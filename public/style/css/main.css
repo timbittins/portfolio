@@ -1,0 +1,151 @@
+/* GLOBAL RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* C O L O R S */
+:root {
+  --clr-prime: #06396d;
+  --clr-second: #4f3af4;
+  --clr-contrast: #8042fe;
+  --clr-text: #fff;
+  --clr-white: #fff;
+  --clr-light: #f2f2f2;
+  --clr-dark: #1d1d1d;
+  --clr-black: #000;
+}
+
+/* M E D I A    Q U E R I E S  */
+/*
+WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT: 
+---------------         ------------------------        ----------
+< 700px (43.75em)       small devices                   default
+> 700px (43.75em)       tablet                          mq-t  
+> 900px (56.25em)       laptop                          mq-lt
+> 1050px (65.625em)     desktop                         mq-dt
+> 1200px (75em)         extra large                     mq-xl
+*/
+/*  M Q   M I X I N  */
+/* FONTS */
+@font-face {
+  font-family: cera;
+  src: local("cera"), local("cera"), url(../fonts/cerabasic-regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: cerabold;
+  src: local("cerabold"), local("cerabold"), url(../fonts/cerabasic-bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: cerablack;
+  src: local("cerablack"), local("cerablack"), url(../fonts/cerabasic-black.woff2) format("woff2");
+}
+:root {
+  --ff-p: cera, arial, sans-serif;
+  --ff-display: cerablack, arial, sans-serif;
+  --ff-h: cerabold, arial, sans-serif;
+  --fs-p: min(max(1.2rem, 3vw), 1.5rem);
+  --fs-display: min(max(3rem, 10vw), 6rem);
+  --fs-h1: min(max(2.5rem, 8vw), 5.5rem);
+  --fs-h2: min(max(2rem, 6vw), 3.875rem);
+  --fs-h3: min(max(1.5rem, 4vw), 2rem);
+}
+
+/* T Y P O G R A P H Y */
+/*--------------------------------------------------------------*/
+/*  GENERAL TEXT SETUP  */
+html {
+  font-family: var(--ff-p);
+  font-size: 1rem;
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-h);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+}
+
+/*  M I X I N S  */
+/* B U T T O N   M I X I N S */
+/* L A Y O U T   M I X I N S */
+body {
+  background-color: var(--clr-prime);
+}/*# sourceMappingURL=main.css.map */

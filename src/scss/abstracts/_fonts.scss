@@ -1,0 +1,43 @@
+/* FONTS */
+@font-face {
+  font-family: cera;
+  src: local("cera"), local("cera"),
+    url(../fonts/cerabasic-regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: cerabold;
+  src: local("cerabold"), local("cerabold"),
+    url(../fonts/cerabasic-bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: cerablack;
+  src: local("cerablack"), local("cerablack"),
+    url(../fonts/cerabasic-black.woff2) format("woff2");
+}
+
+// CUSTOM PROPERTIES
+:root {
+  // font family
+  --ff-p: cera, arial, sans-serif;
+  --ff-display: cerablack, arial, sans-serif;
+  --ff-h: cerabold, arial, sans-serif;
+
+  // font size
+  --fs-p: min(max(1.2rem, 3vw), 1.5rem);
+  --fs-display: min(max(3rem, 10vw), 6rem);
+  --fs-h1: min(max(2.5rem, 8vw), 5.5rem);
+  --fs-h2: min(max(2rem, 6vw), 3.875rem);
+  --fs-h3: min(max(1.5rem, 4vw), 2rem);
+}
+
+// SASS VARIABLES
+// font family
+$ff-p: var(--ff-p);
+$ff-display: var(--ff-display);
+$ff-h: var(--ff-h);
+
+// font size
+$fs-p: var(--fs-p);
+$fs-h1: var(--fs-h1);
+$fs-h2: var(--fs-h2);
+$fs-h3: var(--fs-h3);

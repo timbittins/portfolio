@@ -1,0 +1,47 @@
+/* T Y P O G R A P H Y */
+
+// SASS VARIABLES
+// font family
+$ff-p: var(--ff-p);
+$ff-h: var(--ff-h);
+
+// font size
+$fs-p: var(--fs-p);
+$fs-h1: var(--fs-h1);
+$fs-h2: var(--fs-h2);
+$fs-h3: var(--fs-h3);
+$fs-h4: var(--fs-h4);
+$fs-h5: var(--fs-h5);
+$fs-h6: var(--fs-h6);
+
+/*--------------------------------------------------------------*/
+
+/*  GENERAL TEXT SETUP  */
+html {
+    font-family: $ff-p;
+    font-size: 1rem;
+    font-display: swap;
+    text-rendering: optimizeSpeed;
+    color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-h);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  text-transform: uppercase;
+}
+h2 {
+    font-size: var(--fs-h2);
+}
+h3 {
+    font-size: var(--fs-h3);
+}
+p {
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+}

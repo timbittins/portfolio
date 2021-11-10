@@ -1,0 +1,42 @@
+/* M E D I A    Q U E R I E S  */
+
+// Mobile first
+// font-size: 100%  =>  1rem = 16px
+
+/*
+WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT: 
+---------------         ------------------------        ----------
+< 700px (43.75em)       small devices                   default
+> 700px (43.75em)       tablet                          mq-t  
+> 900px (56.25em)       laptop                          mq-lt
+> 1050px (65.625em)     desktop                         mq-dt
+> 1200px (75em)         extra large                     mq-xl
+*/
+
+/*  M Q   M I X I N  */
+
+@mixin rwd($breakpoint) {
+  @if $breakpoint==mq-t {
+    @media (min-width: 43.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mq-lt {
+    @media (min-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mq-dt {
+    @media (min-width: 65.625em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mq-xl {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+}
