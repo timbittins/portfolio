@@ -10,7 +10,7 @@ WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT:
 > 700px (43.75em)       tablet                          mq-t  
 > 900px (56.25em)       laptop                          mq-lt
 > 1050px (65.625em)     desktop                         mq-dt
-> 1200px (75em)         extra large                     mq-xl
+> 20000px (125em)         extra large                     mq-xl
 */
 
 /*  M Q   M I X I N  */
@@ -35,7 +35,7 @@ WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT:
   }
 
   @if $breakpoint==mq-xl {
-    @media (min-width: 75em) {
+    @media (min-width: 125em) {
       @content;
     }
   }

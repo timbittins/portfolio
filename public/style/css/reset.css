@@ -27,6 +27,11 @@ ol[role=list] {
   list-style: none;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;

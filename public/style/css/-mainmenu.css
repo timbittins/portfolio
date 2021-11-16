@@ -1,0 +1,14 @@
+header {
+  position: relative;
+  z-index: 99;
+  background-color: yellow;
+}
+
+.brand {
+  background-color: red;
+}
+
+.brand .brand__img {
+  width: 5rem;
+  height: 5rem;
+}/*# sourceMappingURL=-mainmenu.css.map */

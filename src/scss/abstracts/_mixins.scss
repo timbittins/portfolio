@@ -1,43 +1,24 @@
 /*  M I X I N S  */
 
-// COLOR MIXINS
-@mixin bg-color-overlay ($background-color: DarkBlue, $transparency: 0.5) {
-    background-color: rgba($background-color, $transparency);
+// Grid
+@mixin grid ($columns: repeat(4, 1fr), $padding: 0 2rem) {
+    display: grid;
+    grid-template-columns: $columns;
+    padding: $padding;   
 }
 
-/* B U T T O N   M I X I N S */
-// Standard Button
-@mixin button {
-    display: block;
-    font-family: cerabold;
-    font-size: var(--fs-h5);
-    font-weight: 100;
-    color: $clr-second;
-    background-color: $clr-prime;
-    outline: .2rem solid $clr-second;
-    border-radius: .4rem;
-    cursor: pointer;
-    transition-duration: 150ms;
-
-    @include rwd(mq-l) {
-        &:hover {
-            background-color: $clr-white;
-            color: $clr-prime;
-        }
-
-        &:active {
-            background-color: $clr-second;
-            color: $clr-prime;
-            outline: .4rem solid red;
-        }
-    }
-}
-
-/* L A Y O U T   M I X I N S */
-// Standard Flexbox
+// Flexbox
 @mixin flex ($flex-direction: row, $justify-content: center, $align-items: center) {
     display: flex;
     flex-direction: $flex-direction;
     justify-content: $justify-content;
     align-items: $align-items;
+}
+
+// Transition
+@mixin transition ($property: all, $duration: 600ms, $timing-function: ease-in-out, $delay: 0ms, $transform-origin: center center) {
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+    transition-delay: $delay;
 }

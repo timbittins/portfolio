@@ -45,3 +45,17 @@ p {
   font-family: var(--ff-p);
   font-size: var(--fs-p);
 }
+
+
+/*  LINKS  */
+
+a:link,
+a:visited {
+  font-size: $fs-p;
+  text-decoration: none;
+  color: $clr-text;
+  
+}
+a:hover {
+  font-weight: 900;
+}

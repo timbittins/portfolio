@@ -22,13 +22,14 @@ h6 {
   padding: 0;
 }
 
-
-
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
-
+ul {
+  padding: 0;
+  margin: 0;
+}
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
