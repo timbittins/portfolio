@@ -1,30 +1,29 @@
 body {
-    // position: relative; 
-    width: 100vw;
-    min-height: 100vh;
-    background: darkblue url("../../../public/img/TB_bg.svg") center / cover no-repeat;
-    // overflow: hidden;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: darkblue url("../../../public/img/TB_bg.svg") center / cover
+    no-repeat;
+  // overflow: hidden;
 }
 
-header { 
-    display: none;
-    position: relative;
-    // @include flex($justify-content: space-between);
-    // width: 100%;
+main {
+  @include grid($columns: 1fr, $padding: 2rem);
+  place-items: center;
+  position: relative;
+  width: 100vw;
+  // min-height: 100vh;
+  
+  // padding: 1.5rem 1.5rem 0;
 
-    // height: 5em;
-    // padding: 1rem;
-    // z-index: 99;
-    background-color: red;
-}
+  @include rwd(mq-t) {
+    padding: 0 3rem;
+  }
 
-main { 
-    display: none;
-    // position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin-top: 5em;
-    background-color: green;
+  @include rwd(mq-lt) {
+    @include grid($columns: 40% 60%, $padding: 2rem);
+    margin-top: 0;
+    padding: 0 6rem;
+    // background-color: red;
+  }
 }

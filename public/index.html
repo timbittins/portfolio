@@ -8,56 +8,92 @@
     <link rel="stylesheet" href="./style/css/main.css" />
   </head>
   <body>
-    
-    <input class="menu__switch" id="menuSwitch" type="checkbox">
 
-    <nav class="nav__container" id="navigation" role="navigation" aria-label="Main">
-
-      <section class="brand menu__bar--item">
+       <section class="brand">
         <a href="#">
-          <img class="brand__img" src="./img/TB_203_white.svg" alt="Tim Bittins Logo"/>
+          <img
+            class="brand__img"
+            src="./img/TB_203_white.svg"
+            alt="Tim Bittins Logo"
+          />
         </a>
         <a href="#" class="menu__bar--link">
-          <p class=" brand__name">Tim Bittins</p>
+          <p class="brand__name">Tim Bittins</p>
         </a>
       </section>
+    <input class="menu__switch" id="menuSwitch" type="checkbox" />
 
+    <nav
+      class="nav__container"
+      id="navigation"
+      role="navigation"
+      aria-label="Main"
+    >
       
+
       <label for="menuSwitch">
         <div type="button" class="menu__button">
-            <div class="menu__button--line1"></div>
-            <div class="menu__button--line2"></div>
-            <div class="menu__button--line3"></div>
+          <div class="menu__button--line1"></div>
+          <div class="menu__button--line2"></div>
+          <div class="menu__button--line3"></div>
         </div>
       </label>
+      
+   
 
-      <nav class="menu__bar">
-          <ul class="menu__bar--list" role="list" >
-              <li class="menu__bar--item">
-                <a href="#" class="menu__bar--link">Home
-                  <div class="menu__bar--line"></div>
-                </a>
-                
-              </li>
-              <li class="menu__bar--item">
-                <a href="#" class="menu__bar--link">Portfolio
-                  <div class="menu__bar--line"></div>
-                </a>
-              </li>
-              <li class="menu__bar--item">
-                <a href="#" class="menu__bar--link">About Me
-                  <div class="menu__bar--line"></div>
-                </a>
-              </li>
-              <li class="menu__bar--item">
-                <a href="#" class="menu__bar--link">Contact
-                  <div class="menu__bar--line"></div>
-                </a>
-              </li>
+      <div class="menu__container">
+        <nav class="menu__bar">
+          <ul class="menu__bar--list" role="list">
+            <li class="menu__bar--item">
+              <a href="#" class="menu__bar--link"
+                >Home
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+            <li class="menu__bar--item">
+              <a href="#" class="menu__bar--link"
+                >Portfolio
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+            <li class="menu__bar--item">
+              <a href="#" class="menu__bar--link"
+                >Über mich
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+            <li class="menu__bar--item">
+              <a href="#" class="menu__bar--link"
+                >Kontakt
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
           </ul>
-      </nav>
-
+        </nav>
+      </div>
     </nav>
- 
+
+    <main>
+      <section class="page__info frontpage">
+        <h2 class="page__info--h2">Tim Bittins</h2>
+        <h1 class="page__info--h1">Web-design & Entwicklung</h1>
+        <p class="page__info--p">
+          Klare Webseiten, moderne Interfaces und Frontend-Programmierung mit
+          Leidenschaft.
+        </p>
+        <button
+          type="button"
+          class="button__regular"
+          onclick="document.location='./pages/portfolio.html'"
+        >
+          Portfolio
+        </button>
+      </section>
+
+      <section class="page__content">
+        <img src="./img/TB_203_white.svg" alt="">
+      </section>
+
+    </main>
   </body>
 </html>

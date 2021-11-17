@@ -1,0 +1,37 @@
+// :root {
+//     --btn-width: 12rem;
+//     --btn-height: 4rem;
+// }
+// $btn-width: var(--btn-width);
+// $btn-height: var(--btn-height);
+
+.button__regular {
+  width: 12rem;
+  height: 4rem;
+  margin: 3rem auto;
+  font-family: $ff-h;
+  font-size: $fs-p;
+  color: $clr-text;
+  background: linear-gradient(to right top, #8042fe, #4f3af4);
+  border: none;
+  //   border: 3px solid $clr-white;
+  border-radius: 0.625rem;
+
+  @include rwd(mq-t) {
+    width: 14rem;
+    height: 5rem;
+    margin: 6rem auto;
+    // border: 5px solid $clr-white;
+  }
+
+  @include rwd(mq-lt) {
+    width: 12rem;
+    height: 4rem;
+    margin: 6rem 0;
+    &:hover {
+      cursor: pointer;
+      background: transparent;
+      border: 5px solid $clr-contrast;
+    }
+  }
+}
