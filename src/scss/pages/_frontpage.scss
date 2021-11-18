@@ -1,13 +1,15 @@
-.frontpage {
+.page__info {
   width: 100%;
+  // padding-top: 4rem;
   @include flex($flex-direction: column, $align-items: flex-start);
-
+  // background-color: aquamarine;
+  
   @include rwd(mq-t) {
-    padding-top: 10rem;
+    // padding-top: 20rem;
   }
 
   @include rwd(mq-lt) {
-    padding-top: 15rem;
+    justify-content: center;
   }
 }
 
@@ -18,7 +20,7 @@
 .page__info--h2 {
   font-size: $fs-h3;
 
-  @include rwd(mq-t) {
+  @include rwd(mq-lt) {
     display: none;
   }
 }
@@ -28,16 +30,15 @@
 }
 
 .page__content {
-    display: none;
-    & img {
-        display: none;
-    }
-}
-
-.page__content img {
   display: none;
 
   @include rwd(mq-lt) {
-    width: 30rem;
+    @include flex;
+    width: 100%;
+    height: 75%;
+    // background-color: aliceblue;
+    & img {
+      width: 30rem;
+    }
   }
 }

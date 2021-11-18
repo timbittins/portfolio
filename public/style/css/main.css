@@ -107,7 +107,7 @@ WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT:
   --ff-p: cera, arial, sans-serif;
   --ff-display: cerablack, arial, sans-serif;
   --ff-h: cerabold, arial, sans-serif;
-  --fs-p: 1.5rem;
+  --fs-p: min(max(1.5rem, 3.5vw), 2rem);
   --fs-display: min(max(3rem, 10vw), 4rem);
   --fs-h1: min(max(2.5rem, 8vw), 5rem);
   --fs-h2: min(max(2rem, 6vw), 3.875rem);
@@ -173,10 +173,11 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  padding: 2rem;
+  padding: 0 2rem;
   place-items: center;
   position: relative;
   width: 100vw;
+  min-height: 100vh;
 }
 @media (min-width: 43.75em) {
   main {
@@ -190,7 +191,7 @@ main {
     grid-template-rows: auto;
     padding: 2rem;
     margin-top: 0;
-    padding: 0 6rem;
+    padding: 0 12rem;
   }
 }
 
@@ -213,12 +214,12 @@ main {
     justify-content: space-between;
     align-items: center;
     height: 8rem;
-    padding: 0 8rem 0;
+    padding: 0 12rem 0;
   }
 }
 
 .brand {
-  position: relative;
+  position: absolute;
   top: 1.5rem;
   left: 1.5rem;
   width: 75%;
@@ -234,7 +235,6 @@ main {
   .brand {
     position: fixed;
     top: 2.5rem;
-    left: 2.5rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -245,15 +245,11 @@ main {
     width: 6em;
     height: 6rem;
   }
-  .brand .brand__name {
-    display: block;
-    font-size: 2.5rem;
-  }
 }
 @media (min-width: 56.25em) {
   .brand {
     top: 2rem;
-    left: 6rem;
+    left: 12rem;
     gap: 1.5rem;
     width: 100%;
   }
@@ -262,6 +258,7 @@ main {
     height: 4rem;
   }
   .brand .brand__name {
+    display: block;
     font-size: var(--fs-p);
     position: relative;
   }
@@ -463,21 +460,16 @@ main {
   }
 }
 
-.frontpage {
+.page__info {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-@media (min-width: 43.75em) {
-  .frontpage {
-    padding-top: 10rem;
-  }
-}
 @media (min-width: 56.25em) {
-  .frontpage {
-    padding-top: 15rem;
+  .page__info {
+    justify-content: center;
   }
 }
 
@@ -488,7 +480,7 @@ main {
 .page__info--h2 {
   font-size: var(--fs-h3);
 }
-@media (min-width: 43.75em) {
+@media (min-width: 56.25em) {
   .page__info--h2 {
     display: none;
   }
@@ -501,14 +493,15 @@ main {
 .page__content {
   display: none;
 }
-.page__content img {
-  display: none;
-}
-
-.page__content img {
-  display: none;
-}
 @media (min-width: 56.25em) {
+  .page__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+  }
   .page__content img {
     width: 30rem;
   }
@@ -517,30 +510,31 @@ main {
 .button__regular {
   width: 12rem;
   height: 4rem;
-  margin: 3rem auto;
+  margin: 3rem auto 0;
   font-family: var(--ff-h);
   font-size: var(--fs-p);
   color: var(--clr-white);
-  background: linear-gradient(to right top, #8042fe, #4f3af4);
+  background-color: var(--clr-contrast);
   border: none;
   border-radius: 0.625rem;
+  transition: background-color 200ms ease-in-out, border 200ms ease-in-out;
 }
 @media (min-width: 43.75em) {
   .button__regular {
     width: 14rem;
     height: 5rem;
-    margin: 6rem auto;
+    margin: 6rem auto 0;
   }
 }
 @media (min-width: 56.25em) {
   .button__regular {
     width: 12rem;
     height: 4rem;
-    margin: 6rem 0;
+    margin: 6rem 0 0;
   }
   .button__regular:hover {
     cursor: pointer;
-    background: transparent;
+    background-color: transparent;
     border: 5px solid var(--clr-contrast);
   }
 }/*# sourceMappingURL=main.css.map */
