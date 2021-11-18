@@ -107,10 +107,11 @@ WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT:
   --ff-p: cera, arial, sans-serif;
   --ff-display: cerablack, arial, sans-serif;
   --ff-h: cerabold, arial, sans-serif;
+  --fs-s: min(max(1.2rem, 3vw), 1.8rem);
   --fs-p: min(max(1.5rem, 3.5vw), 2rem);
   --fs-display: min(max(3rem, 10vw), 4rem);
   --fs-h1: min(max(2.5rem, 8vw), 5rem);
-  --fs-h2: min(max(2rem, 6vw), 3.875rem);
+  --fs-h2: min(max(2rem, 6vw), 3rem);
   --fs-h3: min(max(1.5rem, 4vw), 2rem);
 }
 
@@ -192,6 +193,60 @@ main {
     padding: 2rem;
     margin-top: 0;
     padding: 0 12rem;
+  }
+}
+
+.page__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (min-width: 56.25em) {
+  .page__info {
+    justify-content: center;
+  }
+}
+
+.page__info--h1 {
+  margin-top: 0.8rem;
+}
+
+.page__info--h2 {
+  margin-top: 1rem;
+}
+
+.page__info--h3 {
+  margin-top: 4rem;
+}
+
+.page__info--p {
+  margin-top: 2rem;
+}
+
+.page__info--name {
+  font-family: var(--ff-h);
+  font-size: var(--fs-h2);
+}
+
+.page__info--address {
+  margin-top: 0.8rem;
+  font-size: var(--fs-s);
+  line-height: 1.5;
+}
+
+@media (min-width: 56.25em) {
+  .page__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+  }
+  .page__content img {
+    width: 30rem;
   }
 }
 
@@ -457,53 +512,6 @@ main {
   }
   .menu__switch:checked + .nav__container .menu__button .menu__button--line3 {
     transform: rotate(-315deg) translate(-15%, -300%);
-  }
-}
-
-.page__info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-@media (min-width: 56.25em) {
-  .page__info {
-    justify-content: center;
-  }
-}
-
-.page__info--h1 {
-  margin-top: 0.8rem;
-}
-
-.page__info--h2 {
-  font-size: var(--fs-h3);
-}
-@media (min-width: 56.25em) {
-  .page__info--h2 {
-    display: none;
-  }
-}
-
-.page__info--p {
-  margin-top: 2rem;
-}
-
-.page__content {
-  display: none;
-}
-@media (min-width: 56.25em) {
-  .page__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 75%;
-  }
-  .page__content img {
-    width: 30rem;
   }
 }
 
