@@ -12,37 +12,32 @@
 
   @include rwd(mq-lt) {
     @include flex($flex-direction: row, $justify-content: space-between);
+    flex-wrap: wrap;
     height: 8rem;
     padding: 0 12rem 0;
   }
 }
 
 .brand { 
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-
-  width: 75%;
-  & .brand__img {
-    width: 4rem;
-    height: 4rem;
-  }
-  & .brand__name {
-    display: none;
-  }
+  display: none;
 
   @include rwd(mq-t) {
     position: fixed;
     top: 2.5rem;
+    left: 1.5rem;
     @include flex($justify-content: flex-start);
     gap: 1rem;
     & .brand__img {
       width: 6em;
       height: 6rem;
     }
+    & .brand__name {
+      display: none;
+    }
   }
 
   @include rwd(mq-lt) {
+    position: relative;
     top: 2rem;
     left: 12rem;
     gap: 1.5rem;

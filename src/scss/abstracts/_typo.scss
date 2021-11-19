@@ -11,8 +11,6 @@ $fs-h1: var(--fs-h1);
 $fs-h2: var(--fs-h2);
 $fs-h3: var(--fs-h3);
 $fs-h4: var(--fs-h4);
-$fs-h5: var(--fs-h5);
-$fs-h6: var(--fs-h6);
 
 /*--------------------------------------------------------------*/
 
@@ -41,6 +39,10 @@ h2 {
 }
 h3 {
     font-size: var(--fs-h3);
+}
+h4 {
+    font-family: var(--ff-h);
+    font-size: var(--fs-h4);
 }
 p {
   font-family: var(--ff-p);

@@ -1,0 +1,11 @@
+.page__content--frontpage {
+    & img {
+      width: 20rem;
+    }
+    
+    @include rwd(mq-lt) {
+        & img {
+        width: 30rem;
+        }
+    }
+}

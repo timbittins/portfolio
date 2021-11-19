@@ -1,4 +1,5 @@
-.button__regular {
+.button__regular,
+.button__submit {
   width: 12rem;
   height: 4rem;
   margin: 3rem auto 0;
@@ -25,5 +26,18 @@
       background-color: transparent;
       border: 5px solid $clr-contrast;
     }
+  }
+}
+
+
+.button__submit {
+  margin: 0 auto 1rem;
+  
+  @include rwd(mq-t) {
+    margin:  1rem auto;
+  }
+
+  @include rwd(mq-lt) {
+    margin: 0;
   }
 }

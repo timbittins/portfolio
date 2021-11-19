@@ -1,0 +1,71 @@
+/* CONTACT FORM */
+.form__container {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    @include flex($justify-content: flex-start);
+
+    @include rwd(mq-t) {
+        margin: 2.5rem 0;
+    }
+}
+
+.form__form {
+    width: 100%;
+    font-size: $fs-s;
+
+    @include rwd(mq-t) {
+        font-size: $fs-p;
+    }
+}
+
+.form__section {
+    position: relative;
+    @include flex($flex-direction: column, $align-items: flex-start);
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @include rwd(mq-t) {
+        margin-bottom: 1rem;
+    }
+}
+
+.form__label {
+    margin-bottom: .25rem;
+}
+
+.form__input,
+.form__textarea {
+    width: 100%;
+
+    @include rwd(mq-t) {
+        width: 80%;
+    }
+}
+
+.form__input {
+    height: 3rem;
+    padding: 0 1rem;
+    
+    @include rwd(mq-t) {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.form__textarea {
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+}
+
+.form__checkbox {
+    margin: 1rem 0;
+
+    @include rwd(mq-t) {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 1.5rem 1rem 1.5rem 0;
+    }
+}
+
+

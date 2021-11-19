@@ -4,14 +4,17 @@ body {
   min-height: 100vh;
   background: darkblue url("../../../public/img/TB_bg.svg") center / cover
     no-repeat;
+  
 }
 
 main {
-  @include grid($columns: 1fr, $padding: 0 2rem);
-  place-items: center;
   position: relative;
-  width: 100vw;
+  @include flex($flex-direction: column);
+  gap: 5rem;
+  width: 100%;
   min-height: 100vh;
+  padding: 0 2rem;
+
 
   @include rwd(mq-t) {
     padding: 0 3rem;
@@ -25,16 +28,18 @@ main {
 }
 
 .page__info {
-  width: 100%;
-  // padding-top: 4rem;
   @include flex($flex-direction: column, $align-items: flex-start);
-  
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 0 0;
+
   @include rwd(mq-t) {
     // padding-top: 20rem;
   }
 
   @include rwd(mq-lt) {
-    justify-content: center;
+    position: fixed;
+    // padding-top: 8rem;
   }
 }
 
@@ -43,11 +48,11 @@ main {
 }
 
 .page__info--h2 {
-margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .page__info--h3 {
-margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .page__info--p {
@@ -57,26 +62,14 @@ margin-top: 4rem;
 .page__info--name {
   font-family: $ff-h;
   font-size: $fs-h2;
-
 }
-
-.page__info--address {
-  margin-top: 0.8rem;
-  font-size: $fs-s;
-  line-height: 1.5;
-}
-
-
 
 .page__content {
-  // display: none;
+  @include flex($flex-direction: column);
+  width: 100%;
+  min-height: 100vh;
 
   @include rwd(mq-lt) {
-    @include flex;
-    width: 100%;
-    height: 75%;
-    & img {
-      width: 30rem;
-    }
+    display: none;
   }
 }
