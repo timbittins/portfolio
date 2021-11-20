@@ -3,9 +3,11 @@
 // SASS VARIABLES
 // font family
 $ff-p: var(--ff-p);
+$ff-display: var(--ff-display);
 $ff-h: var(--ff-h);
 
 // font size
+$fs-s: var(--fs-s);
 $fs-p: var(--fs-p);
 $fs-h1: var(--fs-h1);
 $fs-h2: var(--fs-h2);
@@ -61,4 +63,9 @@ a:visited {
 }
 a:hover {
   font-weight: 900;
+}
+
+/* SPECIAL */
+small {
+  font-size: 1rem;
 }

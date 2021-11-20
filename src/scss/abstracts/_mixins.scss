@@ -1,11 +1,11 @@
 /*  M I X I N S  */
 
 // Grid
-@mixin grid($columns, $rows: auto, $padding) {
+@mixin grid($columns: 2fr, $rows: auto, $gap) {
   display: grid;
   grid-template-columns: $columns;
   grid-template-rows: $rows;
-  padding: $padding;
+  gap: $gap;
 }
 
 // Flexbox

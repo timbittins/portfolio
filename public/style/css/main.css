@@ -169,11 +169,15 @@ a:hover {
   font-weight: 900;
 }
 
+/* SPECIAL */
+small {
+  font-size: 1rem;
+}
+
 .button__regular,
 .button__submit {
-  width: 12rem;
-  height: 4rem;
   margin: 3rem auto 0;
+  padding: 1rem 2rem;
   font-family: var(--ff-h);
   font-size: var(--fs-p);
   color: var(--clr-white);
@@ -185,23 +189,19 @@ a:hover {
 @media (min-width: 43.75em) {
   .button__regular,
 .button__submit {
-    width: 14rem;
-    height: 5rem;
     margin: 6rem auto 0;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .button__regular,
 .button__submit {
-    width: 12rem;
-    height: 4rem;
     margin: 6rem 0 0;
   }
   .button__regular:hover,
 .button__submit:hover {
     cursor: pointer;
     background-color: transparent;
-    border: 5px solid var(--clr-contrast);
+    box-shadow: 0 0 1px 5px var(--clr-contrast);
   }
 }
 
@@ -213,9 +213,9 @@ a:hover {
     margin: 1rem auto;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .button__submit {
-    margin: 0;
+    margin: 2rem 0;
   }
 }
 
@@ -234,6 +234,11 @@ a:hover {
     margin: 2.5rem 0;
   }
 }
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .form__container {
+    margin: 1rem 0;
+  }
+}
 
 .form__form {
   width: 100%;
@@ -242,6 +247,11 @@ a:hover {
 @media (min-width: 43.75em) {
   .form__form {
     font-size: var(--fs-p);
+  }
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .form__form {
+    font-size: var(--fs-s);
   }
 }
 
@@ -254,9 +264,9 @@ a:hover {
   width: 100%;
   margin-bottom: 1rem;
 }
-@media (min-width: 43.75em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .form__section {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 }
 
@@ -284,11 +294,20 @@ a:hover {
     margin-bottom: 2.5rem;
   }
 }
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .form__input {
+    margin-bottom: 1.5rem;
+  }
+}
 
 .form__textarea {
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
+}
+
+.form__label--privacy {
+  cursor: pointer;
 }
 
 .form__checkbox {
@@ -301,23 +320,27 @@ a:hover {
     margin: 1.5rem 1rem 1.5rem 0;
   }
 }
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .form__checkbox {
+    width: 1rem;
+    height: 1rem;
+    margin: 1.5rem 1rem 1.5rem 0;
+    cursor: pointer;
+  }
+}
 
 body {
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background: darkblue url("../../../public/img/TB_bg.svg") center/cover no-repeat;
+  background: darkblue url("../../../public/img/TB_bg.svg") no-repeat fixed center/cover;
 }
 
 main {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
   width: 100%;
   min-height: 100vh;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 @media (min-width: 43.75em) {
@@ -325,14 +348,11 @@ main {
     padding: 0 3rem;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   main {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto;
-    padding: 2rem;
-    margin-top: 0;
-    padding: 0 12rem;
+    max-width: 2000px;
+    margin-top: 8rem;
+    padding: 0 min(max(6rem, 10%), 12rem);
   }
 }
 
@@ -345,9 +365,10 @@ main {
   min-height: 100vh;
   padding: 2rem 0 0;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .page__info {
     position: fixed;
+    width: 40%;
   }
 }
 
@@ -378,11 +399,16 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 50%;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .page__content {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 50%;
   }
 }
 
@@ -398,47 +424,35 @@ main {
   height: 0;
   z-index: 90;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .nav__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 2000px;
     height: 8rem;
-    padding: 0 12rem 0;
+    margin: 0 auto;
+    padding: 0 min(max(6rem, 10%), 12rem) 0;
+    background: darkblue url("../../../public/img/TB_bg.svg") top/cover;
   }
 }
 
 .brand {
   display: none;
 }
-@media (min-width: 43.75em) {
-  .brand {
-    position: fixed;
-    top: 2.5rem;
-    left: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-  }
-  .brand .brand__img {
-    width: 6em;
-    height: 6rem;
-  }
-  .brand .brand__name {
-    display: none;
-  }
-}
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .brand {
     position: relative;
-    top: 2rem;
-    left: 12rem;
+    top: 0rem;
+    left: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 1.5rem;
-    width: 100%;
+    padding: 1rem 0;
   }
   .brand .brand__img {
     width: 4rem;
@@ -504,7 +518,7 @@ main {
     top: 3rem;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .menu__button {
     display: none;
   }
@@ -526,12 +540,12 @@ main {
   transition-delay: 0ms;
   z-index: 90;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .menu__container {
     position: relative;
     transform: translateX(0);
     width: auto;
-    height: 100%;
+    height: auto;
   }
 }
 
@@ -565,7 +579,7 @@ main {
     font-size: 6rem;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .menu__bar {
     display: flex;
     flex-direction: row;
@@ -582,7 +596,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    gap: 3rem;
   }
   .menu__bar .menu__bar--list .menu__bar--item {
     display: flex;
@@ -594,7 +608,7 @@ main {
   .menu__bar .menu__bar--list .menu__bar--link {
     position: relative;
     padding: 0;
-    margin-left: 2rem;
+    margin: 0;
     font-family: cera;
     font-size: var(--fs-p);
     overflow: hidden;
@@ -615,7 +629,7 @@ main {
   transition-timing-function: ease-in-out;
   transition-delay: 0ms;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .menu__bar--line {
     display: block;
   }
@@ -650,7 +664,7 @@ main {
 .page__content--frontpage img {
   width: 20rem;
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .page__content--frontpage img {
     width: 30rem;
   }
@@ -658,23 +672,17 @@ main {
 
 .page__info--contact {
   justify-content: flex-end;
-  width: 100vw;
-  padding: 0 2rem;
-  background-color: var(--clr-prime);
 }
 @media (min-width: 43.75em) {
   .page__info--contact {
     padding: 0 3rem;
   }
 }
-@media (min-width: 56.25em) {
+@media (min-width: 56.25em) and (orientation: landscape) {
   .page__info--contact {
-    background-color: transparent;
+    justify-content: flex-start;
+    padding: 0;
   }
-}
-
-.page__content--contact {
-  width: 100%;
 }
 
 .contact__impressum {
@@ -683,16 +691,28 @@ main {
   border: 0 solid var(--clr-white);
   border-width: 1px 0 1px 0;
 }
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .contact__impressum {
+    padding: 8.5rem 0;
+    border: none;
+  }
+}
 
 .contact__impressum--address {
   margin-top: 0.8rem;
   font-size: var(--fs-s);
   line-height: 1.5;
+  font-style: normal;
 }
 @media (min-width: 43.75em) {
   .contact__impressum--address {
     font-size: var(--fs-p);
     font-family: var(--ff-h);
+  }
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .contact__impressum--address {
+    font-family: var(--ff-p);
   }
 }
 
@@ -709,4 +729,9 @@ main {
 }
 .contact_privacy a {
   font-size: 0.8rem;
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .contact_privacy {
+    width: 40%;
+  }
 }/*# sourceMappingURL=main.css.map */

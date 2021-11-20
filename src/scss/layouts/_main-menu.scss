@@ -11,37 +11,26 @@
   z-index: 90;
 
   @include rwd(mq-lt) {
-    @include flex($flex-direction: row, $justify-content: space-between);
+    @include flex($justify-content: space-between);
     flex-wrap: wrap;
+    max-width: 2000px;
     height: 8rem;
-    padding: 0 12rem 0;
+    margin: 0 auto;
+    padding: 0 min(max(6rem, 10%), 12rem) 0;
+  background: darkblue url("../../../public/img/TB_bg.svg") top / cover;
   }
 }
 
 .brand { 
   display: none;
 
-  @include rwd(mq-t) {
-    position: fixed;
-    top: 2.5rem;
-    left: 1.5rem;
-    @include flex($justify-content: flex-start);
-    gap: 1rem;
-    & .brand__img {
-      width: 6em;
-      height: 6rem;
-    }
-    & .brand__name {
-      display: none;
-    }
-  }
-
   @include rwd(mq-lt) {
     position: relative;
-    top: 2rem;
-    left: 12rem;
+    top: 0rem;
+    left: 0rem;
+    @include flex;
     gap: 1.5rem;
-    width: 100%;
+    padding: 1rem 0;
     & .brand__img {
       width: 4rem;
       height: 4rem;
@@ -132,7 +121,7 @@
     position: relative;
     transform: translateX(0);
     width: auto;
-    height: 100%;
+    height: auto;
   }
 }
 
@@ -177,7 +166,7 @@
         $justify-content: center,
         $align-items: center
       );
-      height: 100%;
+      gap: 3rem;
       & .menu__bar--item {
         @include flex;
         width: auto;
@@ -185,7 +174,7 @@
       & .menu__bar--link {
         position: relative;
         padding: 0;
-        margin-left: 2rem;
+        margin: 0;
         font-family: cera;
         font-size: $fs-p;
         overflow: hidden;

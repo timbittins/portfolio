@@ -1,8 +1,7 @@
 .button__regular,
 .button__submit {
-  width: 12rem;
-  height: 4rem;
   margin: 3rem auto 0;
+  padding: 1rem 2rem;
   font-family: $ff-h;
   font-size: $fs-p;
   color: $clr-text;
@@ -12,19 +11,15 @@
   transition: background-color 200ms ease-in-out, border 200ms ease-in-out;
 
   @include rwd(mq-t) {
-    width: 14rem;
-    height: 5rem;
     margin: 6rem auto 0;
   }
 
   @include rwd(mq-lt) {
-    width: 12rem;
-    height: 4rem;
     margin: 6rem 0 0;
     &:hover {
       cursor: pointer;
       background-color: transparent;
-      border: 5px solid $clr-contrast;
+      box-shadow: 0 0 1px 5px $clr-contrast;
     }
   }
 }
@@ -38,6 +33,6 @@
   }
 
   @include rwd(mq-lt) {
-    margin: 0;
+    margin: 2rem 0;
   }
 }
