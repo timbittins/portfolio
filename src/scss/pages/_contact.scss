@@ -16,7 +16,7 @@
   border-width: 1px 0 1px 0;
 
   @include rwd(mq-lt) {
-    padding: 10rem 0 5rem;
+    padding: 18rem 0 5rem;
     border-width: 0 0 1px 0;
   }
 }
@@ -28,7 +28,7 @@
   font-style: normal;
 
   @include rwd(mq-t) {
-    font-size: $fs-p;
+    // font-size: $fs-p;
     font-family: $ff-h;
   }
 

@@ -9,67 +9,61 @@
   </head>
   <body>
     <header>
+      
       <input class="menu__switch" id="menuSwitch" type="checkbox" />
-
-      <nav
-        class="nav__container"
-        id="navigation"
-        role="navigation"
-        aria-label="Main"
-      >
-
-        <section class="brand">
-        <a href="#">
-          <img
-            class="brand__img"
-            src="../img/TB_203_white.svg"
-            alt="Tim Bittins Logo"
-          />
-        </a>
-        <a href="#" class="menu__bar--link">
-          <p class="brand__name">Tim Bittins</p>
-        </a>
-      </section>
-
-        <label for="menuSwitch">
-          <div type="button" class="menu__button">
-            <div class="menu__button--line1"></div>
-            <div class="menu__button--line2"></div>
-            <div class="menu__button--line3"></div>
-          </div>
-        </label>
-
-        <div class="menu__container">
-          <nav class="menu__bar">
-            <ul class="menu__bar--list" role="list">
-              <li class="menu__bar--item">
-                <a href="../index.html" class="menu__bar--link"
-                  >Home
-                  <div class="menu__bar--line"></div>
-                </a>
-              </li>
-              <li class="menu__bar--item">
-                <a href="./portfolio.html" class="menu__bar--link"
-                  >Portfolio
-                  <div class="menu__bar--line"></div>
-                </a>
-              </li>
-              <li class="menu__bar--item">
-                <a href="./ueber-mich.html" class="menu__bar--link"
-                  >Über mich
-                  <div class="menu__bar--line"></div>
-                </a>
-              </li>
-              <li class="menu__bar--item">
-                <a href="./kontakt.html" class="menu__bar--link"
-                  >Kontakt
-                  <div class="menu__bar--line"></div>
-                </a>
-              </li>
-            </ul>
-          </nav>
+      
+      <label for="menuSwitch">
+        <div type="button" class="menu__button">
+          <div class="menu__button--line1"></div>
+          <div class="menu__button--line2"></div>
+          <div class="menu__button--line3"></div>
         </div>
-      </nav>
+      </label>
+
+      <div class="menu__container">
+        <nav class="menu__bar">
+          <a href="../index.html">
+             <section class="brand">
+               <img
+               class="brand__img"
+               src="../img/TB_203_white.svg"
+               alt="Tim Bittins Logo"
+               />
+               <p class="brand__name">Tim Bittins
+                 <span class="menu__bar--line"></span>
+                </p>
+             </section>
+           </a>
+
+          <ul class="menu__bar--list" role="list">
+            <li class="menu__bar--item">
+              <a href="./service.html" class="menu__bar--link"
+                >Service
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+            <li class="menu__bar--item">
+              <a href="./portfolio.html" class="menu__bar--link"
+                >Portfolio
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+            <li class="menu__bar--item">
+              <a href="./ueber-mich.html" class="menu__bar--link"
+                >Über mich
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+            <li class="menu__bar--item">
+              <a href="./kontakt.html" class="menu__bar--link menu__link--active"
+                >Kontakt
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
     </header>
     
 

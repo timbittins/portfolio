@@ -2,7 +2,7 @@
   display: none;
 }
 
-.brand { 
+.brand {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -18,13 +18,12 @@
     top: 2.5rem;
     left: 2.5rem;
     & .brand__img {
-    width: 5.5rem;
-    height: 5.5rem;
-  }
-    
+      width: 5.5rem;
+      height: 5.5rem;
+    }
   }
 
-  @include rwd(mq-lt) { 
+  @include rwd(mq-lt) {
     position: relative;
     top: 0;
     left: 0;
@@ -37,8 +36,10 @@
     }
 
     & .brand__name {
+      position: relative;
       display: block;
-      white-space: pre;
+      padding: 0.5rem 0;
+      overflow: hidden;
     }
   }
 }
@@ -49,7 +50,7 @@
   right: 1.5rem;
   width: 3.5rem;
   height: 3.5rem;
-  background: linear-gradient(to right top, #8042fe, #4f3af4);
+  background: $clr-prime linear-gradient(to right top, #8042fe, #4f3af4);
   border-radius: 0.6rem;
   z-index: 99;
 
@@ -134,7 +135,7 @@
     @include flex($flex-direction: column, $justify-content: space-evenly);
   }
   & .menu__bar--item {
-    width: 100%; 
+    width: 100%;
   }
   & .menu__bar--link {
     display: block;
@@ -152,7 +153,6 @@
 
   @include rwd(mq-lt) {
     position: relative;
-    // width: 100vw;
     @include flex($justify-content: space-between);
     flex-wrap: wrap;
     gap: 0 3rem;
@@ -167,19 +167,17 @@
       );
       gap: 3rem;
       & .menu__bar--item {
-        @include flex;
         width: auto;
       }
-      & .menu__bar--link {
+    }
+    .menu__bar--link {
         position: relative;
         width: 100%;
-        padding: 0;
-        margin: 0;
+        padding: 0.5rem 0;
         font-family: cera;
         font-size: $fs-p;
         overflow: hidden;
       }
-    }
   }
 }
 
@@ -197,6 +195,10 @@
   @include rwd(mq-lt) {
     display: block;
   }
+}
+
+.brand:hover .menu__bar--line {
+  transform: translateX(0);
 }
 
 .menu__bar--link:hover .menu__bar--line {
@@ -225,4 +227,8 @@
       transform: rotate(-315deg) translate(-15%, -300%);
     }
   }
+}
+
+.menu__link--active .menu__bar--line {
+  transform: translateX(0);
 }

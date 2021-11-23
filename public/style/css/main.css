@@ -106,8 +106,8 @@ WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT:
   --ff-p: cera, arial, sans-serif;
   --ff-display: cerablack, arial, sans-serif;
   --ff-h: cerabold, arial, sans-serif;
-  --fs-s: min(max(1.2rem, 3vw), 1.8rem);
-  --fs-p: min(max(1.5rem, 3.5vw), 2rem);
+  --fs-s: min(max(1rem, 3vw), 1.2rem);
+  --fs-p: min(max(1.5rem, 3.5vw), 1.8rem);
   --fs-display: min(max(3rem, 10vw), 4rem);
   --fs-h1: min(max(2.5rem, 8vw), 5rem);
   --fs-h2: min(max(1.5rem, 6vw), 3rem);
@@ -162,10 +162,6 @@ a:visited {
   font-size: var(--fs-p);
   text-decoration: none;
   color: var(--clr-white);
-}
-
-a:hover {
-  font-weight: 900;
 }
 
 /* SPECIAL */
@@ -488,8 +484,10 @@ main {
     height: 4rem;
   }
   .brand .brand__name {
+    position: relative;
     display: block;
-    white-space: pre;
+    padding: 0.5rem 0;
+    overflow: hidden;
   }
 }
 
@@ -499,7 +497,7 @@ main {
   right: 1.5rem;
   width: 3.5rem;
   height: 3.5rem;
-  background: linear-gradient(to right top, #8042fe, #4f3af4);
+  background: var(--clr-prime) linear-gradient(to right top, #8042fe, #4f3af4);
   border-radius: 0.6rem;
   z-index: 99;
 }
@@ -630,17 +628,12 @@ main {
     gap: 3rem;
   }
   .menu__bar .menu__bar--list .menu__bar--item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: auto;
   }
-  .menu__bar .menu__bar--list .menu__bar--link {
+  .menu__bar .menu__bar--link {
     position: relative;
     width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 0.5rem 0;
     font-family: cera;
     font-size: var(--fs-p);
     overflow: hidden;
@@ -667,6 +660,10 @@ main {
   }
 }
 
+.brand:hover .menu__bar--line {
+  transform: translateX(0);
+}
+
 .menu__bar--link:hover .menu__bar--line {
   transform: translateX(0);
 }
@@ -691,6 +688,10 @@ main {
   .menu__switch:checked + label .menu__button .menu__button--line3 {
     transform: rotate(-315deg) translate(-15%, -300%);
   }
+}
+
+.menu__link--active .menu__bar--line {
+  transform: translateX(0);
 }
 
 @media (min-width: 56.25em) and (orientation: landscape) {
@@ -726,7 +727,7 @@ main {
 }
 @media (min-width: 56.25em) and (orientation: landscape) {
   .contact__impressum {
-    padding: 10rem 0 5rem;
+    padding: 18rem 0 5rem;
     border-width: 0 0 1px 0;
   }
 }
@@ -739,7 +740,6 @@ main {
 }
 @media (min-width: 43.75em) {
   .contact__impressum--address {
-    font-size: var(--fs-p);
     font-family: var(--ff-h);
   }
 }
