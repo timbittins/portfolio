@@ -47,7 +47,7 @@
     width: 100%;
 
     @include rwd(mq-t) {
-        width: 80%;
+        width: 85%;
     }
 }
 
@@ -76,6 +76,7 @@
 
 .form__checkbox {
     margin: 1rem 0;
+    accent-color: $clr-contrast;
 
     @include rwd(mq-t) {
         width: 1.5rem;

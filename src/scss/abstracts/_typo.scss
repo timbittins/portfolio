@@ -18,11 +18,11 @@ $fs-h4: var(--fs-h4);
 
 /*  GENERAL TEXT SETUP  */
 html {
-    font-family: $ff-p;
-    font-size: 1rem;
-    font-display: swap;
-    text-rendering: optimizeSpeed;
-    color: #fff;
+  font-family: $ff-p;
+  font-size: 1rem;
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+  color: #fff;
 }
 
 h1,
@@ -34,23 +34,22 @@ h3 {
 
 h1 {
   font-size: var(--fs-h1);
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 h2 {
-    font-size: var(--fs-h2);
+  font-size: var(--fs-h2);
 }
 h3 {
-    font-size: var(--fs-h3);
+  font-size: var(--fs-h3);
 }
 h4 {
-    font-family: var(--ff-h);
-    font-size: var(--fs-h4);
+  font-family: var(--ff-h);
+  font-size: var(--fs-h4);
 }
 p {
   font-family: var(--ff-p);
   font-size: var(--fs-p);
 }
-
 
 /*  LINKS  */
 
@@ -59,7 +58,6 @@ a:visited {
   font-size: $fs-p;
   text-decoration: none;
   color: $clr-text;
-  
 }
 a:hover {
   font-weight: 900;

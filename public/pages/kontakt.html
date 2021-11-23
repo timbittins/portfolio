@@ -8,72 +8,75 @@
     <link rel="stylesheet" href="../style/css/main.css" />
   </head>
   <body>
-    
-    <input class="menu__switch" id="menuSwitch" type="checkbox" />
+    <header>
+      <input class="menu__switch" id="menuSwitch" type="checkbox" />
 
-    <nav
-      class="nav__container"
-      id="navigation"
-      role="navigation"
-      aria-label="Main"
-    >
+      <nav
+        class="nav__container"
+        id="navigation"
+        role="navigation"
+        aria-label="Main"
+      >
 
-      <section class="brand">
-      <a href="#">
-        <img
-          class="brand__img"
-          src="../img/TB_203_white.svg"
-          alt="Tim Bittins Logo"
-        />
-      </a>
-      <a href="#" class="menu__bar--link">
-        <p class="brand__name">Tim Bittins</p>
-      </a>
-    </section>
+        <section class="brand">
+        <a href="#">
+          <img
+            class="brand__img"
+            src="../img/TB_203_white.svg"
+            alt="Tim Bittins Logo"
+          />
+        </a>
+        <a href="#" class="menu__bar--link">
+          <p class="brand__name">Tim Bittins</p>
+        </a>
+      </section>
 
-      <label for="menuSwitch">
-        <div type="button" class="menu__button">
-          <div class="menu__button--line1"></div>
-          <div class="menu__button--line2"></div>
-          <div class="menu__button--line3"></div>
+        <label for="menuSwitch">
+          <div type="button" class="menu__button">
+            <div class="menu__button--line1"></div>
+            <div class="menu__button--line2"></div>
+            <div class="menu__button--line3"></div>
+          </div>
+        </label>
+
+        <div class="menu__container">
+          <nav class="menu__bar">
+            <ul class="menu__bar--list" role="list">
+              <li class="menu__bar--item">
+                <a href="../index.html" class="menu__bar--link"
+                  >Home
+                  <div class="menu__bar--line"></div>
+                </a>
+              </li>
+              <li class="menu__bar--item">
+                <a href="./portfolio.html" class="menu__bar--link"
+                  >Portfolio
+                  <div class="menu__bar--line"></div>
+                </a>
+              </li>
+              <li class="menu__bar--item">
+                <a href="./ueber-mich.html" class="menu__bar--link"
+                  >Über mich
+                  <div class="menu__bar--line"></div>
+                </a>
+              </li>
+              <li class="menu__bar--item">
+                <a href="./kontakt.html" class="menu__bar--link"
+                  >Kontakt
+                  <div class="menu__bar--line"></div>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </label>
-
-      <div class="menu__container">
-        <nav class="menu__bar">
-          <ul class="menu__bar--list" role="list">
-            <li class="menu__bar--item">
-              <a href="../index.html" class="menu__bar--link"
-                >Home
-                <div class="menu__bar--line"></div>
-              </a>
-            </li>
-            <li class="menu__bar--item">
-              <a href="./portfolio.html" class="menu__bar--link"
-                >Portfolio
-                <div class="menu__bar--line"></div>
-              </a>
-            </li>
-            <li class="menu__bar--item">
-              <a href="./ueber-mich.html" class="menu__bar--link"
-                >Über mich
-                <div class="menu__bar--line"></div>
-              </a>
-            </li>
-            <li class="menu__bar--item">
-              <a href="./kontakt.html" class="menu__bar--link"
-                >Kontakt
-                <div class="menu__bar--line"></div>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </nav>
+      </nav>
+    </header>
+    
 
     <main>
       <section class="page__info page__info--contact">
-        <h1>Kontakt</h1>
+        <div class="keep">
+ <h1>Kontakt</h1>
 
         <article class="form__container">
           <form class="form__form" action="..db/contact.php" method="post">
@@ -127,11 +130,15 @@
             </div>
           </form>
         </article>
+        </div>
+       
       </section>
 
-      <section class="page__content page__content--contact">
+      <!-- <section class="page__spacer"></section> -->
 
-        <article class="contact__impressum">
+      <section class="page__content page__content--contact">
+        <div class="keep__content">
+<article class="contact__impressum">
           <h2 class="contact__impressum--h2">Impressum</h2>
           <address class="contact__impressum--address">
             Tim Bittins <br />
@@ -269,14 +276,15 @@
             Website ist:
           </p>
           <p>
-            Beispielfirma<br />
-            Musterweg 10<br />
-            90210 Musterstadt
+            Tim Bittins<br />
+            Schwamendingenstrasse 115<br />
+            8051 Zürich<br />
+            Schweiz
           </p>
 
           <p>
-            Telefon: +49 (0) 123 44 55 66<br />
-            E-Mail: info@beispielfirma.de
+            Telefon: +41 77 258 72 82<br />
+            E-Mail: kontakt@timbittins.com
           </p>
           <p>
             Verantwortliche Stelle ist die nat&uuml;rliche oder juristische
@@ -576,6 +584,8 @@
           </p>
           <br /><br />
         </article>
+        </div>
+        
       </section>
     </main>
   </body>

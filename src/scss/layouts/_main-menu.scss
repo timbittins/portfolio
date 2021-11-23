@@ -2,32 +2,32 @@
   display: none;
 }
 
-.nav__container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 0;
-  z-index: 90;
-
-  @include rwd(mq-lt) {
-    @include flex($justify-content: space-between);
-    flex-wrap: wrap;
-    max-width: 2000px;
-    height: 8rem;
-    margin: 0 auto;
-    padding: 0 min(max(6rem, 10%), 12rem) 0;
-  background: darkblue url("../../../public/img/TB_bg.svg") top / cover;
-  }
-}
-
 .brand { 
-  display: none;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  & .brand__img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  & .brand__name {
+    display: none;
+  }
 
-  @include rwd(mq-lt) {
+  @include rwd(mq-t) {
+    top: 2.5rem;
+    left: 2.5rem;
+    & .brand__img {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+    
+  }
+
+  @include rwd(mq-lt) { 
     position: relative;
-    top: 0rem;
-    left: 0rem;
+    top: 0;
+    left: 0;
     @include flex;
     gap: 1.5rem;
     padding: 1rem 0;
@@ -38,8 +38,7 @@
 
     & .brand__name {
       display: block;
-      font-size: $fs-p;
-      position: relative;
+      white-space: pre;
     }
   }
 }
@@ -52,7 +51,6 @@
   height: 3.5rem;
   background: linear-gradient(to right top, #8042fe, #4f3af4);
   border-radius: 0.6rem;
-  // border: 3px solid $clr-white;
   z-index: 99;
 
   & .menu__button--line1,
@@ -68,19 +66,15 @@
   }
   & .menu__button--line2 {
     top: 1.5rem;
-    // background-color: red;
   }
   & .menu__button--line3 {
     top: 2rem;
-    // background-color: green;
-
   }
   @include rwd(mq-t) {
     top: 2.5rem;
     right: 2.5rem;
     width: 5.5rem;
     height: 5.5rem;
-    // border: 5px solid $clr-white;
     & .menu__button--line1,
     .menu__button--line2,
     .menu__button--line3 {
@@ -104,8 +98,9 @@
 }
 
 .menu__container {
-  position: fixed;
-  right: 0;
+  position: relative;
+  inset: 0;
+
   @include flex(
     $flex-direction: column,
     $justify-content: center,
@@ -113,31 +108,33 @@
   );
   width: 100vw;
   height: 100vh;
-  transform: translateX(100%);
-  @include transition($property: transform, $timing-function: ease-in-out);
-  z-index: 90;
+  overflow: hidden;
 
   @include rwd(mq-lt) {
     position: relative;
-    transform: translateX(0);
-    width: auto;
+    width: 100%;
     height: auto;
+    z-index: 90;
   }
 }
 
 .menu__bar {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   padding-top: 3rem;
   background-color: #8042fe;
+  transform: translateX(100%);
+  @include transition($property: transform, $timing-function: ease-in-out);
   z-index: 95;
   & .menu__bar--list {
     height: 100%;
     @include flex($flex-direction: column, $justify-content: space-evenly);
   }
   & .menu__bar--item {
-    width: 100%;
+    width: 100%; 
   }
   & .menu__bar--link {
     display: block;
@@ -154,9 +151,11 @@
   }
 
   @include rwd(mq-lt) {
-    @include flex;
-    width: auto;
-    height: 100%;
+    position: relative;
+    // width: 100vw;
+    @include flex($justify-content: space-between);
+    flex-wrap: wrap;
+    gap: 0 3rem;
     padding: 0;
     transform: translate(0);
     background-color: transparent;
@@ -173,6 +172,7 @@
       }
       & .menu__bar--link {
         position: relative;
+        width: 100%;
         padding: 0;
         margin: 0;
         font-family: cera;
@@ -203,10 +203,11 @@
   transform: translateX(0);
 }
 
-.menu__switch:checked + .nav__container .menu__container {
+.menu__switch:checked ~ .menu__container .menu__bar {
   transform: translateX(0);
 }
-.menu__switch:checked + .nav__container .menu__button {
+
+.menu__switch:checked + label .menu__button {
   & .menu__button--line1 {
     transform: rotate(315deg) translate(-20%, 300%);
   }

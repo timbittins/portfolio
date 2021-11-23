@@ -1,55 +1,47 @@
 .page__info--contact {
   justify-content: flex-end;
-
-  @include rwd(mq-t) {
-    padding: 0 3rem;
+  // background-color: darkgreen;
   }
-
-  @include rwd(mq-lt) {
-    justify-content: flex-start;
-    padding: 0;
-  }
-}
 
 .page__content--contact {
-//   display: none;
+  //   display: none;
   // width: 100%;
   // background-color: brown;
 }
 
 .contact__impressum {
   width: 100%;
-    padding: 5rem 0;
+  padding: 5rem 0;
   border: 0 solid $clr-white;
   border-width: 1px 0 1px 0;
 
   @include rwd(mq-lt) {
-    padding: 8.5rem 0;
-    border: none;
+    padding: 10rem 0 5rem;
+    border-width: 0 0 1px 0;
   }
 }
 
 .contact__impressum--address {
-    margin-top: 0.8rem;
-    font-size: $fs-s;
-    line-height: 1.5;
-    font-style: normal;
+  margin-top: 0.8rem;
+  font-size: $fs-s;
+  line-height: 1.5;
+  font-style: normal;
 
-    @include rwd(mq-t) {
-      font-size: $fs-p;
-      font-family: $ff-h;
-    }
+  @include rwd(mq-t) {
+    font-size: $fs-p;
+    font-family: $ff-h;
+  }
 
-    @include rwd(mq-lt) {
-      font-family: $ff-p;
-    }
+  @include rwd(mq-lt) {
+    font-family: $ff-p;
+  }
 }
 
 .contact_privacy {
-    // display: none;
-    width: 100%;
-    margin-top: 5rem;
-    height: auto;
+  // display: none;
+  width: 100%;
+  margin-top: 5rem;
+  height: auto;
 
   & p,
   a,
@@ -63,6 +55,8 @@
   }
 
   @include rwd(mq-lt) {
-    width: 40%
+    & a {
+      font-size: 1.2rem;
+    }
   }
 }
