@@ -1,6 +1,6 @@
 .page__info--frontpage {
   @include rwd(mq-lt) {
-    padding-top: 8rem;
+    // padding-top: 8rem;
   }
 }
 
@@ -12,9 +12,12 @@
     @include rwd(mq-lt) {
         & img {
         width: 30rem;
-        margin-top: 5rem;
         }
     }
+}
+
+.frontpage__h1 {
+  font-size: $fs-display;
 }
 
  .page__info--name {

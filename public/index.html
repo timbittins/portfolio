@@ -9,9 +9,8 @@
   </head>
   <body>
     <header>
-      
       <input class="menu__switch" id="menuSwitch" type="checkbox" />
-      
+
       <label for="menuSwitch">
         <div type="button" class="menu__button">
           <div class="menu__button--line1"></div>
@@ -23,17 +22,18 @@
       <div class="menu__container">
         <nav class="menu__bar">
           <a href="index.html">
-             <section class="brand">
-               <img
-               class="brand__img"
-               src="./img/TB_203_white.svg"
-               alt="Tim Bittins Logo"
-               />
-               <p class="brand__name menu__link--active">Tim Bittins
-                 <span class="menu__bar--line"></span>
-                </p>
-             </section>
-           </a>
+            <section class="brand">
+              <img
+                class="brand__img"
+                src="./img/TB_203_white.svg"
+                alt="Tim Bittins Logo"
+              />
+              <p class="brand__name menu__link--active">
+                Tim Bittins
+                <span class="menu__bar--line"></span>
+              </p>
+            </section>
+          </a>
 
           <ul class="menu__bar--list" role="list">
             <li class="menu__bar--item">
@@ -63,24 +63,27 @@
           </ul>
         </nav>
       </div>
-
     </header>
 
     <main>
       <section class="page__info page__info--frontpage">
-        <p class="page__info--name">Tim Bittins</p>
-        <h1 class="page__info--h1">Moderne Webseiten mit Stil</h1>
-        <p class="page__info--p">Design und Entwicklung mit Leidenschaft.</p>
-        <button
-          type="button"
-          class="button__regular"
-          onclick="document.location='./pages/portfolio.html'"
-        >
-          Portfolio
-        </button>
+        <div class="keep__info">
+          <p class="small">Tim Bittins</p>
+          <h1 class="page__info--h1 display">
+            Moderne Webseiten mit Stil
+          </h1>
+          <h3>Design und Entwicklung mit Leidenschaft.</h3>
+          <button
+            type="button"
+            class="button__regular"
+            onclick="document.location='./pages/portfolio.html'"
+          >
+            Portfolio
+          </button>
+        </div>
       </section>
 
-      <section class="page__spacer"></section>
+      <!-- <section class="page__spacer"></section> -->
 
       <section class="page__content page__content--frontpage">
         <article>
