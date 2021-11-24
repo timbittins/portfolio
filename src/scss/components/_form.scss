@@ -2,7 +2,7 @@
 .form__container {
     position: relative;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
     @include flex($justify-content: flex-start);
 
     @include rwd(mq-t) {
@@ -31,7 +31,7 @@
     position: relative;
     @include flex($flex-direction: column, $align-items: flex-start);
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     @include rwd(mq-lt) {
         margin-bottom: 0;
@@ -40,6 +40,10 @@
 
 .form__label {
     margin-bottom: .25rem;
+    font-family: $ff-h;
+    & .form__label--info {
+        font-family: $ff-p;
+    }
 }
 
 .form__input,
@@ -75,7 +79,7 @@
 }
 
 .form__checkbox {
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
     accent-color: $clr-contrast;
 
     @include rwd(mq-t) {

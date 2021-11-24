@@ -54,7 +54,8 @@ main {
   @include flex($flex-direction: column, $align-items: flex-start);
   width: 100%;
   min-height: 100vh;
-  // padding: 1rem 0 0;
+  padding: 2.3rem 0 0;
+  // background-color: darkgreen;
   .page__info--h1 {
     margin-top: 0.8rem;
   }
@@ -65,7 +66,6 @@ main {
     margin-top: 4rem;
   }
 
- 
   .keep__info {
     @include rwd(mq-lt) {
       position: fixed;
@@ -92,7 +92,13 @@ main {
   @include flex($flex-direction: column);
   width: 100%;
   min-height: 100vh;
-  & .content__section {
+  // background-color: darkred;
+  & .content__article:not(:first-child) {
+    // background-color: darkslategrey;
+    width: 100%;
+    margin-top: 5rem;
+  }
+  & .content__section:not(:first-child) {
     margin-top: 3rem;
   }
 

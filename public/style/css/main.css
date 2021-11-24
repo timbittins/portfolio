@@ -60,6 +60,7 @@ select {
 :root {
   --clr-prime: #06396d;
   --clr-second: #4f3af4;
+  --clr-third: hsla(247, 90%, 72%, 0.404);
   --clr-contrast: #8042fe;
   --clr-text: #fff;
   --clr-white: #fff;
@@ -167,11 +168,17 @@ a:visited {
   font-size: var(--fs-s);
 }
 
+.hr__seperator {
+  width: 100%;
+  height: 0.25rem;
+  margin-top: 5rem;
+  background-color: var(--clr-white);
+}
+
 .button__regular,
 .button__submit {
   margin: 3rem auto 0;
   padding: 1rem 2rem;
-  font-family: var(--ff-h);
   font-size: var(--fs-p);
   color: var(--clr-white);
   background-color: var(--clr-contrast);
@@ -212,11 +219,89 @@ a:visited {
   }
 }
 
+[data-tooltip] {
+  cursor: pointer;
+  position: relative;
+}
+
+[data-tooltip]::after {
+  background-color: var(--clr-white);
+  color: var(--clr-dark);
+  font-size: var(--fs-s);
+  padding: 0.6rem 1.2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.5rem;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  content: attr(data-tooltip);
+  transform: translate(-50%, 110%) scale(0);
+  transform-origin: top;
+  transition: 0.14s;
+  box-shadow: 0 0.3rem 0.9rem 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+[data-tooltip]:hover:after {
+  display: block;
+  transform: translate(-50%, 120%) scale(1);
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+}
+@media (min-width: 43.75em) {
+  .socialmedia {
+    gap: 3rem 4rem;
+  }
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .socialmedia {
+    justify-content: flex-start;
+  }
+}
+
+.socialmedia__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.socialmedia__link .socialmedia__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+@media (min-width: 43.75em) {
+  .socialmedia__link .socialmedia__icon {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .socialmedia__link .socialmedia__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .socialmedia__link p {
+    display: none;
+  }
+}
+
 /* CONTACT FORM */
 .form__container {
   position: relative;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -255,7 +340,7 @@ a:visited {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 56.25em) and (orientation: landscape) {
   .form__section {
@@ -265,6 +350,10 @@ a:visited {
 
 .form__label {
   margin-bottom: 0.25rem;
+  font-family: var(--ff-h);
+}
+.form__label .form__label--info {
+  font-family: var(--ff-p);
 }
 
 .form__input,
@@ -304,7 +393,7 @@ a:visited {
 }
 
 .form__checkbox {
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
   accent-color: var(--clr-contrast);
 }
 @media (min-width: 43.75em) {
@@ -384,6 +473,7 @@ main {
   align-items: flex-start;
   width: 100%;
   min-height: 100vh;
+  padding: 2.3rem 0 0;
 }
 .page__info .page__info--h1 {
   margin-top: 0.8rem;
@@ -422,7 +512,11 @@ main {
   width: 100%;
   min-height: 100vh;
 }
-.page__content .content__section {
+.page__content .content__article:not(:first-child) {
+  width: 100%;
+  margin-top: 5rem;
+}
+.page__content .content__section:not(:first-child) {
   margin-top: 3rem;
 }
 @media (min-width: 56.25em) and (orientation: landscape) {
@@ -710,20 +804,9 @@ main {
   font-size: var(--fs-h3);
 }
 
-.page__info--contact {
-  justify-content: flex-end;
-}
-
-.contact__impressum {
-  width: 100%;
-  padding: 5rem 0;
-  border: 0 solid var(--clr-white);
-  border-width: 1px 0 1px 0;
-}
 @media (min-width: 56.25em) and (orientation: landscape) {
-  .contact__impressum {
-    padding: 18rem 0 5rem;
-    border-width: 0 0 1px 0;
+  .page__content--contact {
+    padding-left: 2rem;
   }
 }
 
@@ -733,33 +816,23 @@ main {
   line-height: 1.5;
   font-style: normal;
 }
-@media (min-width: 43.75em) {
-  .contact__impressum--address {
-    font-family: var(--ff-h);
-  }
-}
 @media (min-width: 56.25em) and (orientation: landscape) {
   .contact__impressum--address {
     font-family: var(--ff-p);
   }
 }
 
-.contact_privacy {
-  width: 100%;
-  margin-top: 5rem;
-  height: auto;
-}
-.contact_privacy p,
-.contact_privacy a,
-.contact_privacy h4 {
+.content__article--privacy p,
+.content__article--privacy a,
+.content__article--privacy h4 {
   margin-top: 1rem;
   font-size: var(--fs-s);
 }
-.contact_privacy a {
+.content__article--privacy a {
   font-size: 0.8rem;
 }
 @media (min-width: 56.25em) and (orientation: landscape) {
-  .contact_privacy a {
+  .content__article--privacy a {
     font-size: 1.2rem;
   }
 }

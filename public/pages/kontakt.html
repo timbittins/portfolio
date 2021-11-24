@@ -65,9 +65,9 @@
       </div>
 
     </header>
-    
 
     <main>
+      
       <section class="page__info page__info--contact">
         <div class="keep__info">
         <h1>Kontakt</h1>
@@ -75,7 +75,7 @@
         <article class="form__container">
           <form class="form__form" action="..db/contact.php" method="post">
             <div class="form__section">
-              <label class="form__label" for="name">Name <small>(erforderlich)</small></label>
+              <label class="form__label" for="name">Name <span class="form__label--info"><small>(erforderlich)</small></span> </label>
               <input
                 class="form__input"
                 type="text"
@@ -86,7 +86,7 @@
             </div>
 
             <div class="form__section">
-              <label class="form__label" for="email">Email <small>(erforderlich)</small></label>
+              <label class="form__label" for="email">Email <span class="form__label--info"><small>(erforderlich)</small></span> </label>
               <input
                 class="form__input"
                 type="text"
@@ -97,7 +97,7 @@
             </div>
 
             <div class="form__section">
-              <label class="form__label" for="message">Nachricht <small>(erforderlich)</small></label>
+              <label class="form__label" for="message">Nachricht  <span class="form__label--info"><small>(erforderlich)</small></span> </label>
               <textarea
                 class="form__textarea"
                 name="message"
@@ -124,26 +124,57 @@
             </div>
           </form>
         </article>
-        </div>
-       
+        </div> 
       </section>
 
-      <!-- <section class="page__spacer"></section> -->
-
+      
       <section class="page__content page__content--contact">
-        <div class="keep__content">
-<article class="contact__impressum">
-          <h2 class="contact__impressum--h2">Impressum</h2>
-          <address class="contact__impressum--address">
-            Tim Bittins <br />
-            Landsberger Allee 81 <br />
-            10407 Berlin <br />
-            + 49 176 457 454 55 <br />
-            design@timbittins.com
-          </address>
+        
+        <hr class="hr__seperator">
+        
+        <article class="content__article">
+          <section class="content__section socialmedia">
+            <a class="socialmedia__link" data-tooltip="LinkedIn" href="https://www.linkedin.com/in/tim-bittins-566a69206/" target="_blank">
+              <img class="socialmedia__icon" src="../img/TB_Portfolio_SM_linkedin_101.svg" alt="LinkedIn Logo">
+              <p class="small">LindedIn</p>
+            </a>
+            
+            <a class="socialmedia__link" data-tooltip="Xing" href="https://www.xing.com/profile/Tim_Bittins/cv" target="_blank">
+              <img class="socialmedia__icon" src="../img/TB_Portfolio_SM_xing_101.svg" alt="LinkedIn Logo">
+              <p class="small">Xing</p>
+            </a>
+            
+            <a class="socialmedia__link" data-tooltip="Twitter" href="https://twitter.com/timbittins" target="_blank">
+              <img class="socialmedia__icon" src="../img/TB_Portfolio_SM_twitter_101.svg" alt="LinkedIn Logo">
+              <p class="small">Twitter</p>
+            </a>
+            
+            <a class="socialmedia__link" data-tooltip="GitHub" href="https://github.com/timbittins" target="_blank">
+              <img class="socialmedia__icon" src="../img/TB_Portfolio_SM_github_101.svg" alt="LinkedIn Logo">
+              <p class="small">GitHub</p>
+            </a>
+            
+          </section>
         </article>
 
-        <article class="contact_privacy">
+        <hr class="hr__seperator">
+      
+        <article class="content__article">
+            <section class="content__section">
+              <h2>Impressum</h2>
+              <address class="contact__impressum--address">
+                Tim Bittins <br />
+                Landsberger Allee 81 <br />
+                10407 Berlin <br />
+                + 49 176 457 454 55 <br />
+                design@timbittins.com
+              </address>
+            </section>
+        </article>
+
+        <hr class="hr__seperator">
+
+        <article class="content__article content__article--privacy">
           <h2>Datenschutz</h2>
           <h4>1. Datenschutz auf einen Blick</h4>
           <h4>Allgemeine Hinweise</h4>
