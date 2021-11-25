@@ -62,10 +62,6 @@
     @include rwd(mq-t) {
         margin-bottom: 2.5rem;
     }
-    
-    @include rwd(mq-lt) {
-        margin-bottom: 1.5rem;
-    }
 }
 
 .form__textarea {
@@ -91,7 +87,7 @@
     @include rwd(mq-lt) {
         width: 1rem;
         height: 1rem;
-        margin: 1.5rem 1rem 1.5rem 0;
+        margin: 2.5rem 1rem 0rem 0;
         cursor: pointer;
     }
 }

@@ -1,9 +1,3 @@
-.page__info--contact {
-    // @include flex($flex-direction: column, $justify-content: flex-start, $align-items: flex-start);
-  // background-color: darkgreen;
-  
-  }
-
 .page__content--contact {
   @include rwd(mq-lt) {
     padding-left: 2rem;
@@ -11,28 +5,11 @@
 } 
 
 
-.contact__impressum {
-  // width: 100%;
-  // padding: 5rem 0;
-  // border: 0 solid $clr-white;
-  // border-width: 1px 0 1px 0;
-
-  @include rwd(mq-lt) {
-    // padding: 18rem 0 5rem;
-    // border-width: 0 0 1px 0;
-  }
-}
-
 .contact__impressum--address {
   margin-top: 0.8rem;
   font-size: $fs-p;
   line-height: 1.5;
   font-style: normal;
-
-  @include rwd(mq-t) {
-    // font-size: $fs-p;
-    // font-family: $ff-h;
-  }
 
   @include rwd(mq-lt) {
     font-family: $ff-p;
@@ -40,10 +17,6 @@
 }
 
 .content__article--privacy {
-  // display: none;
-  // width: 100%;
-  // margin-top: 5rem;
-  // height: auto;
 
   & p,
   a,

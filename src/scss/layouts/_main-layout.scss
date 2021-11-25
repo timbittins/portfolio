@@ -1,10 +1,9 @@
 body {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
   background: darkblue url("../../../public/img/TB_bg.svg") no-repeat fixed
     center / cover;
-    z-index: 1;
+  z-index: 1;
 }
 
 header {
@@ -39,12 +38,12 @@ main {
 
   @include rwd(mq-lt) {
     display: grid;
-  grid-template-columns: 30% 65%;
-  gap: 5%;
+    grid-template-columns: 30% 65%;
+    gap: 5%;
     max-width: 2000px;
-    // margin-top: 8rem;
+    margin-top: 8rem;
+    min-height: 100%;
     padding: 0 min(max(6rem, 10%), 12rem);
-    // overflow-y: hidden;
     z-index: 1;
     // background-color: pink;
   }
@@ -69,17 +68,16 @@ main {
   .keep__info {
     @include rwd(mq-lt) {
       position: fixed;
-      widtH: 25%;
+      width: 25%;
       max-width: 500px;
     }
   }
 
   @include rwd(mq-lt) {
     columns: 0/1;
-    // position: fixed;
     width: auto;
-    // max-width: 800px;
-    height: 100vh;
+    height: calc(100vh - 8rem);
+    min-height: auto;
     // background-color: orange;
     z-index: 1;
     .page__info--name {
@@ -91,26 +89,25 @@ main {
 .page__content {
   @include flex($flex-direction: column);
   width: 100%;
-  min-height: 100vh;
-  // background-color: darkred;
-  & .content__article:not(:first-child) {
-    // background-color: darkslategrey;
+  & .content__article {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
-  & .content__section:not(:first-child) {
+  & .content__section {
     margin-top: 3rem;
   }
 
-
   @include rwd(mq-lt) {
-    // position: absolute;
-    // right: 0;
     @include flex($flex-direction: column);
     width: auto;
     columns: 1/2;
-    margin-top: 8rem;
     // background-color: green;
     z-index: 2;
+    & .content__article:not(:first-child) {
+      margin-top: 7rem;
+    }
+    & .content__section:not(:first-child) {
+      margin-top: 3rem;
+    }
   }
 }
