@@ -1,26 +1,26 @@
 .page__info--frontpage {
+  & .page__info--name {
+  font-family: $ff-h;
+  font-size: $fs-h3;
+
   @include rwd(mq-lt) {
-    // padding-top: 8rem;
+    display: none;
   }
+}
 }
 
 .page__content--frontpage {
-    & img {
-      width: 20rem;
-    }
-    
-    @include rwd(mq-lt) {
-        & img {
-        width: 30rem;
-        }
-    }
-}
-
-.frontpage__h1 {
-  font-size: $fs-display;
-}
-
- .page__info--name {
-    font-family: $ff-h;
-    font-size: $fs-h3;
+  & img {
+    width: 20rem;
   }
+
+  @include rwd(mq-lt) {
+    & img {
+      width: 30rem;
+    }
+  }
+}
+
+
+
+

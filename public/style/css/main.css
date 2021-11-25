@@ -418,133 +418,6 @@ a:visited {
   }
 }
 
-body {
-  position: relative;
-  width: 100vw;
-  background: darkblue url("../../../public/img/TB_bg.svg") no-repeat fixed center/cover;
-  z-index: 1;
-}
-
-header {
-  position: absolute;
-}
-@media (min-width: 56.25em) and (orientation: landscape) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    max-width: 2000px;
-    height: 8rem;
-    padding: 0 min(max(6rem, 10%), 12rem);
-    background: darkblue url("../../../public/img/TB_bg.svg") top/cover;
-    transform: translateX(-50%);
-    z-index: 90;
-  }
-}
-
-main {
-  position: relative;
-  width: 100%;
-  max-width: 2000px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-@media (min-width: 43.75em) {
-  main {
-    padding: 0 3rem;
-  }
-}
-@media (min-width: 56.25em) and (orientation: landscape) {
-  main {
-    display: grid;
-    grid-template-columns: 30% 65%;
-    gap: 5%;
-    max-width: 2000px;
-    margin-top: 8rem;
-    min-height: 100%;
-    padding: 0 min(max(6rem, 10%), 12rem);
-    z-index: 1;
-  }
-}
-
-.page__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  min-height: 100vh;
-  padding: 2.3rem 0 0;
-}
-.page__info .page__info--h1 {
-  margin-top: 0.8rem;
-}
-.page__info .page__info--h2 {
-  margin-top: 1rem;
-}
-.page__info .page__info--h3 {
-  margin-top: 4rem;
-}
-@media (min-width: 56.25em) and (orientation: landscape) {
-  .page__info .keep__info {
-    position: fixed;
-    width: 25%;
-    max-width: 500px;
-  }
-}
-@media (min-width: 56.25em) and (orientation: landscape) {
-  .page__info {
-    -moz-columns: 0/1;
-         columns: 0/1;
-    width: auto;
-    height: calc(100vh - 8rem);
-    min-height: auto;
-    z-index: 1;
-  }
-  .page__info .page__info--name {
-    display: none;
-  }
-}
-
-.page__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.page__content .content__article {
-  width: 100%;
-  margin-top: 7rem;
-}
-.page__content .content__section {
-  margin-top: 3rem;
-}
-@media (min-width: 56.25em) and (orientation: landscape) {
-  .page__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    -moz-columns: 1/2;
-         columns: 1/2;
-    z-index: 2;
-  }
-  .page__content .content__article:not(:first-child) {
-    margin-top: 7rem;
-  }
-  .page__content .content__section:not(:first-child) {
-    margin-top: 3rem;
-  }
-}
-
 .menu__switch {
   display: none;
 }
@@ -798,6 +671,153 @@ main {
   transform: translateX(0);
 }
 
+body {
+  position: relative;
+  width: 100vw;
+  background: darkblue url("../../../public/img/TB_bg.svg") no-repeat fixed center/cover;
+  z-index: 1;
+}
+
+header {
+  position: absolute;
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 2000px;
+    height: 8rem;
+    padding: 0 min(max(6rem, 10%), 12rem);
+    background: darkblue url("../../../public/img/TB_bg.svg") top/cover;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.116);
+    transform: translateX(-50%);
+    z-index: 90;
+  }
+}
+
+main {
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (min-width: 43.75em) {
+  main {
+    padding: 0 3rem;
+  }
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  main {
+    display: grid;
+    grid-template-columns: 30% 65%;
+    gap: 5%;
+    max-width: 2000px;
+    margin-top: 8rem;
+    min-height: 100%;
+    padding: 0 min(max(6rem, 10%), 12rem);
+    z-index: 1;
+  }
+}
+
+.page__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2.3rem 0 0;
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .page__info {
+    width: auto;
+    height: calc(100vh - 8rem);
+    min-height: auto;
+    z-index: 1;
+  }
+  .page__info .keep__info {
+    position: fixed;
+    width: 25%;
+    max-width: 500px;
+  }
+}
+
+.page__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .page__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    min-height: auto;
+    -moz-columns: 1/2;
+         columns: 1/2;
+    z-index: 2;
+  }
+}
+
+.page__info--h1 {
+  margin-top: 0.8rem;
+}
+
+.page__info--h2 {
+  margin-top: 1rem;
+}
+
+.page__info--h3 {
+  margin-top: 4rem;
+}
+
+.content__article {
+  width: 100%;
+  margin-top: 7rem;
+}
+
+.content__section {
+  margin-top: 3rem;
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .content__section .content__article:not(:first-child) {
+    margin-top: 7rem;
+  }
+}
+
+.content__article {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(5, 44, 84, 0.315);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17.8px);
+  -webkit-backdrop-filter: blur(17.8px);
+  border: 1px solid rgba(6, 57, 109, 0.18);
+}
+
+.page__info--frontpage .page__info--name {
+  font-family: var(--ff-h);
+  font-size: var(--fs-h3);
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .page__info--frontpage .page__info--name {
+    display: none;
+  }
+}
+
 .page__content--frontpage img {
   width: 20rem;
 }
@@ -805,15 +825,6 @@ main {
   .page__content--frontpage img {
     width: 30rem;
   }
-}
-
-.frontpage__h1 {
-  font-size: var(--fs-display);
-}
-
-.page__info--name {
-  font-family: var(--ff-h);
-  font-size: var(--fs-h3);
 }
 
 @media (min-width: 56.25em) and (orientation: landscape) {
@@ -847,16 +858,4 @@ main {
   .content__article--privacy a {
     font-size: 1.2rem;
   }
-}
-
-.keep__info {
-  width: 100%;
-  max-width: 50rem;
-  z-index: 1;
-}
-
-.keep__content {
-  width: 100%;
-  max-width: 50rem;
-  z-index: 2;
 }/*# sourceMappingURL=main.css.map */
