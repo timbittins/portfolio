@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="../style/css/main.css" />
   </head>
   <body>
-
     <header>
-      
       <input class="menu__switch" id="menuSwitch" type="checkbox" />
-      
+
       <label for="menuSwitch">
         <div type="button" class="menu__button">
           <div class="menu__button--line1"></div>
@@ -24,17 +22,18 @@
       <div class="menu__container">
         <nav class="menu__bar">
           <a href="../index.html">
-             <section class="brand">
-               <img
-               class="brand__img"
-               src="../img/TB_203_white.svg"
-               alt="Tim Bittins Logo"
-               />
-               <p class="brand__name">Tim Bittins
-                 <span class="menu__bar--line"></span>
-                </p>
-             </section>
-           </a>
+            <section class="brand">
+              <img
+                class="brand__img"
+                src="../img/TB_203_white.svg"
+                alt="Tim Bittins Logo"
+              />
+              <p class="brand__name">
+                Tim Bittins
+                <span class="menu__bar--line"></span>
+              </p>
+            </section>
+          </a>
 
           <ul class="menu__bar--list" role="list">
             <li class="menu__bar--item">
@@ -44,7 +43,9 @@
               </a>
             </li>
             <li class="menu__bar--item">
-              <a href="./portfolio.html" class="menu__bar--link menu__link--active"
+              <a
+                href="./portfolio.html"
+                class="menu__bar--link menu__link--active"
                 >Portfolio
                 <div class="menu__bar--line"></div>
               </a>
@@ -64,18 +65,83 @@
           </ul>
         </nav>
       </div>
-
     </header>
 
     <main>
-      <section class="page__info frontpage">
+      <section class="page__info" id="pageInfo">
         <h1>Portfolio</h1>
+
+        <button
+          type="button"
+          class="button__regular"
+          onclick="document.location= '#sliderDaf'"
+        >
+          Dance Art <small>festival</small>
+        </button>
+
+        <button
+          type="button"
+          class="button__regular"
+          onclick="document.location= '#sliderNun'"
+        >
+          Nunocci
+        </button>
+
+        <button
+          type="button"
+          class="button__regular"
+          onclick="document.location= '#sliderSpre'"
+        >
+          Spreebohne
+        </button>
+
       </section>
 
-      <section class="page__content">
-       
-      </section>
+      <section class="page__content portfolio__content">
+        <article class="portfolio__article section-slider" id="sliderDaf">
+          <section class="portfolio__section" data-slider="slider-one">
+            <h2>Dance Art <small>festival</small></h2>
+          </section>
+          <section class="portfolio__section" data-slider="slider-two">
+            <p>DAF Text Area 1</p>
+          </section>
+          <section class="portfolio__section" data-slider="slider-three">
+            <p>DAF Text Area 2</p>
+          </section>
+          <button type="button" class="button__totop--slider"  onclick="document.location= '#pageInfo'" title="Go to top"></button>></button>
+        </article>
 
+        <article class="portfolio__article section-slider" id="sliderNun">
+          <section class="portfolio__section" data-slider="slider-one">
+            <h2>Nunocci</h2>
+          </section>
+          <section class="portfolio__section" data-slider="slider-two">
+            <p>Nunocci Text Area 1</p>
+          </section>
+          <section class="portfolio__section" data-slider="slider-three">
+            <p>Nunocci Text Area 2</p>
+          </section>
+          <button type="button" class="button__totop--slider"  onclick="document.location= '#pageInfo'" title="Go to top"></button>
+        </article>
+
+        <article class="portfolio__article section-slider" id="sliderSpre">
+          <section class="portfolio__section" data-slider="slider-one">
+            <h2>Spreebohne</h2>
+          </section>
+          <section class="portfolio__section" data-slider="slider-two">
+            <p>Spreebohne Text Area 1</p>
+          </section>
+          <section class="portfolio__section" data-slider="slider-three">
+            <p>Spreebohne Text Area 2</p>
+          </section>
+        </article>
+        </section>
+        <button type="button" class="button__totop--slider"  onclick="document.location= '#pageInfo'" title="Go to top"></button>
     </main>
+
+    <script src="../apps/slidr.js"></script>
+    <script src="../apps/nav-animation.js"></script>
+    <script src="../apps/app.js"></script>
+    <noscript>Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit Javascript.</noscript>
   </body>
 </html>

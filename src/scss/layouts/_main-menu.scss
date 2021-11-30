@@ -1,26 +1,19 @@
+
+
 .menu__switch {
   display: none;
 }
 
 .brand {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: $button-position;
+  left: $button-position;
   & .brand__img {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: $button-size;
+    height: $button-size;
   }
   & .brand__name {
     display: none;
-  }
-
-  @include rwd(mq-t) {
-    top: 2.5rem;
-    left: 2.5rem;
-    & .brand__img {
-      width: 5.5rem;
-      height: 5.5rem;
-    }
   }
 
   @include rwd(mq-lt) {
@@ -46,10 +39,10 @@
 
 .menu__button {
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 3.5rem;
-  height: 3.5rem;
+  top: $button-position;
+  right: $button-position;
+  width: $button-size;
+  height: $button-size;
   background: $clr-prime linear-gradient(to right top, #8042fe, #4f3af4);
   border-radius: 0.6rem;
   z-index: 99;
@@ -72,10 +65,6 @@
     top: 2rem;
   }
   @include rwd(mq-t) {
-    top: 2.5rem;
-    right: 2.5rem;
-    width: 5.5rem;
-    height: 5.5rem;
     & .menu__button--line1,
     .menu__button--line2,
     .menu__button--line3 {

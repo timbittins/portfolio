@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   width: 100vw;
@@ -31,10 +35,10 @@ main {
   max-width: 2000px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 2rem;
+  // padding: 0 2rem;
 
   @include rwd(mq-t) {
-    padding: 0 3rem;
+    // padding: 0 3rem;
   }
 
   @include rwd(mq-lt) {
@@ -44,7 +48,7 @@ main {
     max-width: 2000px;
     margin-top: 8rem;
     min-height: 100%;
-    padding: 0 min(max(6rem, 10%), 12rem);
+    padding-left: 0 min(max(6rem, 10%), 12rem);
     z-index: 1;
     // background-color: pink;
   }
@@ -54,8 +58,9 @@ main {
   @include flex($flex-direction: column, $align-items: flex-start);
   width: 100%;
   min-height: 100vh;
-  padding: 2.3rem 0 0;
+  padding: 2.3rem $button-position;
   // background-color: rgba(0, 102, 0, 0.493);
+  // display: none;
   @include rwd(mq-lt) {
     // columns: 0/1;
     width: auto;
@@ -74,7 +79,9 @@ main {
   @include flex($flex-direction: column);
   width: 100%;
   min-height: 100vh;
-  // background-color: rgba(185, 25, 100, 0.384);
+  scroll-behavior: smooth;
+  // overflow: hiodden;
+  // background-color: rgba(240, 243, 54, 0.836);
 
   @include rwd(mq-lt) {
     @include flex($flex-direction: column);

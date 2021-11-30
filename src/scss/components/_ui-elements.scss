@@ -1,3 +1,23 @@
+:root {
+  --button-size: 3.5rem;
+  --button-radius: 0.625rem;
+  --button-position: 1.5rem;
+
+  @include rwd(mq-t) {
+    --button-size: 5.5rem;
+    --button-position: 2.5rem;
+  }
+
+  @include rwd(mq-lt) {
+    --button-size: 4rem;
+    --button-position: 3.5rem;
+  }
+}
+
+$button-size: var(--button-size);
+$button-radius: var(--button-radius);
+$button-position: var(--button-position);
+
 .hr__seperator {
   width: 100%;
   height: 0.25rem;
@@ -13,14 +33,16 @@
 
 .button__regular,
 .button__submit {
+  width: 100%;
+  height: $button-size;
   margin: 3rem auto 0;
-  padding: 1rem 2rem;
+  // padding: 1rem 2rem;
   // font-family: $ff-h;
   font-size: $fs-p;
   color: $clr-text;
   background-color: $clr-contrast;
   border: none;
-  border-radius: 0.625rem;
+  border-radius: $button-radius;
   transition: background-color 200ms ease-in-out, border 200ms ease-in-out;
 
   @include rwd(mq-t) {
@@ -50,32 +72,47 @@
 }
 
 [data-tooltip] {
-  cursor: pointer;
-  position: relative;
+  display: none;
+
+  @include rwd(mq-lt) {
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
 }
 
 [data-tooltip]::after {
-  background-color: $clr-contrast;
-  color: $clr-text;
-  font-size: calc(var(--fs-h2) - var(--fs-p));
-  padding: 0.6rem 1.2rem;
-  height: fit-content;
-  width: fit-content;
-  border-radius: 0.5rem;
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  left: 50%;
-  content: attr(data-tooltip);
-  transform: translate(-50%, 110%) scale(0);
-  transform-origin: top;
-  transition: 200ms;
-  box-shadow: 0 0.3rem 0.9rem 0 rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(0, 0, 0, 0.05);
+  display: none;
+
+  @include rwd(mq-lt) {
+    display: block;
+    background-color: $clr-contrast;
+    color: $clr-text;
+    font-size: calc(var(--fs-h2) - var(--fs-p));
+    padding: 0.6rem 1.2rem;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 0.5rem;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 50%;
+    content: attr(data-tooltip);
+    transform: translate(-50%, 110%) scale(0);
+    transform-origin: top;
+    transition: 200ms;
+    box-shadow: 0 0.3rem 0.9rem 0 rgba(0, 0, 0, 0.2),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
+  }
 }
+
 [data-tooltip]:hover:after {
-  display: block;
-  transform: translate(-50%, 140%) scale(1);
+  display: none;
+
+  @include rwd(mq-lt) {
+    display: block;
+    transform: translate(-50%, 140%) scale(1);
+  }
 }
 
 .socialmedia {
@@ -92,15 +129,8 @@
 .socialmedia__link {
   @include flex($flex-direction: column);
   & .socialmedia__icon {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  @include rwd(mq-t) {
-    & .socialmedia__icon {
-      width: 5.5rem;
-      height: 5.5rem;
-    }
+    width: $button-size;
+    height: $button-size;
   }
 
   @include rwd(mq-lt) {
@@ -110,12 +140,30 @@
       border-radius: 1rem;
       box-shadow: 1rem 2rem 2rem 0.05rem $clr-third;
     }
-    & .socialmedia__icon {
-      width: 4rem;
-      height: 4rem;
-    }
     & p {
       display: none;
     }
+  }
+}
+
+.button__totop--slider {
+  @extend .button__regular;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8rem;
+  margin-bottom: 4.55rem;
+  transform: translateX(-50%);
+  z-index: 89;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1.2rem;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 0.6rem solid transparent;
+    border-right: 0.6rem solid transparent;
+    border-bottom: 1.2rem solid $clr-white;
   }
 }

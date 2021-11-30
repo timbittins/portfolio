@@ -1,0 +1,24 @@
+.portfolio__content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    & .portfolio__article {
+        position: relative;
+        @include flex($flex-direction: column);
+        width: 100%;
+        height: 100vh;
+        border: 1px solid white;
+    }
+    
+    
+
+
+}
+.portfolio__section {
+        position: relative;
+        @include flex($flex-direction: column) ;
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        // background-color: rgba(77, 77, 77, 0.74);
+    }
