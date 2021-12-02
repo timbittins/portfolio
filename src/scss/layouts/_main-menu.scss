@@ -44,7 +44,7 @@
   width: $button-size;
   height: $button-size;
   background: $clr-prime linear-gradient(to right top, #8042fe, #4f3af4);
-  border-radius: 0.6rem;
+  border-radius: $button-radius;
   z-index: 99;
 
   & .menu__button--line1,

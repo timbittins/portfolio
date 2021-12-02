@@ -60,6 +60,7 @@
     padding: 0 1rem;
     
     @include rwd(mq-t) {
+        height: 4rem;
         margin-bottom: 2.5rem;
     }
 }

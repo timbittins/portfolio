@@ -1,6 +1,6 @@
 :root {
   --button-size: 3.5rem;
-  --button-radius: 0.625rem;
+  --button-radius: .7rem;
   --button-position: 1.5rem;
 
   @include rwd(mq-t) {
@@ -31,8 +31,7 @@ $button-position: var(--button-position);
   }
 }
 
-.button__regular,
-.button__submit {
+.button__regular {
   width: 100%;
   height: $button-size;
   margin: 3rem auto 0;
@@ -46,7 +45,10 @@ $button-position: var(--button-position);
   transition: background-color 200ms ease-in-out, border 200ms ease-in-out;
 
   @include rwd(mq-t) {
+    width: auto;
     margin: 6rem auto 0;
+    padding: 0rem 3rem;
+    font-family: $ff-h;
   }
 
   @include rwd(mq-lt) {
@@ -60,16 +62,50 @@ $button-position: var(--button-position);
 }
 
 .button__submit {
+  @extend .button__regular;
   margin: 0 auto 1rem;
 
   @include rwd(mq-t) {
-    margin: 1rem auto;
+    margin: 1rem 0;
   }
 
   @include rwd(mq-lt) {
     margin: 2rem 0 4rem;
   }
 }
+
+.button__regular--setwidth {
+  @include rwd(mq-t) {
+    width: 18rem;
+  }
+}
+
+
+
+.button__totop--slider {
+  @extend .button__regular;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8rem;
+  margin-bottom: 4.8rem;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  z-index: 89;
+  // display: none;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1.2rem;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-left: 0.6rem solid transparent;
+    border-right: 0.6rem solid transparent;
+    border-bottom: 1.2rem solid $clr-white;
+  }
+}
+
 
 [data-tooltip] {
   display: none;
@@ -146,24 +182,3 @@ $button-position: var(--button-position);
   }
 }
 
-.button__totop--slider {
-  @extend .button__regular;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 8rem;
-  margin-bottom: 4.55rem;
-  transform: translateX(-50%);
-  z-index: 89;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 1.2rem;
-    left: 45%;
-    width: 0;
-    height: 0;
-    border-left: 0.6rem solid transparent;
-    border-right: 0.6rem solid transparent;
-    border-bottom: 1.2rem solid $clr-white;
-  }
-}

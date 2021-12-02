@@ -69,31 +69,34 @@
 
     <main>
       <section class="page__info" id="pageInfo">
-        <h1>Portfolio</h1>
+        <div class="keep__info">
+          <h1>Portfolio</h1>
+  
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#sliderDaf'"
+          >
+            Dance Art <small>festival</small>
+          </button>
+  
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#sliderNun'"
+          >
+            Nunocci
+          </button>
+  
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#sliderSpre'"
+          >
+            Spreebohne
+          </button>
 
-        <button
-          type="button"
-          class="button__regular"
-          onclick="document.location= '#sliderDaf'"
-        >
-          Dance Art <small>festival</small>
-        </button>
-
-        <button
-          type="button"
-          class="button__regular"
-          onclick="document.location= '#sliderNun'"
-        >
-          Nunocci
-        </button>
-
-        <button
-          type="button"
-          class="button__regular"
-          onclick="document.location= '#sliderSpre'"
-        >
-          Spreebohne
-        </button>
+        </div>
 
       </section>
 
@@ -108,7 +111,6 @@
           <section class="portfolio__section" data-slider="slider-three">
             <p>DAF Text Area 2</p>
           </section>
-          <button type="button" class="button__totop--slider"  onclick="document.location= '#pageInfo'" title="Go to top"></button>></button>
         </article>
 
         <article class="portfolio__article section-slider" id="sliderNun">
@@ -121,7 +123,6 @@
           <section class="portfolio__section" data-slider="slider-three">
             <p>Nunocci Text Area 2</p>
           </section>
-          <button type="button" class="button__totop--slider"  onclick="document.location= '#pageInfo'" title="Go to top"></button>
         </article>
 
         <article class="portfolio__article section-slider" id="sliderSpre">
@@ -136,7 +137,6 @@
           </section>
         </article>
         </section>
-        <button type="button" class="button__totop--slider"  onclick="document.location= '#pageInfo'" title="Go to top"></button>
     </main>
 
     <script src="../apps/slidr.js"></script>
