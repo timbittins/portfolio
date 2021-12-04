@@ -85,7 +85,7 @@ main {
   min-height: 100vh;
   scroll-behavior: smooth;
   // overflow: hiodden;
-  background-color: rgba(240, 243, 54, 0.836);
+  // background-color: rgba(240, 243, 54, 0.836);
 
   @include rwd(mq-lt) {
     @include flex($flex-direction: column);

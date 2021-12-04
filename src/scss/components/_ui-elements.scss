@@ -32,9 +32,10 @@ $button-position: var(--button-position);
 }
 
 .button__regular {
+  display: block;
   width: 100%;
   height: $button-size;
-  margin: 3rem auto 0;
+  margin: 0.5rem auto 0;
   // padding: 1rem 2rem;
   // font-family: $ff-h;
   font-size: $fs-p;

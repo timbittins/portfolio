@@ -201,9 +201,10 @@ a:visited {
 }
 
 .button__regular, .button__totop--slider, .button__submit {
+  display: block;
   width: 100%;
   height: var(--button-size);
-  margin: 3rem auto 0;
+  margin: 0.5rem auto 0;
   font-size: var(--fs-p);
   color: var(--clr-white);
   background-color: var(--clr-contrast);
@@ -797,7 +798,6 @@ main {
   width: 100%;
   min-height: 100vh;
   scroll-behavior: smooth;
-  background-color: rgba(240, 243, 54, 0.836);
 }
 @media (min-width: 56.25em) and (orientation: landscape) {
   .page__content {
@@ -840,13 +840,12 @@ main {
 }
 
 .content__article {
-  padding: 2rem;
   border-radius: 1rem;
   background: rgba(5, 44, 84, 0.315);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(17.8px);
   -webkit-backdrop-filter: blur(17.8px);
-  border: 1px solid rgba(6, 57, 109, 0.18);
+  border: 1px solid #ff0303;
 }
 
 aside .slidr-control {
@@ -906,6 +905,32 @@ aside .slidr-breadcrumbs li.active {
   border-color: var(--clr-white) !important;
 }
 
+.slider__content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slider__content .slider__article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.slider__section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
 .page__info--frontpage .page__info--name {
   font-family: var(--ff-h);
   font-size: var(--fs-h3);
@@ -923,33 +948,6 @@ aside .slidr-breadcrumbs li.active {
   .page__content--frontpage img {
     width: 30rem;
   }
-}
-
-.portfolio__content {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-.portfolio__content .portfolio__article {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  border: 1px solid white;
-}
-
-.portfolio__section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
 }
 
 @media (min-width: 56.25em) and (orientation: landscape) {

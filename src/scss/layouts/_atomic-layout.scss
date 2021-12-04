@@ -8,10 +8,6 @@
   margin-top: 4rem;
 }
 
-
-
-
-
 .content__article {
   width: 100%;
   margin-top: 7rem;
@@ -24,16 +20,14 @@
     .content__article:not(:first-child) {
       margin-top: 7rem;
     }
-
   }
 }
 
 .content__article {
-  padding: 2rem;
   border-radius: 1rem;
   background: rgba(5, 44, 84, 0.315);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(17.8px);
   -webkit-backdrop-filter: blur(17.8px);
-  border: 1px solid rgba(6, 57, 109, 0.18);
+  border: 1px solid rgb(255, 3, 3);
 }

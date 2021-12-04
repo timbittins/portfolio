@@ -9,9 +9,8 @@
   </head>
   <body>
     <header>
-      
       <input class="menu__switch" id="menuSwitch" type="checkbox" />
-      
+
       <label for="menuSwitch">
         <div type="button" class="menu__button">
           <div class="menu__button--line1"></div>
@@ -23,21 +22,24 @@
       <div class="menu__container">
         <nav class="menu__bar">
           <a href="../index.html">
-             <section class="brand">
-               <img
-               class="brand__img"
-               src="../img/TB_203_white.svg"
-               alt="Tim Bittins Logo"
-               />
-               <p class="brand__name">Tim Bittins
-                 <span class="menu__bar--line"></span>
-                </p>
-             </section>
-           </a>
+            <section class="brand">
+              <img
+                class="brand__img"
+                src="../img/TB_203_white.svg"
+                alt="Tim Bittins Logo"
+              />
+              <p class="brand__name">
+                Tim Bittins
+                <span class="menu__bar--line"></span>
+              </p>
+            </section>
+          </a>
 
           <ul class="menu__bar--list" role="list">
             <li class="menu__bar--item">
-              <a href="./service.html" class="menu__bar--link menu__link--active"
+              <a
+                href="./service.html"
+                class="menu__bar--link menu__link--active"
                 >Service
                 <div class="menu__bar--line"></div>
               </a>
@@ -63,70 +65,90 @@
           </ul>
         </nav>
       </div>
-
     </header>
 
     <main>
-      <section class="page__info ">
+      <section class="page__info" id="pageInfo">
         <div class="keep__info">
           <h1>Service</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsum voluptatem illo, eligendi eos ex laborum.</p>
-          
+          <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+            facilis.
+          </h4>
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#Web-Design'"
+          >
+            Web-Design
+          </button>
+
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#Web-Entwicklung'"
+          >
+            Web-Entwicklung
+          </button>
+
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#e-Commerce'"
+          >
+            e-Commerce
+          </button>
         </div>
       </section>
 
-      <section class="page__content ">
-      
-        <article class="content__article">
-          
-          <h2>Webseiten</h2>
-          
-          <section class="content__section">
-            <h3>Web-Design</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
+      <section class="page__content slider__content">
+        <article class="slider__article section-slider" id="Web-Design">
+          <section class="slider__section" data-slider="slider-one">
+            <h2>Web-Design</h2>
           </section>
-          
-          <section class="content__section">
-            <h3>Web-Entwicklung</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
+          <section class="slider__section" data-slider="slider-two">
+            <p>Web-Design Text Area 1</p>
           </section>
-          
-          <section class="content__section">
-            <h3>e-Commerce</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
+          <section class="slider__section" data-slider="slider-three">
+            <p>Web-Design Text Area 2</p>
           </section>
-          
-        </article>
-        
-        <article class="content__article">
-          
-          <h2>Webseiten</h2>
-          
-          <section class="content__section">
-            <h3>Web-Design</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
-          </section>
-          
-          <section class="content__section">
-            <h3>Web-Entwicklung</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
-          </section>
-          
-          <section class="content__section">
-            <h3>e-Commerce</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
-          </section>
-          
         </article>
 
+        <article class="slider__article section-slider" id="Web-Entwicklung">
+          <section class="slider__section" data-slider="slider-one">
+            <h2>Web-Entwicklung</h2>
+          </section>
+          <section class="slider__section" data-slider="slider-two">
+            <p>Web-Entwicklung Text Area 1</p>
+          </section>
+          <!-- <section class="slider__section" data-slider="slider-three">
+            <p>Web-Entwicklung Text Area 2</p>
+          </section> -->
+        </article>
 
+        <article class="slider__article section-slider" id="e-Commerce">
+          <section class="slider__section" data-slider="slider-one">
+            <h2>e-Commerce</h2>
+          </section>
+          <section class="slider__section" data-slider="slider-two">
+            <p>e-Commerce Text Area 1</p>
+          </section>
+          <section class="slider__section" data-slider="slider-three">
+            <p>e-Commerce Text Area 2</p>
+          </section>
+          <section class="slider__section" data-slider="slider-four">
+            <p>e-Commerce Text Area 2</p>
+          </section>
+        </article>
       </section>
     </main>
+
+    <script src="../apps/slidr.js"></script>
+    <script src="../apps/nav-animation.js"></script>
+    <script src="../apps/app.js"></script>
+    <noscript
+      >Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit
+      Javascript.</noscript
+    >
   </body>
 </html>

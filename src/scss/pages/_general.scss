@@ -1,20 +1,17 @@
-.portfolio__content {
+.slider__content {
     position: relative;
     width: 100%;
     overflow: hidden;
-    & .portfolio__article {
+    & .slider__article {
         position: relative;
         @include flex($flex-direction: column);
         width: 100%;
         height: 100vh;
-        border: 1px solid white;
+        // border: 1px solid white;
     }
-    
-    
-
-
 }
-.portfolio__section {
+
+.slider__section {
         position: relative;
         @include flex($flex-direction: column) ;
         width: 100%;

@@ -9,9 +9,8 @@
   </head>
   <body>
     <header>
-      
       <input class="menu__switch" id="menuSwitch" type="checkbox" />
-      
+
       <label for="menuSwitch">
         <div type="button" class="menu__button">
           <div class="menu__button--line1"></div>
@@ -23,17 +22,18 @@
       <div class="menu__container">
         <nav class="menu__bar">
           <a href="../index.html">
-             <section class="brand">
-               <img
-               class="brand__img"
-               src="../img/TB_203_white.svg"
-               alt="Tim Bittins Logo"
-               />
-               <p class="brand__name">Tim Bittins
-                 <span class="menu__bar--line"></span>
-                </p>
-             </section>
-           </a>
+            <section class="brand">
+              <img
+                class="brand__img"
+                src="../img/TB_203_white.svg"
+                alt="Tim Bittins Logo"
+              />
+              <p class="brand__name">
+                Tim Bittins
+                <span class="menu__bar--line"></span>
+              </p>
+            </section>
+          </a>
 
           <ul class="menu__bar--list" role="list">
             <li class="menu__bar--item">
@@ -49,7 +49,9 @@
               </a>
             </li>
             <li class="menu__bar--item">
-              <a href="./ueber-mich.html" class="menu__bar--link menu__link--active"
+              <a
+                href="./ueber-mich.html"
+                class="menu__bar--link menu__link--active"
                 >Über mich
                 <div class="menu__bar--line"></div>
               </a>
@@ -63,70 +65,180 @@
           </ul>
         </nav>
       </div>
-
     </header>
 
     <main>
-      <section class="page__info ">
+      <section class="page__info">
         <div class="keep__info">
           <h1>Über mich</h1>
-          <h4>Technik-Freak mit Seele und Künstler mit Herz.</h4>
-          
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#Ueber-Tim'"
+          >
+            Über Tim
+          </button>
+
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#Faehigkeiten'"
+          >
+            Fähigkeiten
+          </button>
+
+          <button
+            type="button"
+            class="button__regular button__regular--setwidth"
+            onclick="document.location= '#Technik'"
+          >
+            Technik
+          </button>
         </div>
       </section>
 
-      <section class="page__content ">
-      
-        <article class="content__article">
-          
-          <h2>Webseiten</h2>
-          
-          <section class="content__section">
-            <h3>Web-Design</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
+      <section class="page__content slider__content">
+        <article class="slider__article section-slider" id="Ueber-Tim">
+          <section class="slider__section" data-slider="slider-one">
+            <h2>Über Tim</h2>
+            <h4><em>„Technik-Freak mit Seele und Künstler mit Herz.“</em></h4>
+            <img
+              src="../img/TB_Portfolio_tim_portrait.webp"
+              alt="Ein Portrait von Tim, der freundlich in die Kamera lächelt."
+            />
           </section>
-          
-          <section class="content__section">
-            <h3>Web-Entwicklung</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
+          <section class="slider__section" data-slider="slider-two">
+            <h3>Vision</h3>
+            <p>
+              In meinem bunten Lebensweg gab es immer zwei Konstanten: kreatives
+              Arbeiten und technische Andwendungen. Seit über 20 Jahren verbinde
+              ich visuelle und akustische Facetten mit digitalen Werkzeugen.<br />
+              Die Schönheit von Form und Farbe sowie der Hörgenuss Ton und Musik
+              lassen sich in Frequenzen beschreiben. Dabei habe ich schon früh
+              gelernt mein Publikum mit auf eine Reise zu nehmen. Digitales
+              Geschichtenerzählen ist meine Leidenschaft.
+            </p>
           </section>
-          
-          <section class="content__section">
-            <h3>e-Commerce</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
+
+          <section class="slider__section" data-slider="slider-three">
+            <h3>Ausbildungen</h3>
+            <h4>Mediengestalter Digital & Print</h4>
+            <h4>Tontechniker</h4>
+            <p>
+              Visuelles und akustisches Erstellen und Bearbeiten von digitalen
+              Medien.
+            </p>
+            <ul>
+              <li>Bildbearbeitung & Retouche</li>
+              <li>Formgestaltung & Logo-Design</li>
+              <li>Videoschnitt & Vertonung</li>
+              <li>Sound-Design & Komposition</li>
+            </ul>
           </section>
-          
-        </article>
-        
-        <article class="content__article">
-          
-          <h2>Webseiten</h2>
-          
-          <section class="content__section">
-            <h3>Web-Design</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
-          </section>
-          
-          <section class="content__section">
-            <h3>Web-Entwicklung</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
-          </section>
-          
-          <section class="content__section">
-            <h3>e-Commerce</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est itaque quibusdam velit vel, esse, doloribus, numquam nemo dolores animi optio rem consectetur. Quaerat modi consequatur delectus illum fuga, molestiae eveniet animi voluptas laboriosam dicta, rerum officia repellat expedita. Numquam, fuga dolore fugiat quo cum maxime.
-            </p>  
-          </section>
-          
         </article>
 
+        <article class="slider__article section-slider" id="Faehigkeiten">
+          <section class="slider__section" data-slider="slider-one">
+            <h2>Fähigkeiten</h2>
+            <h4>Web-Design</h4>
+            <h4>Web-Entwicklung</h4>
+            <h4>WordPress & e-Commerce</h4>
+            <h4>Marketing</h4>
+          </section>
+          <section class="slider__section" data-slider="slider-two">
+            <h3>Web-Design</h3>
+            <p>
+              Die erste Erfahrung eines Besuchers auf einer Webseite ist die
+              visuelle Wirkung. Farbpaletten und Schriftkombinationen setzen den
+              Rahmen einer Erlebnisreise.<br />
+              Ich arbeite nach dem Atom-Modell-Prinzip und beginne bei den
+              kleinsten Elementen wie Icons oder Buttons und entwickle
+              aufbauende Design-Komponenten bis hin zum Gesamtlayout.
+            </p>
+            <ul>
+              <li>Atomic Design</li>
+              <li>Responsive Layout</li>
+              <li>Prototyping</li>
+            </ul>
+          </section>
 
+          <section class="slider__section" data-slider="slider-three">
+            <h3>Web-Entwicklung</h3>
+            <p>
+              Als Frontend-Entwickler setze ich Design-Vorlagen in lebendige
+              Webapplikationen um.<br />
+              Mit HTML werden Seiten-Strukturen, Menü-Führung und alle Inhalte
+              barrierefrei eingestellt.<br />
+              Mit CSS gestalte ich Einzelelemente, Bezugssysteme und das gesamte
+              Layout für alle Gerätegrössen inkl. Animationen und Effekte.<br />
+              Mit Javascript erweckt das Web durch Funktionalität zum Leben.
+              Image-Slider, Filterfunktionen, API Schnittstellen oder andere
+              Anwendungsideen lassen sich mit sauberen Code implementieren.
+            </p>
+          </section>
+
+          <section class="slider__section" data-slider="slider-four">
+            <h3>WordPress & e-Commerce</h3>
+            <p>
+              Mit WordPress als Content-Mangement-System können meine Kunden
+              dank einfacher Handhabung und dem grossen Angebot an Plugins ihre
+              Webseite selbst pflegen und erweitern.<br />
+              Mit WooCommerce realisiere ich Online-Shops für Warenhandel und
+              Dienstleistungen, sicher und rechtskonform.
+            </p>
+          </section>
+
+          <section class="slider__section" data-slider="slider-five">
+            <h3>Marketing</h3>
+            <p>
+              Für ein Unternehmen ist es wichtig zu wissen, wer genau die Kunden
+              sind und wie der Markt im eigenen Bereich aussieht.<br>
+              Mit Zielgruppen- und Marktanalysen schaffen wir gemeinsam die
+              Grundlage für ein zugeschnittenes Marketingkonzept.<br>
+              Kundenansprache, Alleinstellungsmerkmale und die
+              Unternehmensidentität werden klar formuliert.<br>
+              Im Social Media Marketing werden das Unternehmen und die Produkte an die richtige
+              Zielgruppe adressiert.
+            </p>
+          </section>
+        </article>
+
+        <article class="slider__article section-slider" id="Technik">
+          <section class="slider__section" data-slider="slider-One">
+            <h2>Technik</h2>
+            <h4>Programme</h4>
+            <h4>Front-End</h4>
+          </section>
+          <section class="slider__section" data-slider="slider-two">
+            <h3>Programme</h3>
+            <p>Adobe Creative Cloud</p>
+            <ul>
+              <li>XD</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>InDesign</li>
+              <li>Audition</li>
+              <li>Lightroom</li>
+            </ul>
+          </section>
+          <section class="slider__section" data-slider="slider-three">
+            <h3>Front-End</h3>
+            <ul>
+              <li>HTML5 / ARIA<br> => barrierefrei</li>
+              <li>CSS3 / SCSS / Tailwind<br> => mobile first </li>
+              <li>Javascript / ES6 / APIs<br> => Web-Anwendungen</li>
+            </ul>
+          </section>
+        </article>
       </section>
     </main>
+
+    <script src="../apps/slidr.js"></script>
+    <script src="../apps/nav-animation.js"></script>
+    <script src="../apps/app.js"></script>
+    <noscript
+      >Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit
+      Javascript.</noscript
+    >
   </body>
 </html>
