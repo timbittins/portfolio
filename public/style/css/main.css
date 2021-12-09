@@ -947,64 +947,6 @@ details summary {
   }
 }
 
-aside .slidr-control {
-  width: var(--button-size) !important;
-  height: var(--button-size) !important;
-  top: 90% !important;
-  margin-top: -4rem !important;
-  right: var(--button-position) !important;
-  border-radius: var(--button-radius);
-  background: var(--clr-contrast);
-  opacity: 0.6;
-  background-color: rgba(255, 0, 0, 0.24);
-}
-
-aside[id*=-control].border {
-  height: 10%;
-}
-
-aside .slidr-control.left {
-  left: var(--button-position) !important;
-}
-
-aside .slidr-control.down,
-aside .slidr-control.up {
-  display: none;
-}
-
-aside .slidr-control:hover {
-  opacity: 1;
-}
-
-@media (min-width: 43.75em) {
-  aside .slidr-control.right:after {
-    top: 2rem !important;
-    right: -0.5rem !important;
-    border-width: 1.2rem 2rem !important;
-  }
-}
-
-@media (min-width: 43.75em) {
-  aside .slidr-control.left:after {
-    top: 2rem !important;
-    left: -0.5rem !important;
-    border-width: 1.2rem 2rem !important;
-  }
-}
-
-aside .slidr-breadcrumbs {
-  margin: 0 1rem 1.5rem !important;
-}
-@media (min-width: 43.75em) {
-  aside .slidr-breadcrumbs {
-    margin: 0 2rem 1.5rem !important;
-  }
-}
-
-aside .slidr-breadcrumbs li.active {
-  border-color: var(--clr-white) !important;
-}
-
 .image__tim--vision {
   position: relative;
   left: -3rem;
