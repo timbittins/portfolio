@@ -1,22 +1,11 @@
+import toTopButtonFunction from "./toTop.js";
+// import slider from "./slidr.js";
+// import slidrAnimation from "./slidr-animation.js";
 
-/* 
-T O   T O P   BU T T O N
-*/
+// slider();
+toTopButtonFunction();
 
-// const toTopButton = document.getElementById("toTop");
-// let headerHeight = header.scrollHeight;
-// document.onscroll = function() {scrollFunction()};
-
-//     function scrollFunction() {
-//         if (document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight) {
-//         toTopButton.style.display = "flex";
-//         } else {
-//         toTopButton.style.display = "none";
-//         }
-//     }
+// slidrAnimation();
+// setTimeout(function () {
     
-//     function topFunction() {
-//         document.body.scrollTop = 0;
-//         document.documentElement.scrollTop = 0;
-// 	}
-
+// }, 3000);

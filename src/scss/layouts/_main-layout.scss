@@ -7,6 +7,7 @@ body {
   width: 100vw;
   background: darkblue url("../../../public/img/TB_bg.svg") no-repeat fixed
     center / cover;
+  overflow-x: hidden;
   z-index: 1;
 }
 
@@ -35,7 +36,7 @@ main {
   max-width: 2000px;
   min-height: 100vh;
   margin: 0 auto;
-  // padding: 0 2rem;
+  // padding: 0 $button-position;
 
   @include rwd(mq-t) {
     // padding: 0 3rem;
@@ -65,6 +66,10 @@ main {
     width: 100%;
   }
 
+  @include rwd(mq-t) {
+    padding: 2.3rem calc(#{$button-position} * 2);
+  }
+
   @include rwd(mq-lt) {
     // columns: 0/1;
     width: auto;
@@ -83,13 +88,18 @@ main {
   @include flex($flex-direction: column);
   width: 100%;
   min-height: 100vh;
+  // padding: 0 $button-position;
   scroll-behavior: smooth;
-  // overflow: hiodden;
+  // overflow: hidden;
   // background-color: rgba(240, 243, 54, 0.836);
+
+  @include rwd(mq-t) {
+    padding: 2.3rem calc(#{$button-position} * 2);
+  }
 
   @include rwd(mq-lt) {
     @include flex($flex-direction: column);
-    width: auto;
+    // width: auto;
     min-height: auto;
     columns: 1/2;
     z-index: 2;

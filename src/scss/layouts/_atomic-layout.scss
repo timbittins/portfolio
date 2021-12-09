@@ -10,11 +10,11 @@
 
 .content__article {
   width: 100%;
-  margin-top: 7rem;
-  
+  margin-bottom: 3rem;
+  overflow: hidden;
 }
 .content__section {
-  margin-top: 3rem;
+  margin-bottom: 3rem;
 
   @include rwd(mq-lt) {
     .content__article:not(:first-child) {
@@ -24,10 +24,52 @@
 }
 
 .content__article {
-  border-radius: 1rem;
-  background: rgba(5, 44, 84, 0.315);
+  padding: 2rem $button-position;
+  // border-radius: 1rem;
+  background: rgba(5, 44, 84, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(17.8px);
   -webkit-backdrop-filter: blur(17.8px);
-  border: 1px solid rgb(255, 3, 3);
+  // border: 1px solid rgb(255, 3, 3);
+}
+
+details {
+  margin: 2rem 0;
+  // padding: 1rem;
+  background-color: $clr-prime;
+  border: 0.2rem solid $clr-second;
+  & summary {
+    padding: 1rem;
+    //  border: .2rem solid white;
+    background-color: $clr-second;
+  }
+}
+.list__standard {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  font-size: $fs-p;
+  line-height: 1.5;
+}
+
+
+.tool__container {
+  @include flex($justify-content: space-evenly);
+  gap: 2rem;
+  // width: 100%;
+  margin-bottom: 2rem;
+  & .tool__container--logo {
+    @include flex($flex-direction: column);
+    gap: 0.3rem;
+  }
+  & .logo__icon {
+    width: $button-size;
+  }
+
+  @include rwd(mq-t) {
+    justify-content: flex-start;
+    margin: 2.5rem 0 5rem;
+    & .logo__icon {
+    width: calc(#{$button-size} - 1rem);
+  }
+  }
 }

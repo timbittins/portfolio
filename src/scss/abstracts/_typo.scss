@@ -27,18 +27,17 @@ html {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--ff-h);
   text-transform: uppercase;
 }
 
 h1,
-h2,
 h3,
 h4 {
-  // margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
-
 
 h1 {
   font-size: var(--fs-h1);
@@ -46,11 +45,12 @@ h1 {
 }
 h2 {
   font-size: var(--fs-h2);
+  margin-bottom: 2rem;
+  // text-align: center;
 }
 h3 {
   font-family: var(--ff-h);
   font-size: var(--fs-h3);
-
 }
 h4 {
   font-family: var(--ff-h);
@@ -60,7 +60,7 @@ p {
   font-family: var(--ff-p);
   font-size: var(--fs-p);
   line-height: 1.5;
-  margin-top: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 /*  LINKS  */
@@ -73,6 +73,11 @@ a:visited {
 }
 
 /* SPECIAL */
+
+blockquote {
+  font-size: $fs-p;
+  font-style: italic;
+}
 .display {
   font-size: $fs-display;
   line-height: 1;

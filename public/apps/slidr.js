@@ -1,14 +1,6 @@
 
-/*!
- * slidr v0.5.0 - A Javascript library for adding slide effects.
- * bchanx.com/slidr
- * MIT licensed
- *
- * Copyright (c) 2014 Brian Chan (bchanx.com)
- */
-
-
 function E() {
+  console.log("Slidr")
   function H() {}
   function K(a, b, c) {
     var d = {
@@ -1231,8 +1223,14 @@ function E() {
     },
   };
 }
-"object" === typeof exports
+
+
+  "object" === typeof exports
   ? (module.exports = E())
   : "function" === typeof define && define.amd
   ? define(E)
   : (this.slidr = E());
+
+
+// export default slider;
+

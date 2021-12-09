@@ -71,12 +71,15 @@
       <section class="page__info">
         <div class="keep__info">
           <h1>Über mich</h1>
+          <blockquote>
+            „Technik-Freak mit Seele und Künstler mit Herz.“
+          </blockquote>
           <button
             type="button"
             class="button__regular button__regular--setwidth"
-            onclick="document.location= '#Ueber-Tim'"
+            onclick="document.location= '#Vision'"
           >
-            Über Tim
+            Vision
           </button>
 
           <button
@@ -90,25 +93,34 @@
           <button
             type="button"
             class="button__regular button__regular--setwidth"
-            onclick="document.location= '#Technik'"
+            onclick="document.location= '#Ausbildungen'"
           >
-            Technik
+            Ausbildungen
           </button>
         </div>
       </section>
 
-      <section class="page__content slider__content">
-        <article class="slider__article section-slider" id="Ueber-Tim">
-          <section class="slider__section" data-slider="slider-one">
-            <h2>Über Tim</h2>
-            <h4><em>„Technik-Freak mit Seele und Künstler mit Herz.“</em></h4>
+      <section class="page__content slider__content" id="articleSlider">
+        <article
+          class="content__article slider__article section-slider"
+          id="Vision"
+          data-slider="slider-one"
+        >
+          <section
+            class="content__section slider__section"
+            data-slider="slider-one"
+          >
+            <h2>Vision</h2>
             <img
-              src="../img/TB_Portfolio_tim_portrait.webp"
+              class="image__tim--vision"
+              src="../img/TB_Portfolio_tim_vision.webp"
               alt="Ein Portrait von Tim, der freundlich in die Kamera lächelt."
             />
           </section>
-          <section class="slider__section" data-slider="slider-two">
-            <h3>Vision</h3>
+          <section
+            class="content__section slider__section"
+            data-slider="slider-two"
+          >
             <p>
               In meinem bunten Lebensweg gab es immer zwei Konstanten: kreatives
               Arbeiten und technische Andwendungen. Seit über 20 Jahren verbinde
@@ -119,123 +131,196 @@
               Geschichtenerzählen ist meine Leidenschaft.
             </p>
           </section>
-
-          <section class="slider__section" data-slider="slider-three">
-            <h3>Ausbildungen</h3>
-            <h4>Mediengestalter Digital & Print</h4>
-            <h4>Tontechniker</h4>
-            <p>
-              Visuelles und akustisches Erstellen und Bearbeiten von digitalen
-              Medien.
-            </p>
-            <ul>
-              <li>Bildbearbeitung & Retouche</li>
-              <li>Formgestaltung & Logo-Design</li>
-              <li>Videoschnitt & Vertonung</li>
-              <li>Sound-Design & Komposition</li>
-            </ul>
-          </section>
         </article>
 
-        <article class="slider__article section-slider" id="Faehigkeiten">
-          <section class="slider__section" data-slider="slider-one">
+        <article
+          class="content__article slider__article section-slider"
+          id="Faehigkeiten"
+          data-slider="slider-two"
+        >
+          <section
+            class="content__section slider__section"
+            data-slider="slider-one"
+          >
             <h2>Fähigkeiten</h2>
-            <h4>Web-Design</h4>
-            <h4>Web-Entwicklung</h4>
-            <h4>WordPress & e-Commerce</h4>
-            <h4>Marketing</h4>
           </section>
-          <section class="slider__section" data-slider="slider-two">
+          <section
+            class="content__section slider__section"
+            data-slider="slider-two"
+          >
             <h3>Web-Design</h3>
-            <p>
-              Die erste Erfahrung eines Besuchers auf einer Webseite ist die
-              visuelle Wirkung. Farbpaletten und Schriftkombinationen setzen den
-              Rahmen einer Erlebnisreise.<br />
-              Ich arbeite nach dem Atom-Modell-Prinzip und beginne bei den
-              kleinsten Elementen wie Icons oder Buttons und entwickle
-              aufbauende Design-Komponenten bis hin zum Gesamtlayout.
-            </p>
-            <ul>
-              <li>Atomic Design</li>
-              <li>Responsive Layout</li>
+            <ul class="list__standard">
+              <li>Farbschema</li>
+              <li>Typografie</li>
+              <li>Vektorgestaltung von Logo und Icon</li>
+              <li>Bildbearbeitung und Retouche</li>
+              <li>Layout im Atomic-Model</li>
               <li>Prototyping</li>
             </ul>
+            <div class="tool__container">
+              <div class="tool__container--logo">
+                <img
+                  class="logo__icon"
+                  src="../img/adobe_xd_icon.webp"
+                  alt="Adobe XD Logo Icon"
+                />
+                <p class="small">XD</p>
+              </div>
+              <div class="tool__container--logo">
+                <img
+                  class="logo__icon"
+                  src="../img/adobe_photoshop_icon.webp"
+                  alt="Adobe Photoshop Logo Icon"
+                />
+                <p class="small">Photoshop</p>
+              </div>
+              <div class="tool__container--logo">
+                <img
+                  class="logo__icon"
+                  src="../img/adobe_illustrator_icon.webp"
+                  alt="Adobe Illustrator Logo Icon"
+                />
+                <p class="small">Illustrator</p>
+              </div>
+            </div>
           </section>
 
-          <section class="slider__section" data-slider="slider-three">
+          <section
+            class="content__section slider__section"
+            data-slider="slider-three"
+          >
             <h3>Web-Entwicklung</h3>
-            <p>
-              Als Frontend-Entwickler setze ich Design-Vorlagen in lebendige
-              Webapplikationen um.<br />
-              Mit HTML werden Seiten-Strukturen, Menü-Führung und alle Inhalte
-              barrierefrei eingestellt.<br />
-              Mit CSS gestalte ich Einzelelemente, Bezugssysteme und das gesamte
-              Layout für alle Gerätegrössen inkl. Animationen und Effekte.<br />
-              Mit Javascript erweckt das Web durch Funktionalität zum Leben.
-              Image-Slider, Filterfunktionen, API Schnittstellen oder andere
-              Anwendungsideen lassen sich mit sauberen Code implementieren.
-            </p>
+            <ul class="list__standard">
+              <li>Seitenaufbau und Struktur</li>
+              <li>Barrierefreiheit</li>
+              <li>Responsive Design für alle Geräte</li>
+              <li>Funktionalität</li>
+              <li>API Anbindung</li>
+            </ul>
+            <div class="tool__container">
+              <div class="tool__container--logo">
+                <img
+                  class="logo__icon"
+                  src="../img/html_icon.webp"
+                  alt="HTML5 Logo Icon"
+                />
+                <p class="small">HTML5</p>
+              </div>
+              <div class="tool__container--logo">
+                <img
+                  class="logo__icon"
+                  src="../img/css_icon.webp"
+                  alt="CSS3 Logo Icon"
+                />
+                <p class="small">CSS3</p>
+              </div>
+              <div class="tool__container--logo">
+                <img
+                  class="logo__icon"
+                  src="../img/javascript_icon.webp"
+                  alt="Javascript Logo Icon"
+                />
+                <p class="small">JS ES6</p>
+              </div>
+            </div>
           </section>
 
-          <section class="slider__section" data-slider="slider-four">
-            <h3>WordPress & e-Commerce</h3>
-            <p>
-              Mit WordPress als Content-Mangement-System können meine Kunden
-              dank einfacher Handhabung und dem grossen Angebot an Plugins ihre
-              Webseite selbst pflegen und erweitern.<br />
-              Mit WooCommerce realisiere ich Online-Shops für Warenhandel und
-              Dienstleistungen, sicher und rechtskonform.
-            </p>
+          <section
+            class="content__section slider__section"
+            data-slider="slider-four"
+          >
+            <h3>CMS & e-Commerce</h3>
+            <ul class="list__standard">
+              <li>Server-Einrichtung</li>
+              <li>CMS Implementierung</li>
+              <li>Aufbereitung von Inhalten</li>
+              <li>Aufsetzen von Online-Shops</li>
+              <li>Versand- und Verkaufsabwicklung</li>
+              <li>Suchmaschinenoptimierung</li>
+            </ul>
+            <div class="tool__container">
+              <div class="tool__container--logo">
+                <img
+                  class="logo__icon"
+                  src="../img/wordpress_icon.webp"
+                  alt="WordPress Logo Icon"
+                />
+                <p class="small">WordPress</p>
+              </div>
+              <div class="tool__container--logo">
+                <img
+                  class="logo__icon"
+                  src="../img/woocommerce_icon.webp"
+                  alt="WooCommerce Logo Icon"
+                />
+                <p class="small">WooCommerce</p>
+              </div>
+            </div>
           </section>
 
-          <section class="slider__section" data-slider="slider-five">
+          <section
+            class="content__section slider__section"
+            data-slider="slider-five"
+          >
             <h3>Marketing</h3>
-            <p>
-              Für ein Unternehmen ist es wichtig zu wissen, wer genau die Kunden
-              sind und wie der Markt im eigenen Bereich aussieht.<br>
-              Mit Zielgruppen- und Marktanalysen schaffen wir gemeinsam die
-              Grundlage für ein zugeschnittenes Marketingkonzept.<br>
-              Kundenansprache, Alleinstellungsmerkmale und die
-              Unternehmensidentität werden klar formuliert.<br>
-              Im Social Media Marketing werden das Unternehmen und die Produkte an die richtige
-              Zielgruppe adressiert.
-            </p>
+            <ul class="list__standard">
+              <li>Zielgruppenanalyse</li>
+              <li>Social Media Marketing</li>
+              <li>Social Media Content Creation</li>
+            </ul>
           </section>
         </article>
 
-        <article class="slider__article section-slider" id="Technik">
-          <section class="slider__section" data-slider="slider-One">
-            <h2>Technik</h2>
-            <h4>Programme</h4>
-            <h4>Front-End</h4>
+        <article
+          class="content__article slider__article section-slider"
+          id="Ausbildungen"
+          data-slider="slider-three"
+        >
+          <section
+            class="content__section slider__section"
+            data-slider="slider-One"
+          >
+            <h2>Ausbildungen</h2>
           </section>
-          <section class="slider__section" data-slider="slider-two">
-            <h3>Programme</h3>
-            <p>Adobe Creative Cloud</p>
-            <ul>
-              <li>XD</li>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-              <li>InDesign</li>
-              <li>Audition</li>
-              <li>Lightroom</li>
+          <section
+            class="content__section slider__section"
+            data-slider="slider-two"
+          >
+            <h3>Mediengestalter Digital & Print</h3>
+            <p>IHK Berlin Zertifikat</p>
+            <ul class="list__standard">
+              <li>Gestaltungsprinzipen</li>
+              <li>Farblehre</li>
+              <li>Schriftgestaltung</li>
+              <li>Layoutgestaltung</li>
+              <li>Frontend Entwicklung</li>
             </ul>
           </section>
-          <section class="slider__section" data-slider="slider-three">
-            <h3>Front-End</h3>
-            <ul>
-              <li>HTML5 / ARIA<br> => barrierefrei</li>
-              <li>CSS3 / SCSS / Tailwind<br> => mobile first </li>
-              <li>Javascript / ES6 / APIs<br> => Web-Anwendungen</li>
+          <section
+            class="content__section slider__section"
+            data-slider="slider-three"
+          >
+            <h3>Tontechniker</h3>
+            <p>SAE Berlin Diploma</p>
+            <ul class="list__standard">
+              <li>Mikrofonie und Aufnahme</li>
+              <li>Signalfluss und Mix</li>
+              <li>Musikschnitt</li>
+              <li>Nachvertonung</li>
+              <li>Sound Design</li>
             </ul>
           </section>
         </article>
+
       </section>
+
     </main>
 
+    <button id="toTop" class="button__totop--slider" type="button"></button>
+
     <script src="../apps/slidr.js"></script>
-    <script src="../apps/nav-animation.js"></script>
-    <script src="../apps/app.js"></script>
+    <script src="../apps/slidr-animation.js"></script>
+    <script src="../apps/app.js" type="module"></script>
     <noscript
       >Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit
       Javascript.</noscript
