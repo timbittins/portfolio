@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tim Bittins | Kontakt</title>
+    <title>Kontakt</title>
     <link rel="stylesheet" href="../style/css/main.css" />
-    <link rel="icon" type="image/svg+xml" href="../img/TB_favicon_01.svg">
   </head>
-
   <body>
     <header>
       
@@ -72,66 +70,18 @@
       
       <aside class="page__info page__info--contact">
         <div class="keep__info">
-        <h1>Kontakt</h1>
 
-        <article class="form__container">
-          <form name="contact" class="form__form" action="https://formsubmit.co/7b236282d7ec4dae9f3eca90645eba1a" method="POST">
-            <div class="form__section">
-              <label class="form__label" for="name">Ihr Name <span class="form__label--info"><small>(erforderlich)</small></span> </label>
-              <input
-                class="form__input"
-                type="text"
-                name="name"
-                placeholder="Bitte Namen eingeben."
-                autocomplete="off"
-                required
-              />
-            </div>
-
-            <div class="form__section">
-              <label class="form__label" for="email">Ihre Emailadresse <span class="form__label--info"><small>(erforderlich)</small></span> </label>
-              <input
-                class="form__input"
-                type="email"
-                name="email"
-                placeholder="Bitte Email eingeben."
-                autocomplete="off"
-                required
-              />
-            </div>
-
-            <div class="form__section">
-              <label class="form__label" for="message">Ihre Nachricht  <span class="form__label--info"><small>(erforderlich)</small></span> </label>
-              <textarea
-                class="form__textarea"
-                name="message"
-                placeholder="Bitte Nachricht eingeben."
-                id="message"
-                cols="30"
-                rows="5"
-              ></textarea>
-            </div>
-
-            <div class="form__section">
-              <label class="form__label form__label--privacy" for="privacy">
-                <input
-                  class="form__checkbox"
-                  type="checkbox"
-                  id="privacy"
-                  required
-                />
-                Datenschutz zustimmen <span class="form__label--info"><small>(erforderlich)</small></span> </label>
-              </label>
-            </div>
-
-            <input type="hidden" name="_next" value="https://pofo.timbittins.com/pages/recieved.html">
-            
-            <div class="form__section">
-              <button id="submit" class="button__submit" type="submit">Absenden</button>
-            </div>
-          </form>
+        <article class="form__recieved">
+           <h3>Nachricht erhalten!</h3>
+           <p>Vielen Dank für Ihre Nachricht. Ich melde mich in kürze zurück.</p>
+           <button
+            type="button"
+            class="button__regular"
+            onclick="document.location='./kontakt.html'"
+          >
+            Neue Nachricht
+          </button>
         </article>
-
         </div> 
       </aside>
 
@@ -168,7 +118,13 @@
         <article class="content__article">
           <h2>Impressum</h2>
           <section class="content__section">
-              <img class="contact__impressum--address" src="../img/impressum.webp" alt="Adressdaten Tim Bittins Schwamendingenstr 115 8051 Zürich">
+              <address class="contact__impressum--address">
+                Tim Bittins <br />
+                Landsberger Allee 81 <br />
+                10407 Berlin <br />
+                + 49 176 457 454 55 <br />
+                design@timbittins.com
+              </address>
             </section>
         </article>
 
@@ -613,7 +569,7 @@
     </main>
    
     <button id="toTop" class="button__totop--slider" type="button"></button>
-
+    
     <script src="../apps/app.js" type="module"></script>
     <noscript
       >Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit

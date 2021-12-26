@@ -6,13 +6,10 @@
 
 
 .contact__impressum--address {
-  margin-top: 0.8rem;
-  font-size: $fs-p;
-  line-height: 1.5;
-  font-style: normal;
+  width: 17rem;
 
-  @include rwd(mq-lt) {
-    font-family: $ff-p;
+  @include rwd(mq-t) {
+    width: 20rem;
   }
 }
 
@@ -36,15 +33,3 @@
   }
 }
 
-// .keep__info {
-// width: 100%;
-// max-width: 50rem;
-// z-index: 1;
-
-// }
-
-// .keep__content {
-// width: 100%;
-// max-width: 50rem;
-// z-index: 2;
-// }

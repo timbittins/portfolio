@@ -26,6 +26,11 @@ html {
   color: #fff;
 }
 
+.display {
+  display: block;
+  margin: 1rem 0;
+}
+
 h1,
 h2,
 h3 {
@@ -34,7 +39,7 @@ h3 {
 }
 
 h1,
-h3,
+
 h4 {
   margin-bottom: 1rem;
 }
@@ -46,11 +51,11 @@ h1 {
 h2 {
   font-size: var(--fs-h2);
   margin-bottom: 2rem;
-  // text-align: center;
 }
 h3 {
   font-family: var(--ff-h);
   font-size: var(--fs-h3);
+  margin: 3rem 0 .75rem;
 }
 h4 {
   font-family: var(--ff-h);
@@ -60,7 +65,7 @@ p {
   font-family: var(--ff-p);
   font-size: var(--fs-p);
   line-height: 1.5;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /*  LINKS  */
@@ -70,6 +75,10 @@ a:visited {
   font-size: $fs-p;
   text-decoration: none;
   color: $clr-text;
+}
+a:hover {
+  text-shadow: 0 0 1rem $clr-light;
+  @include transition($property: text-shadow, $duration: 150ms);
 }
 
 /* SPECIAL */

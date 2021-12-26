@@ -1,0 +1,25 @@
+.project__logo {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.project__link {
+    display: block;
+    margin: 1rem 0 3rem;
+    font-size: $fs-h3 !important;
+    text-decoration: underline !important;
+    text-align: center;
+    &:hover {
+        text-shadow: 1px 1px 1px white;
+    }
+}
+
+.project__image {
+     width: 100%;
+     height: auto;
+     margin-bottom: 4rem;
+}
+
+#Nunocci {
+    background: hsla(26, 38%, 21%);
+}

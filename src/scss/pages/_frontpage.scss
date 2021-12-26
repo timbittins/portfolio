@@ -1,16 +1,22 @@
 .page__info--frontpage {
+  
   & .page__info--name {
-  font-family: $ff-h;
-  font-size: $fs-h3;
+    position: absolute;
+    top: 2.5rem;
+    font-family: $ff-h;
+    font-size: $fs-s;
 
-  @include rwd(mq-lt) {
-    display: none;
+    @include rwd(mq-lt) {
+      display: none;
+    }
   }
-}
+  & .page__info--h1 {
+    font-size: $fs-h4;
+  }
 }
 
 .page__content--frontpage {
-  display: none;
+  // display: none;
   & img {
     width: 20rem;
   }
@@ -22,7 +28,3 @@
     }
   }
 }
-
-
-
-
