@@ -3,11 +3,15 @@
     margin: 0 auto;
 }
 
+.project__link--explain {
+    text-align: center;
+}
 .project__link {
     display: block;
     margin: 1rem 0 5rem;
     font-size: $fs-h3 !important;
     text-decoration: underline !important;
+    text-underline-offset: .3rem;
     text-align: center;
     &:hover {
         text-shadow: 1px 1px 1px white;

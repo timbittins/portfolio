@@ -63,6 +63,11 @@ main {
     font-family: $ff-h;
     font-size: $fs-s;
 
+    @include rwd(mq-t) {
+      top: 5rem;
+      font-size: calc(#{$fs-p} + .25rem);
+    }
+
     @include rwd(mq-lt) {
       display: none;
     }
@@ -76,7 +81,8 @@ main {
   }
 
   @include rwd(mq-t) {
-    padding: 2rem calc(#{$button-position} * 2) 0;
+    // height: calc(100vh);
+    padding: 10rem calc(#{$button-position} * 2);
   }
 
   @include rwd(mq-lt) {
@@ -85,6 +91,7 @@ main {
     height: calc(100vh - 8rem);
     padding: 2rem 0 0 calc(#{$button-position} * 3);
     .keep__info {
+      justify-content: center;
       position: fixed;
       width: 25%;
       max-width: 500px;

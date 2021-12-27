@@ -1,9 +1,25 @@
 .page__info--frontpage {
-  
- 
   & .page__info--h1 {
     font-size: $fs-h4;
   }
+
+  @include rwd(mq-t) {
+    & .page__info--h1 {
+      font-size: $fs-h2 ;
+      text-align: left;
+    }
+  }
+
+  @include rwd(mq-lt) {
+    min-height: auto;
+    & .page__info--h1 {
+      font-size: $fs-h4 ;
+    }
+    & .button__regular--frontpage {
+      margin-top: 6rem;
+    }
+  }
+
 }
 
 .page__content--frontpage {
