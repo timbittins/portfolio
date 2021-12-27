@@ -1,3 +1,15 @@
+.page__info--contact {
+  
+  padding-top: .5rem;
+  & .keep__info {
+    justify-content: flex-start;
+    height: auto;
+  }
+  & h1 {
+    // margin-top: 9rem;
+  }
+}
+
 .page__content--contact {
   @include rwd(mq-lt) {
     padding-left: 2rem;

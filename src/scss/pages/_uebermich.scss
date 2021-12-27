@@ -1,0 +1,19 @@
+.image__tim--vision {
+    position: relative;
+    left: -3rem;
+    height: 10rem;
+    margin: 1.5rem 0 2.5rem;
+
+    @include rwd(mq-t) {
+        left: 0;
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+.book__image {
+    width: 50%;
+    margin: 0 auto;
+}
+

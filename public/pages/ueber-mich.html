@@ -71,7 +71,9 @@
     <main>
       <aside class="page__info">
         <div class="keep__info">
+          <p class="page__info--name">Tim Bittins</p>
           <h1>Über mich</h1>
+          <div class="button__container">
           <button
             type="button"
             class="button__regular button__regular--setwidth"
@@ -93,10 +95,16 @@
             class="button__regular button__regular--setwidth"
             onclick="document.location= '#Ausbildungen'"
           >
-            Ausbildungen
+            Bücherliste
           </button>
+          </div>
+          <div class="arrows__direction">
+              <span class="arrows__down arrow__one"></span>
+              <span class="arrows__down arrow__two"></span>
+              <span class="arrows__down arrow__three"></span>
+          </div>
+        </aside>
         </div>
-      </aside>
 
       <section class="page__content">
         <article
@@ -184,7 +192,7 @@
             <ul class="list__standard">
               <li>Seitenaufbau und Struktur</li>
               <li>Barrierefreiheit</li>
-              <li>Responsive Design für alle Geräte</li>
+              <li>Responsive Design für alle Geräte <small>(SCSS / Tailwind)</small></li>
               <li>Funktionalität</li>
               <li>API Anbindung</li>
             </ul>
@@ -258,6 +266,16 @@
               <li>Social Media Content Creation</li>
             </ul>
           </section>
+
+          <section
+            class="content__section"
+          >
+            <h3>Ausbildungen</h3>
+            <ul class="list__standard">
+              <li>Mediengestalter digital & print <small>(IHK Berlin Zertifikat)</small></li>
+              <li>Tontechniker <small>(SAE Berlin Diploma)</small></li>
+            </ul>
+          </section>
         </article>
 
         <article
@@ -267,34 +285,87 @@
           <section
             class="content__section"
           >
-            <h2>Ausbildungen</h2>
+            <h2>Bücherliste</h2>
+            <p>Eine Auswahl der Bücher, die ich zuletzt in den Händen hatte.<br>
+            Lesen begeistert mich, lesen entspannt.<br>
+            Viele Inspirationen für meinen Job und mein Leben kamen von guten 
+            Autoren und deren Werken. </p>
           </section>
+
           <section
-            class="content__section"
-          >
-            <h3>Mediengestalter Digital & Print</h3>
-            <p>IHK Berlin Zertifikat</p>
-            <ul class="list__standard">
-              <li>Gestaltungsprinzipen</li>
-              <li>Farblehre</li>
-              <li>Schriftgestaltung</li>
-              <li>Layoutgestaltung</li>
-              <li>Frontend Entwicklung</li>
-            </ul>
+            class="content__section">
+            <h3>Javascript - The Definitive Guide</h3>
+            <h4>David Flanagan</h4>
+             <img
+              class="book__image"
+              src="../img/book_javascript_the_definitive_guide.webp"
+              alt="Bild des Buches Javascript - The Definitive Guide"
+              loading="lazy"
+            />
           </section>
+
           <section
-            class="content__section"
-          >
-            <h3>Tontechniker</h3>
-            <p>SAE Berlin Diploma</p>
-            <ul class="list__standard">
-              <li>Mikrofonie und Aufnahme</li>
-              <li>Signalfluss und Mix</li>
-              <li>Musikschnitt</li>
-              <li>Nachvertonung</li>
-              <li>Sound Design</li>
-            </ul>
+            class="content__section">
+            <h3>Clean Code</h3>
+            <h4>Robert C. Martin</h4>
+             <img
+              class="book__image"
+              src="../img/book_clean_code.webp"
+              alt="Bild des Buches Clean Code"
+              loading="lazy"
+            />
           </section>
+
+          <section
+            class="content__section">
+            <h3>The Design of Everyday Things</h3>
+            <h4>Don Norman</h4>
+             <img
+              class="book__image"
+              src="../img/book_the_design_of_everyday_things.webp"
+              alt="Bild des Buches The Design Of Everyday Things"
+              loading="lazy"
+            />
+          </section>
+
+          <section
+            class="content__section">
+            <h3>Design Thinking</h3>
+            <h4>Michael Lewrick</h4>
+             <img
+              class="book__image"
+              src="../img/book_design_thinking.webp"
+              alt="Bild des Buches Design Thinking"
+              loading="lazy"
+            />
+          </section>
+
+          <section
+            class="content__section">
+            <h3>7 Strategies for Wealth and Happiness</h3>
+            <h4>Jim Rohn</h4>
+             <img
+              class="book__image"
+              src="../img/book_seven_strategies_for_weath_and_happiness.webp"
+              alt="Bild des Buches 7 Strategies for Wealth and Happiness"
+              loading="lazy"
+            />
+          </section>
+
+          <section
+            class="content__section">
+            <h3>This is Marketing</h3>
+            <h4>Seth Godin</h4>
+             <img
+              class="book__image"
+              src="../img/book_this_is_marketing.webp"
+              alt="Bild des Buches This is Marketing"
+              loading="lazy"
+            />
+          </section>
+
+
+          
         </article>
 
       </section>

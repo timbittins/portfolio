@@ -120,7 +120,7 @@ html {
 
 .display {
   display: block;
-  margin: 1rem 0;
+  margin: 0 0 1rem;
 }
 
 h1,
@@ -130,7 +130,6 @@ h3 {
   text-transform: uppercase;
 }
 
-h1,
 h4 {
   margin-bottom: 1rem;
 }
@@ -138,6 +137,7 @@ h4 {
 h1 {
   font-size: var(--fs-h1);
   letter-spacing: 0.1rem;
+  margin-top: 3vh;
 }
 
 h2 {
@@ -230,14 +230,22 @@ blockquote {
   display: block;
   width: 100%;
   height: var(--button-size);
-  margin: 7.5vh auto 0;
+  margin: 4vh auto 0;
   padding: 0rem 2rem;
+  font-family: var(--ff-h);
   font-size: var(--fs-p);
   color: var(--clr-white);
   background-color: var(--clr-contrast);
   border: 2px solid #976eeb;
   border-radius: var(--button-radius);
   transition: background-color 100ms ease-in-out, border 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+.button__regular:first-child, .button__totop--slider:first-child, .button__submit:first-child {
+  margin-top: 0;
+}
+.button__regular h2, .button__totop--slider h2, .button__submit h2 {
+  font-size: var(--fs-p);
+  margin: 0;
 }
 @media (min-width: 43.75em) {
   .button__regular, .button__totop--slider, .button__submit {
@@ -304,13 +312,15 @@ blockquote {
 .button__totop--slider::after {
   content: "";
   position: absolute;
-  bottom: 1.15rem;
-  left: 30%;
-  width: 0;
-  height: 0;
-  border-left: 0.6rem solid transparent;
-  border-right: 0.6rem solid transparent;
-  border-bottom: 1.2rem solid var(--clr-white);
+  bottom: 0.6rem;
+  left: 25%;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0 0.3rem 0.3rem;
+  transform: rotate(-135deg);
+  border-right: 0.2rem solid white;
+  border-bottom: 0.2rem solid white;
 }
 @media (min-width: 43.75em) {
   .button__totop--slider::after {
@@ -405,6 +415,11 @@ blockquote {
     justify-content: flex-start;
   }
 }
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .socialmedia {
+    margin-bottom: 4rem;
+  }
+}
 
 .socialmedia__link {
   display: flex;
@@ -421,6 +436,7 @@ blockquote {
     transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
   }
   .socialmedia__link:hover {
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
     transform: translate(-5%, -10%) scale(1.1);
     border-radius: 1rem;
     box-shadow: 0.5rem 1rem 2rem 0.05rem rgba(8, 7, 8, 0.438);
@@ -440,14 +456,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .arrows__direction {
-  position: absolute;
-  top: 80vh;
-  left: 47.5%;
   display: block;
   margin: 0 auto;
   width: 1.5rem;
   height: 3.5rem;
-  margin-top: 3rem;
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .arrows__direction {
+    display: none;
+  }
 }
 
 .arrows__down {
@@ -669,7 +686,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     display: block;
     padding: 0.1rem 0;
-    margin-top: 0;
+    margin: 0;
     overflow: hidden;
   }
 }
@@ -930,16 +947,28 @@ main {
 }
 
 .page__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   width: 100%;
-  height: 100vh;
-  padding: 2.3rem var(--button-position);
+  min-height: 100vh;
+  padding: 6rem var(--button-position) 0;
+}
+.page__info .page__info--name {
+  position: absolute;
+  top: 2.5rem;
+  font-family: var(--ff-h);
+  font-size: var(--fs-s);
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .page__info .page__info--name {
+    display: none;
+  }
 }
 .page__info .keep__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
   width: 100%;
+  height: calc(100vh - 6rem - 8vh);
 }
 @media (min-width: 43.75em) {
   .page__info {
@@ -998,16 +1027,17 @@ main {
   }
 }
 
-.page__info--h1 {
-  margin-top: 0.8rem;
-}
-
 .page__info--h2 {
   margin-top: 1rem;
 }
 
 .page__info--h3 {
   margin-top: 4rem;
+}
+
+.button__container {
+  width: 100%;
+  margin: 5vh 0;
 }
 
 .content__article {
@@ -1076,31 +1106,6 @@ details summary {
   }
 }
 
-.image__tim--vision {
-  position: relative;
-  left: -3rem;
-  height: 10rem;
-  margin-top: 1rem;
-}
-@media (min-width: 43.75em) {
-  .image__tim--vision {
-    left: 0;
-    width: 100%;
-    height: auto;
-  }
-}
-
-.page__info--frontpage .page__info--name {
-  position: absolute;
-  top: 2.5rem;
-  font-family: var(--ff-h);
-  font-size: var(--fs-s);
-}
-@media (min-width: 56.25em) and (orientation: landscape) {
-  .page__info--frontpage .page__info--name {
-    display: none;
-  }
-}
 .page__info--frontpage .page__info--h1 {
   font-size: var(--fs-h4);
 }
@@ -1124,7 +1129,7 @@ details summary {
 
 .project__link {
   display: block;
-  margin: 1rem 0 3rem;
+  margin: 1rem 0 5rem;
   font-size: var(--fs-h3) !important;
   text-decoration: underline !important;
   text-align: center;
@@ -1139,10 +1144,40 @@ details summary {
   margin-bottom: 4rem;
 }
 
+#DanceArtFestival {
+  background: rgba(87, 78, 0, 0.76);
+}
+
 #Nunocci {
   background: #4a3321;
 }
 
+.image__tim--vision {
+  position: relative;
+  left: -3rem;
+  height: 10rem;
+  margin: 1.5rem 0 2.5rem;
+}
+@media (min-width: 43.75em) {
+  .image__tim--vision {
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.book__image {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.page__info--contact {
+  padding-top: 0.5rem;
+}
+.page__info--contact .keep__info {
+  justify-content: flex-start;
+  height: auto;
+}
 @media (min-width: 56.25em) and (orientation: landscape) {
   .page__content--contact {
     padding-left: 2rem;

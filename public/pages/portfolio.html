@@ -69,40 +69,59 @@
     </header>
 
     <main>
-      <section class="page__info" id="pageInfo">
+      <aside class="page__info" id="pageInfo">
         <div class="keep__info">
+          <p class="page__info--name">Tim Bittins</p>
           <h1>Portfolio</h1>
-
-          <button
+          <div class="button__container">
+          <!-- <button
             type="button"
             class="button__regular button__regular--setwidth"
             onclick="document.location= '#DanceArtFestival'"
           >
-            Dance Art <small>festival</small>
-          </button>
+            <h2>Dance Art <small>festival</small></h2>
+          </button> -->
 
           <button
             type="button"
             class="button__regular button__regular--setwidth"
             onclick="document.location= '#Nunocci'"
           >
-            Nunocci
+            <h2>Nunocci</h2>
           </button>
 
-          <button
+          <!-- <button
             type="button"
             class="button__regular button__regular--setwidth"
             onclick="document.location= '#Spreebohne'"
           >
             Spreebohne
-          </button>
+          </button> -->
+          </div>
+          <div class="arrows__direction">
+              <span class="arrows__down arrow__one"></span>
+              <span class="arrows__down arrow__two"></span>
+              <span class="arrows__down arrow__three"></span>
+          </div>
         </div>
-      </section>
+      </aside>
 
       <section class="page__content">
-        <article class="content__article" id="DanceArtFestival">
+        <!-- <article class="content__article" id="DanceArtFestival">
           <section class="content__section">
-            <h2>Dance Art <small>festival</small></h2>
+            <img
+              class="project__logo"
+              src="../img/daf_logo.webp"
+              alt="Rundes Logo des Festivals in gelb un schwarz mit Schriftzug darunter."
+              loading="lazy"
+            />
+            <a
+              class="project__link"
+              data-tooltip="zur Webseite"
+              href="https://dance-art-festival.com/"
+              target="_blank"
+              >dance-art-festival.com</a
+            >
           </section>
           <section class="content__section">
             <h3>DAF Text Area 1</h3>
@@ -128,11 +147,10 @@
               tempore?
             </p>
           </section>
-        </article>
+        </article> -->
 
         <article class="content__article" id="Nunocci">
           <section class="content__section">
-            <h2>Nunocci</h2>
             <img
               class="project__logo"
               src="../img/nunocci_logo.webp"
@@ -146,31 +164,27 @@
               target="_blank"
               >www.nunocci.de</a
             >
-            <h3>Projekt:</h3>
-            <ul class="list__standard">
-              <li>Webseite mit integriertem Onlineshop</li>
-              <li>Social Media Marketing</li>
-            </ul>
           </section>
 
           <section class="content__section">
-            <h3>Kunde:</h3>
-            <p>
-              Die Firma Sobelle Sweets produziert und vertreibt Haselnusscremes
-              unter der Marke „Nunocci“.<br />
-              Der bestehende Onlineshop wurde über ein Shopsystem betrieben.
-            </p>
             <h3>Aufgaben</h3>
+            <ul class="list__standard">
+              <li>Web Design und Entwicklung</li>
+              <li>Social Media Marketing</li>
+            </ul>
+
+            <h3>Kunde</h3>
             <p>
-              Neuerstellung einer Webseite und Integration des neuen Corporate
-              Designs sowie erweiterte Funktionen.
+              Die Firma Sobelle Sweets aus Brandenburg produziert und vertreibt hochwertige Haselnusscremes
+              unter der Marke „Nunocci“.
             </p>
-            <img
-              class="project__image"
-              src="../img/nunocci_vergleich_webseiten.webp"
-              alt="Vergleich der alten und der neuen Webseite."
-              loading="lazy"
-            />
+
+            <h3>Lösungsansatz</h3>
+            <p>
+              Um der Qualität des Produktes gerecht zu werden, wurde ein Re-Design der Marke empfohlen und umgesetzt.<br>
+              Ein übersichtlicher und benutzerfreundlicher Online-Shop mit einfacher Kaufabwicklung soll eine messbare Umsatzsteigerung
+              generieren.
+            </p>
           </section>
 
           <section class="content__section">
@@ -244,7 +258,7 @@
 
           <section class="content__section">
             <h3>Testimonial</h3>
-            <p><em>Ben Horn, Geschäftsfüher von Nunocci sagt:</em></p>
+            <p><em>Ben Horn, Geschäftsfüher von Sobelle Sweets:</em></p>
             <blockquote>
               „Durch seine Arbeit, seine Ideen, die er mit in das Projekt
               einbrachte, konnten wir einen sehr erfolgreichen Relaunch starten.
@@ -257,7 +271,7 @@
           </section>
         </article>
 
-        <article class="content__article" id="Spreebohne">
+        <!-- <article class="content__article" id="Spreebohne">
           <section class="content__section">
             <h2>Spreebohne</h2>
           </section>
@@ -285,7 +299,7 @@
               tempore?
             </p>
           </section>
-        </article>
+        </article> -->
       </section>
     </main>
 
