@@ -57,21 +57,6 @@ main {
   padding: 6rem $button-position 0;
   // background-color: red;
 
-   & .page__info--name {
-    position: absolute;
-    top: 2.5rem;
-    font-family: $ff-h;
-    font-size: $fs-s;
-
-    @include rwd(mq-t) {
-      top: 5rem;
-      font-size: calc(#{$fs-p} + .25rem);
-    }
-
-    @include rwd(mq-lt) {
-      display: none;
-    }
-  }
   
   & .keep__info {
     @include flex($flex-direction: column, $justify-content: space-evenly, $align-items: flex-start);
@@ -111,7 +96,7 @@ main {
 .page__content {
   @include flex($flex-direction: column);
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; 
 
   @include rwd(mq-t) {
     padding: 2.3rem calc(#{$button-position} * 1.5);

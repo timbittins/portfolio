@@ -1,6 +1,6 @@
 :root {
   --button-size: 3.5rem;
-  --button-radius: 0.7rem;
+  --button-radius: .5rem;
   --button-position: 1.5rem;
 
   @include rwd(mq-t) {
@@ -68,17 +68,7 @@ $button-position: var(--button-position);
   }
 }
 
-@keyframes button-slide {
-  0% {
-   transform: translateY(150%);
-  }
-  50% {
-   transform: translateY(150%);
-  }
-  100% {
-   transform: translateY(0%); 
-  }
-}
+
 
 .button__submit {
   @extend .button__regular;
@@ -93,10 +83,6 @@ $button-position: var(--button-position);
   @include rwd(mq-t) {
     margin: 1rem 0;
   }
-
-  @include rwd(mq-lt) {
-    margin: 2rem 0 4rem;
-  }
 }
 
 .button__regular--setwidth {
@@ -105,6 +91,7 @@ $button-position: var(--button-position);
     padding: 0;
   }
 }
+
 
 .button__totop--slider {
   @extend .button__regular;
@@ -116,7 +103,9 @@ $button-position: var(--button-position);
   padding: 0;
   // opacity: 0.8;
   z-index: 89;
-  display: none;
+  // display: none;
+  // transform: translateY(0%);
+  // transition: all 1s ease;
   &::after {
     content: "";
     position: absolute;
@@ -129,6 +118,7 @@ $button-position: var(--button-position);
     transform: rotate(-135deg);
     border-right: 0.2rem solid white;
     border-bottom: 0.2rem solid white;
+    
   }
 
   @include rwd(mq-t) {
@@ -154,6 +144,9 @@ $button-position: var(--button-position);
       box-shadow: none;
       opacity: 1;
     }
+    &:active {
+      background-color: $clr-contrast;
+    }
     &::after {
       bottom: .5rem;
       left: 24%;
@@ -163,6 +156,18 @@ $button-position: var(--button-position);
       border-right: 0.3rem solid white;
       border-bottom: 0.3rem solid white;
     }
+  }
+}
+
+@keyframes button-slide {
+  0% {
+   transform: translateY(150%);
+  }
+  50% {
+   transform: translateY(150%);
+  }
+  100% {
+   transform: translateY(0%); 
   }
 }
 
@@ -260,7 +265,10 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
   width: 1.5rem;
   height: 3.5rem;
+  opacity: 1;
+  animation: arrows 1600ms linear;
   // background-color: red;
+
 
   @include rwd(mq-t) {
     width: 4.3rem;
@@ -269,6 +277,18 @@ body::-webkit-scrollbar-thumb {
 
   @include rwd(mq-lt) {
     display: none;
+  }
+}
+
+@keyframes arrows {
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

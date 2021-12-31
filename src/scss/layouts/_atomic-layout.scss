@@ -10,7 +10,7 @@
 
 .button__container {
   width: 100%;
-  margin: 0 0 5vh;
+  margin: 0 0 5vh; 
 
   @include rwd(mq-t) {
     margin: 0;
@@ -27,6 +27,7 @@
 }
 
 .anima__box--h1 {
+  position: relative;
   overflow:hidden;
 }
 

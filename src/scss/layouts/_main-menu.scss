@@ -8,20 +8,21 @@
   position: absolute;
   top: $button-position;
   left: $button-position;
+  @include flex;
+    gap: .5rem;
   & .brand__img {
     width: $button-size;
     height: $button-size;
   }
   & .brand__name {
-    display: none;
+    margin: 0;
   }
 
   @include rwd(mq-lt) {
     position: relative;
     top: 0;
     left: 0;
-    @include flex;
-    gap: 1.5rem;
+    
     padding: 1rem 0;
     & .brand__img {
       width: 4rem;
@@ -122,7 +123,8 @@
   z-index: 95;
   & .menu__bar--list {
     height: 100%;
-    @include flex($flex-direction: column, $justify-content: space-evenly);
+    @include flex($flex-direction: column);
+    gap: 5vh;
   }
   & .menu__bar--item {
     width: 100%;
