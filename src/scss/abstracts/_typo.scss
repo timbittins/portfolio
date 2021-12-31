@@ -108,7 +108,6 @@ a:visited {
   color: $clr-text;
 }
 a:hover {
-  // text-shadow: 0 0 1rem $clr-light;
   @include transition($property: text-shadow, $duration: 150ms);
 }
 

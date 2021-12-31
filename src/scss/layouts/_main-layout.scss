@@ -55,18 +55,15 @@ main {
   width: 100%;
   min-height: 100vh;
   padding: 6rem $button-position 0;
-  // background-color: red;
 
   
   & .keep__info {
     @include flex($flex-direction: column, $justify-content: space-evenly, $align-items: flex-start);
     width: 100%;
     height: calc(100vh - 6rem - 8vh);
-    // background-color: green;
   }
 
   @include rwd(mq-t) {
-    // height: calc(100vh);
     padding: 10rem calc(#{$button-position} * 2);
   }
 

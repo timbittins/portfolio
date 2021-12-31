@@ -101,11 +101,7 @@ $button-position: var(--button-position);
   width: $button-size;
   height: $button-size;
   padding: 0;
-  // opacity: 0.8;
   z-index: 89;
-  // display: none;
-  // transform: translateY(0%);
-  // transition: all 1s ease;
   &::after {
     content: "";
     position: absolute;
@@ -267,7 +263,6 @@ body::-webkit-scrollbar-thumb {
   height: 3.5rem;
   opacity: 1;
   animation: arrows 1600ms linear;
-  // background-color: red;
 
 
   @include rwd(mq-t) {
