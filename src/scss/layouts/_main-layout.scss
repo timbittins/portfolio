@@ -42,7 +42,7 @@ main {
   animation: fade-in 500ms ease-in;
 
   @include rwd(mq-lt) {
-    display: grid;
+    display: grid; 
     grid-template-columns: 35% 65%;
     max-width: 2000px;
     padding-top: 8rem;

@@ -1294,19 +1294,30 @@ details summary {
 }
 
 .vision__tim--box {
-  height: 10rem;
+  width: 100%;
   margin: 1.5rem 0 2.5rem;
+}
+@media (min-width: 43.75em) {
+  .vision__tim--box {
+    aspect-ratio: 10/3.4;
+    margin: 2.4rem 0 5rem;
+  }
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .vision__tim--box {
+    margin: 0 0 3rem;
+  }
 }
 
 .vision__tim--img {
   position: relative;
-  left: -3rem;
+  left: -1.5rem;
   height: 10rem;
 }
 @media (min-width: 43.75em) {
   .vision__tim--img {
-    left: 0;
     width: 100%;
+    left: 0;
     height: auto;
   }
 }
