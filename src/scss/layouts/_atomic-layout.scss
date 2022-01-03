@@ -50,12 +50,10 @@
 
 details {
   margin: 2rem 0;
-  // padding: 1rem;
   background-color: $clr-prime;
   border: 0.2rem solid $clr-second;
   & summary {
     padding: 1rem;
-    //  border: .2rem solid white;
     background-color: $clr-second;
   }
 }
@@ -70,7 +68,7 @@ details {
 .tool__container {
   @include flex($justify-content: space-evenly);
   gap: 2rem;
-  margin-bottom: 2rem;
+  height: calc(#{$button-size} + 3.5rem);
   & .tool__container--logo {
     @include flex($flex-direction: column);
     gap: 0.3rem;

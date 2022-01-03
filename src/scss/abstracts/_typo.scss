@@ -19,9 +19,8 @@ $fs-h4: var(--fs-h4);
 
 /*  GENERAL TEXT SETUP  */
 html {
-  font-family: $ff-p;
+  font-family: $ff-p, sans-serif;
   font-size: 1rem;
-  font-display: swap;
   text-rendering: optimizeSpeed;
   color: #fff;
 }

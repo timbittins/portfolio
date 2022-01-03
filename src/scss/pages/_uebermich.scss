@@ -1,18 +1,75 @@
-.image__tim--vision {
-    position: relative;
-    left: -3rem;
-    height: 10rem;
-    margin: 1.5rem 0 2.5rem;
-
-    @include rwd(mq-t) {
-        left: 0;
-        width: 100%;
-        height: auto;
-
-    }
+.vision__tim--box {
+  height: 10rem;
+  margin: 1.5rem 0 2.5rem;
+  // background-color: red;
 }
 
-.book__image {
-    width: 50%;
+.vision__tim--img {
+  // display: none;
+  position: relative;
+  left: -3rem;
+  height: 10rem;
+
+  @include rwd(mq-t) {
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
 }
 
+
+
+.content__section--books {
+//   background-color: violet;
+  
+  @include rwd(mq-t) {
+      display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  @include rwd(mq-lt) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
+.book__box {
+  width: 100%;
+  margin: 3rem 0;
+  & .book__title h3 {
+    margin-bottom: 0.2rem;
+  }
+//   background-color: green;
+  & h4 {
+    margin-bottom: 1.2rem;
+  }
+  
+  @include rwd(mq-t) {
+     @include flex($flex-direction: column, $justify-content: space-between, $align-items: flex-start);
+    gap: 1rem;
+    & .book__title h3 {
+    margin-bottom: 0.75rem;
+  }
+  }
+
+  @include rwd(mq-lt) {
+    margin: 0 0; width: 45%;
+  }
+}
+
+.book__cover--box {
+  width: 65%;
+  aspect-ratio: 9/12;
+  // background-color: red;
+
+  @include rwd(mq-t) {
+    width: 100%;
+  }
+}
+
+.book__cover--img {
+  width: 100%;
+  // display: none;
+}

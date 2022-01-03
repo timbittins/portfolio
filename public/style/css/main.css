@@ -85,14 +85,17 @@ WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT:
 @font-face {
   font-family: cera;
   src: local("cera"), local("cera"), url(../fonts/cerabasic-regular.woff2) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: cerabold;
   src: local("cerabold"), local("cerabold"), url(../fonts/cerabasic-bold.woff2) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: cerablack;
   src: local("cerablack"), local("cerablack"), url(../fonts/cerabasic-black.woff2) format("woff2");
+  font-display: swap;
 }
 :root {
   --ff-p: cera, arial, sans-serif;
@@ -111,9 +114,8 @@ WIDTH SIZE:             MEDIA QUERY FOR:                ARGUMENT:
 /*--------------------------------------------------------------*/
 /*  GENERAL TEXT SETUP  */
 html {
-  font-family: var(--ff-p);
+  font-family: var(--ff-p), sans-serif;
   font-size: 1rem;
-  font-display: swap;
   text-rendering: optimizeSpeed;
   color: #fff;
 }
@@ -784,6 +786,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     top: 0;
     left: 0;
+    gap: 1.5rem;
     padding: 1rem 0;
   }
   .brand .brand__img {
@@ -901,7 +904,7 @@ body::-webkit-scrollbar-thumb {
 .menu__bar .menu__bar--link {
   display: block;
   padding: 1rem;
-  font-family: cerabold;
+  font-family: var(--ff-h);
   font-size: 3.5rem;
   text-align: center;
 }
@@ -1202,7 +1205,7 @@ details summary {
   justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 2rem;
+  height: calc(var(--button-size) + 3.5rem);
 }
 .tool__container .tool__container--logo {
   display: flex;
@@ -1257,18 +1260,24 @@ details summary {
   }
 }
 
-.project__logo {
+.project__logo--box {
   width: 85%;
-  margin: 0 auto;
+  aspect-ratio: 16/9;
+  margin: 0 auto 2rem;
+}
+
+.project__logo--img {
+  width: 100%;
 }
 
 .project__link--explain {
   text-align: center;
+  margin: 0;
 }
 
 .project__link {
   display: block;
-  margin: 1rem 0 5rem;
+  margin: 0 0 5rem;
   font-size: var(--fs-h3) !important;
   text-decoration: underline !important;
   text-underline-offset: 0.3rem;
@@ -1284,30 +1293,81 @@ details summary {
   margin-bottom: 4rem;
 }
 
-#DanceArtFestival {
-  background: rgba(87, 78, 0, 0.76);
-}
-
-#Nunocci {
-  background: #4a3321;
-}
-
-.image__tim--vision {
-  position: relative;
-  left: -3rem;
+.vision__tim--box {
   height: 10rem;
   margin: 1.5rem 0 2.5rem;
 }
+
+.vision__tim--img {
+  position: relative;
+  left: -3rem;
+  height: 10rem;
+}
 @media (min-width: 43.75em) {
-  .image__tim--vision {
+  .vision__tim--img {
     left: 0;
     width: 100%;
     height: auto;
   }
 }
 
-.book__image {
-  width: 50%;
+@media (min-width: 43.75em) {
+  .content__section--books {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .content__section--books {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
+
+.book__box {
+  width: 100%;
+  margin: 3rem 0;
+}
+.book__box .book__title h3 {
+  margin-bottom: 0.2rem;
+}
+.book__box h4 {
+  margin-bottom: 1.2rem;
+}
+@media (min-width: 43.75em) {
+  .book__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .book__box .book__title h3 {
+    margin-bottom: 0.75rem;
+  }
+}
+@media (min-width: 56.25em) and (orientation: landscape) {
+  .book__box {
+    margin: 0 0;
+    width: 45%;
+  }
+}
+
+.book__cover--box {
+  width: 65%;
+  aspect-ratio: 9/12;
+}
+@media (min-width: 43.75em) {
+  .book__cover--box {
+    width: 100%;
+  }
+}
+
+.book__cover--img {
+  width: 100%;
 }
 
 .page__info--contact {
@@ -1335,10 +1395,12 @@ details summary {
 
 .contact__impressum--address {
   width: 17rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 43.75em) {
   .contact__impressum--address {
     width: 20rem;
+    margin-bottom: 2rem;
   }
 }
 

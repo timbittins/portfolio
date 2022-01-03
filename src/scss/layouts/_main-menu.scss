@@ -13,7 +13,7 @@
   & .brand__img {
     width: $button-size;
     height: $button-size;
-  }
+  } 
   & .brand__name {
     margin: 0;
   }
@@ -22,6 +22,7 @@
     position: relative;
     top: 0;
     left: 0;
+    gap: 1.5rem;
     
     padding: 1rem 0;
     & .brand__img {
@@ -132,7 +133,7 @@
   & .menu__bar--link {
     display: block;
     padding: 1rem;
-    font-family: cerabold;
+    font-family: $ff-h;
     font-size: 3.5rem;
     text-align: center;
   }

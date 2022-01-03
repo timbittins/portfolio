@@ -3,16 +3,19 @@
   font-family: cera;
   src: local("cera"), local("cera"),
     url(../fonts/cerabasic-regular.woff2) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: cerabold;
   src: local("cerabold"), local("cerabold"),
     url(../fonts/cerabasic-bold.woff2) format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: cerablack;
   src: local("cerablack"), local("cerablack"),
     url(../fonts/cerabasic-black.woff2) format("woff2");
+  font-display: swap;
 }
 
 // CUSTOM PROPERTIES
@@ -31,4 +34,3 @@
   --fs-h3: min(max(1.5rem, 3vw), 2rem);
   --fs-h4: min(max(1.2rem, 2vw), 1.5rem);
 }
-

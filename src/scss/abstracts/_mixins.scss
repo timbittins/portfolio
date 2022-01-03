@@ -1,7 +1,7 @@
 /*  M I X I N S  */
 
 // Grid
-@mixin grid($columns: 2fr, $rows: auto, $gap) {
+@mixin grid($columns: 1fr 1fr, $rows: auto, $gap) {
   display: grid;
   grid-template-columns: $columns;
   grid-template-rows: $rows;

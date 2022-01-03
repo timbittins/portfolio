@@ -23,9 +23,11 @@
 
 .contact__impressum--address {
   width: 17rem;
+  margin-bottom: 1rem;
 
   @include rwd(mq-t) {
     width: 20rem;
+     margin-bottom: 2rem;
   }
 }
 

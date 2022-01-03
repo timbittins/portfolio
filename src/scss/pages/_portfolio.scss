@@ -1,14 +1,21 @@
-.project__logo {
+.project__logo--box {
     width: 85%;
-    margin: 0 auto;
+    aspect-ratio: 16/9;
+    margin: 0 auto 2rem;
+    // background-color: red;
+}
+
+.project__logo--img {
+    width: 100%;
 }
 
 .project__link--explain {
     text-align: center;
+    margin: 0;
 }
 .project__link {
     display: block;
-    margin: 1rem 0 5rem;
+    margin: 0 0 5rem;
     font-size: $fs-h3 !important;
     text-decoration: underline !important;
     text-underline-offset: .3rem;
@@ -24,9 +31,9 @@
      margin-bottom: 4rem;
 }
 
-#DanceArtFestival {
-    background: hsla(54, 100%, 17%, 0.76);
-}
-#Nunocci {
-    background: hsla(26, 38%, 21%);
-}
+// #DanceArtFestival {
+//     background: hsla(54, 100%, 17%, 0.76);
+// }
+// #Nunocci {
+//     background: hsla(26, 38%, 21%);
+// }
