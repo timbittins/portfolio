@@ -11,6 +11,10 @@
   --clr-light: #f2f2f2;
   --clr-dark: #1d1d1d;
   --clr-black: #000;
+
+  --clr-cta-1: rgb(2, 30, 58);
+  // --clr-cta-2: #cdc8f7;
+  --clr-cta-2: skyblue;
 }
 
 // SASS VARIABLES
@@ -24,3 +28,6 @@ $clr-white: var(--clr-white);
 $clr-light: var(--clr-light);
 $clr-dark: var(--clr-dark);
 $clr-black: var(--clr-black);
+
+$clr-cta-1: var(--clr-cta-1);
+$clr-cta-2: var(--clr-cta-2);

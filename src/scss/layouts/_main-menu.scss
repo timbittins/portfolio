@@ -194,7 +194,13 @@
   transform: translateX(0);
 }
 
-.menu__bar--link:hover .menu__bar--line {
+.menu__bar--link:hover,
+.menu__bar--link:focus {
+  outline: none;
+}
+
+.menu__bar--link:hover .menu__bar--line,
+.menu__bar--link:focus .menu__bar--line {
   transform: translateX(0);
 }
 

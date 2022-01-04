@@ -56,7 +56,8 @@ $button-position: var(--button-position);
   @include rwd(mq-lt) {
     margin: 2rem 0;
     font-size: $fs-p;
-    &:hover {
+      &:hover,
+      &:focus {
       cursor: pointer;
       background-color: transparent;
       outline: 4px solid $clr-contrast;

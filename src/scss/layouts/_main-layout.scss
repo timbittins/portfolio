@@ -39,7 +39,9 @@ main {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  animation: fade-in 500ms ease-in;
+  // animation: fade-in 500ms ease-in;
+  background-color: rgba(0, 128, 0, 0.398);
+
 
   @include rwd(mq-lt) {
     display: grid; 
@@ -94,6 +96,7 @@ main {
   @include flex($flex-direction: column);
   width: 100%;
   min-height: 100vh; 
+  // background-color: rgba(255, 0, 0, 0.357);
 
   @include rwd(mq-t) {
     padding: 2.3rem calc(#{$button-position} * 1.5);
@@ -102,6 +105,6 @@ main {
   @include rwd(mq-lt) {
     grid-column: 2/3;
     min-height: calc(100vh - 8rem);
-    padding: 0 calc(#{$button-position} * 2) 0;
+    // padding: 0 calc(#{$button-position} * 2) 0;
   }
 }
