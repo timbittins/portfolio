@@ -40,7 +40,7 @@ main {
   width: 100%;
   margin: 0 auto;
   // animation: fade-in 500ms ease-in;
-  background-color: rgba(0, 128, 0, 0.398);
+  // background-color: rgba(0, 128, 0, 0.398);
 
 
   @include rwd(mq-lt) {
@@ -105,6 +105,6 @@ main {
   @include rwd(mq-lt) {
     grid-column: 2/3;
     min-height: calc(100vh - 8rem);
-    // padding: 0 calc(#{$button-position} * 2) 0;
+    padding: 2.3rem calc(#{$button-position} * 2);
   }
 }

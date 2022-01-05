@@ -203,7 +203,8 @@ $button-position: var(--button-position);
   }
 }
 
-[data-tooltip]:hover:after {
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:after {
   display: none;
 
   @include rwd(mq-lt) {
@@ -236,11 +237,13 @@ $button-position: var(--button-position);
 
   @include rwd(mq-lt) {
     transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
-    &:hover {
+    &:hover,
+    &:focus {
       transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
       transform: translate(-5%, -10%) scale(1.1);
       border-radius: 1rem;
       box-shadow: 0.5rem 1rem 2rem 0.05rem hsla(300, 8%, 3%, 0.438);
+      outline: none;
     }
     & p {
       display: none;
