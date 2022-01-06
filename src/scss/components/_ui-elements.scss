@@ -34,7 +34,7 @@ $button-position: var(--button-position);
   border-radius: $button-radius;
   transition: background-color 100ms ease-in-out, border 200ms ease-in-out,
     box-shadow 200ms ease-in-out;
-    animation: button-slide 750ms ease-in-out;
+    animation: button-slide 750ms ease;
  
   & h2 {
     margin: 0;
@@ -67,6 +67,10 @@ $button-position: var(--button-position);
       background-color: $clr-contrast;
     }
   }
+}
+
+.button__regular--cta {
+  // margin-bottom: 0;
 }
 
 
@@ -158,10 +162,7 @@ $button-position: var(--button-position);
 
 @keyframes button-slide {
   0% {
-   transform: translateY(150%);
-  }
-  50% {
-   transform: translateY(150%);
+   transform: translateY(250%);
   }
   100% {
    transform: translateY(0%); 

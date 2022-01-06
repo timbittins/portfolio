@@ -254,6 +254,22 @@ blockquote {
     transform: translateX(0%);
   }
 }
+@-webkit-keyframes h2-slide {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes h2-slide {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 :root {
   --button-size: 3.5rem;
   --button-radius: .5rem;
@@ -285,8 +301,8 @@ blockquote {
   border: 2px solid #976eeb;
   border-radius: var(--button-radius);
   transition: background-color 100ms ease-in-out, border 200ms ease-in-out, box-shadow 200ms ease-in-out;
-  -webkit-animation: button-slide 750ms ease-in-out;
-          animation: button-slide 750ms ease-in-out;
+  -webkit-animation: button-slide 750ms ease;
+          animation: button-slide 750ms ease;
 }
 .button__regular h2, .button__totop--slider h2, .button__submit h2 {
   margin: 0;
@@ -405,10 +421,7 @@ blockquote {
 
 @-webkit-keyframes button-slide {
   0% {
-    transform: translateY(150%);
-  }
-  50% {
-    transform: translateY(150%);
+    transform: translateY(250%);
   }
   100% {
     transform: translateY(0%);
@@ -417,10 +430,7 @@ blockquote {
 
 @keyframes button-slide {
   0% {
-    transform: translateY(150%);
-  }
-  50% {
-    transform: translateY(150%);
+    transform: translateY(250%);
   }
   100% {
     transform: translateY(0%);
@@ -1056,6 +1066,8 @@ main {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  -webkit-animation: fade-in 500ms ease-in;
+          animation: fade-in 500ms ease-in;
 }
 @media (min-width: 56.25em) and (orientation: landscape) {
   main {
@@ -1253,7 +1265,7 @@ details summary {
     font-size: var(--fs-h4);
   }
   .page__info--frontpage .button__regular--frontpage {
-    margin-top: 6rem;
+    margin: 6rem 0;
   }
 }
 
@@ -1264,7 +1276,6 @@ details summary {
 }
 
 .content__article--frontpage {
-  padding: 0;
   background-color: transparent;
   box-shadow: none;
   -webkit-backdrop-filter: none;
@@ -1276,34 +1287,35 @@ details summary {
   }
 }
 
-.frontpage__h2 {
+.frontpage__h2--box {
+  overflow: hidden;
+}
+.frontpage__h2--box .frontpage__h2--text {
   font-size: var(--fs-h3);
-  -webkit-animation: h1-slide 750ms ease;
-          animation: h1-slide 750ms ease;
+  -webkit-animation: h2-slide 750ms ease;
+          animation: h2-slide 750ms ease;
 }
 
 .frontpage__text--frage {
   position: relative;
   left: 0;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem;
   border-color: var(--clr-cta-2);
   border-left-style: solid;
   border-width: 0.5rem;
   overflow: hidden;
   transform: scaleY(0);
-  -webkit-animation: openframe 500ms 1400ms forwards;
-          animation: openframe 500ms 1400ms forwards;
+  -webkit-animation: openframe 650ms ease forwards;
+          animation: openframe 650ms ease forwards;
 }
 
 .frontpage__text--frage p {
   margin: 0;
-  padding: 1.5rem 1.2rem;
+  padding: 0 1.2rem;
   font-family: var(--ff-h);
-  color: var(--clr-cta-2);
-  background-color: var(--clr-cta-1);
   transform: translateX(-101%);
-  -webkit-animation: movetext 500ms 1900ms forwards;
-          animation: movetext 500ms 1900ms forwards;
+  -webkit-animation: movetext 500ms 1000ms forwards;
+          animation: movetext 500ms 1000ms forwards;
 }
 
 @-webkit-keyframes movetext {
