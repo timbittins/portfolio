@@ -8,11 +8,12 @@
   }
   
   @include rwd(mq-lt) {
-    margin: 0 0 3rem;
+    aspect-ratio: 16/4;
+    margin: 0 0 1.5rem;
   }
 }
 
-.vision__tim--img {
+.vision__tim--img img{
   position: relative;
   left: -1.5rem;
   height: 10rem;

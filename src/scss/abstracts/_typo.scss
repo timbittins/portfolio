@@ -61,19 +61,19 @@ h1::after {
   background-size: 15% 100%;
   background-repeat: no-repeat;
   background-clip: text;
-  background-position-x: -120%;
+  background-position-x: -20%;
   filter: blur(.5rem);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shineit 2500ms 450ms ease;
+  animation: shineit 500ms 750ms ease-in-out;
 }
 
 @keyframes shineit{
   0% {
-    background-position-x: -120%;
+    background-position-x: -20%;
   }
   100% {
-    background-position-x: 200%;
+    background-position-x: 100%;
   }
 }
 

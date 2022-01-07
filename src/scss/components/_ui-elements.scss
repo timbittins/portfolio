@@ -60,7 +60,6 @@ $button-position: var(--button-position);
       &:focus {
       cursor: pointer;
       background-color: transparent;
-      outline: 4px solid $clr-contrast;
       box-shadow: 0 0 15px 10px $clr-contrast;
     }
     &:active {
@@ -70,7 +69,11 @@ $button-position: var(--button-position);
 }
 
 .button__regular--cta {
-  // margin-bottom: 0;
+  margin: 0;
+
+  @include rwd(mq-lt) {
+    margin: 1rem 0;
+  }
 }
 
 

@@ -16,6 +16,16 @@
   } 
   & .brand__name {
     margin: 0;
+    font-family: $ff-h;
+  }
+
+  @include rwd(mq-t) {
+    & .brand__name {
+      
+    font-size: $fs-h2;
+    margin-left: 1rem;
+
+  }
   }
 
   @include rwd(mq-lt) {
@@ -23,7 +33,6 @@
     top: 0;
     left: 0;
     gap: 1.5rem;
-    
     padding: 1rem 0;
     & .brand__img {
       width: 4rem;
@@ -35,6 +44,8 @@
       display: block;
       padding: 0.1rem 0;
       margin: 0;
+      font-family: $ff-p;
+      font-size: $fs-p;
       overflow: hidden;
     }
   }
@@ -171,6 +182,7 @@
         font-size: $fs-p;
         overflow: hidden;
       }
+
   }
 }
 
@@ -190,9 +202,17 @@
   }
 }
 
-.brand:hover .menu__bar--line {
-  transform: translateX(0);
+.brand:hover .brand__name .menu__bar--line,
+.brand:focus .brand__name .menu__bar--line {
+  // transform: translateX(0);
 }
+
+.brand__link:focus {
+  outline: none;
+}
+.brand__link:focus .menu__bar--line  {
+      transform: translateX(0);
+    }
 
 .menu__bar--link:hover,
 .menu__bar--link:focus {
@@ -228,6 +248,19 @@
   }
 }
 
-.menu__link--active .menu__bar--line {
-  transform: translateX(0);
+.menu__bar--item .menu__link--active,
+.brand .menu__link--active {
+  // text-decoration: overline ;
+  // text-decoration: line-through ;
+  color: $clr-cta-2;
+  // font-weight: 900;
+  // text-transform: uppercase;
+  // background-color: $clr-contrast;
+  // border-radius: .4rem;
+
+  @include rwd(mq-lt) {
+    color: $clr-text;
+    border-bottom: 1px solid white;
+    padding-bottom: 0rem;
+  }
 }

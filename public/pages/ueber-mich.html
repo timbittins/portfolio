@@ -22,7 +22,7 @@
 
       <div class="menu__container">
         <nav class="menu__bar">
-          <a href="../index.html">
+          <a class="brand__link" href="../index.html">
             <section class="brand">
               <img
                 class="brand__img"
@@ -38,7 +38,7 @@
 
           <ul class="menu__bar--list" role="list">
             <li class="menu__bar--item">
-              <a href="./portfolio.html" class="menu__bar--link"
+              <a href="./portfolio.html" class="menu__bar--link" 
                 >Portfolio
                 <div class="menu__bar--line"></div>
               </a>
@@ -118,12 +118,13 @@
           >
             <h2>Vision</h2>
             <div class="vision__tim--box">
-              <img
-                class="vision__tim--img"
-                src="../img/TB_Portfolio_tim_vision.webp"
-                alt="Ein Portrait von Tim, der freundlich in die Kamera lächelt."
-                loading="lazy";
-              />
+
+            <picture class="vision__tim--img">
+              <source srcset="../img/TB_Portfolio_tim_vision_lt.webp"
+              media="(min-width: 56.25em)">
+              <img src="../img/TB_Portfolio_tim_vision_sm.webp" alt="Ein Portrait von Tim, der freundlich nach rechts in Richtung Zukunft schaut." loading="lazy" /> 
+            </picture>
+
             </div>
           </section>
           <section

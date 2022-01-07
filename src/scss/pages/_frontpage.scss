@@ -5,7 +5,7 @@
 
   @include rwd(mq-t) {
     & .page__info--h1 {
-      font-size: $fs-h2 ;
+      font-size: $fs-h2;
       text-align: left;
     }
   }
@@ -13,23 +13,20 @@
   @include rwd(mq-lt) {
     min-height: auto;
     & .page__info--h1 {
-      font-size: $fs-h4 ;
+      font-size: $fs-h4;
     }
     & .button__regular--frontpage {
       margin: 6rem 0;
     }
   }
-
 }
 
 .page__content--frontpage {
   // width: 100%;
-  
-
 
   @include rwd(mq-lt) {
     // display: flex;
-padding: 0 calc(#{$button-position} * 3.4) 0 $button-position;
+    padding-top: 5rem;
   }
 }
 
@@ -46,34 +43,49 @@ padding: 0 calc(#{$button-position} * 3.4) 0 $button-position;
 
 .frontpage__h2--box {
   overflow: hidden;
-  .frontpage__h2--text {
-    font-size: $fs-h3;
-    animation: h2-slide 750ms ease;
-  }
 }
 
+.frontpage__h2--text {
+  margin-bottom: 0;
+  font-size: $fs-h3;
+  animation: h2-slide 750ms ease;
+
+  @include rwd(mq-t) {
+    font-size: $fs-h2;
+  }
+
+  @include rwd(mq-lt) {
+    font-size: $fs-h3;
+  }
+}
 
 .frontpage__text--frage {
   position: relative;
   left: 0;
-  margin: 2rem 0 4rem     ;
-  border-color:$clr-cta-2;
-  border-left-style: solid;
-  border-width: .5rem;
+  margin: 2rem 0 4rem;
+  // border-left: .5rem solid $clr-white;
   overflow: hidden;
   transform: scaleY(0);
   animation: openframe 650ms ease forwards;
+
+  @include rwd(mq-lt) {
+    border-left: .5rem solid $clr-white;
+  }
 }
 
 .frontpage__text--frage p {
   margin: 0;
-  padding: 0 1.2rem;
   font-family: $ff-h;
   // color: $clr-cta-2;
   // background-color: $clr-cta-1;
   transform: translateX(-101%);
-  animation: movetext 500ms 1000ms forwards;
+  animation: movetext 500ms 750ms forwards;
   // display: none;
+  
+  @include rwd(mq-lt) {
+    padding: 0 1.2rem;
+    // border-left: .5rem solid $clr-white;
+  }
 }
 
 @keyframes movetext {
@@ -85,10 +97,6 @@ padding: 0 calc(#{$button-position} * 3.4) 0 $button-position;
   }
 }
 
-
-
-
-
 @keyframes openframe {
   0% {
     transform: scaleY(0);
@@ -97,5 +105,3 @@ padding: 0 calc(#{$button-position} * 3.4) 0 $button-position;
     transform: scaleY(1);
   }
 }
-
-
