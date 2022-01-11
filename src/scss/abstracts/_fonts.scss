@@ -27,7 +27,8 @@
 
   // font size
   --fs-s: min(max(1rem, 3vw), 1.2rem);
-  --fs-p: 1.5rem;
+  --fs-p:  min(max(1.125rem, 3vw), 1.5rem);
+  --fs-xl:1.5rem;
   --fs-display: min(max(3.2rem, 10vw), 5rem);
   --fs-h1: min(max(3rem, 7.5vw), 4.5rem);
   --fs-h2: min(max(1.8rem, 4.5vw), 2.8rem);

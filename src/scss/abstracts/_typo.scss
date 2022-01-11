@@ -9,6 +9,7 @@ $ff-h: var(--ff-h);
 // font size
 $fs-s: var(--fs-s);
 $fs-p: var(--fs-p);
+$fs-xl: var(--fs-xl);
 $fs-display: var(--fs-display);
 $fs-h1: var(--fs-h1);
 $fs-h2: var(--fs-h2);
@@ -31,8 +32,7 @@ html {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: var(--ff-h);
   text-transform: uppercase;
 }
@@ -114,6 +114,7 @@ a:hover {
 /* SPECIAL */
 
 blockquote {
+  margin-bottom: 1.5rem;
   font-size: $fs-p;
   font-style: italic;
 }

@@ -105,6 +105,6 @@ main {
   @include rwd(mq-lt) {
     grid-column: 2/3;
     min-height: calc(100vh - 8rem);
-    padding: 2.3rem calc(#{$button-position} * 2);
+    padding: 0 calc(#{$button-position} * 2);
   }
 }

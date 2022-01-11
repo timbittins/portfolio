@@ -48,15 +48,7 @@
   }
 }
 
-details {
-  margin: 2rem 0;
-  background-color: $clr-prime;
-  border: 0.2rem solid $clr-second;
-  & summary {
-    padding: 1rem;
-    background-color: $clr-second;
-  }
-}
+
 .list__standard {
   margin-bottom: 2rem;
   padding: 0 1rem;

@@ -19,19 +19,23 @@ $button-radius: var(--button-radius);
 $button-position: var(--button-position);
 
 
-
+a.button__regular:link,
 .button__regular {
-  display: block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: $button-size;
   margin: 4vh auto 0;
   padding: 0rem 2rem;
   font-family: $ff-h;
   font-size: $fs-p;
+  text-align: center;
   color: $clr-text;
   background-color: $clr-contrast;
   border: 2px solid #976eeb;
   border-radius: $button-radius;
+  outline: none;
   transition: background-color 100ms ease-in-out, border 200ms ease-in-out,
     box-shadow 200ms ease-in-out;
     animation: button-slide 750ms ease;
@@ -93,6 +97,7 @@ $button-position: var(--button-position);
   }
 }
 
+a.button__regular--setwidth:link,
 .button__regular--setwidth {
   @include rwd(mq-t) {
     width: 20rem;
@@ -102,6 +107,7 @@ $button-position: var(--button-position);
 
 
 .button__totop--slider {
+  display: none;
   @extend .button__regular;
   position: fixed;
   bottom: $button-position;

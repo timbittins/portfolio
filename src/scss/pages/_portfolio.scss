@@ -1,12 +1,13 @@
 .project__logo--box {
     width: 85%;
-    aspect-ratio: 16/9;
-    margin: 0 auto 2rem;
+    aspect-ratio: 16/8;
+    margin: 0 auto;
     // background-color: red;
 }
 
 .project__logo--img {
     width: 100%;
+    // background-color: green;
 }
 
 .project__link--explain {
@@ -28,7 +29,9 @@
 .project__image {
      width: 100%;
      height: auto;
-     margin-bottom: 4rem;
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
 }
 
 // #DanceArtFestival {
