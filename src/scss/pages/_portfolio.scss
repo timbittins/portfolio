@@ -38,10 +38,9 @@
 
 .project__link--box {
     @include flex($flex-direction: column);
-    gap: .5rem;
+    // gap: .5rem;
     width: 100%;
     margin: 0 0 5rem;
-    // background-color: yellow;
 }
 
 .project__link--explain {
@@ -50,9 +49,8 @@
 }
 .project__link {
   display: inline;
-//   padding: 1rem;
+  padding: .5rem 1rem;
   width: auto;
-//   background-color: red;
   font-size: $fs-h3 !important;
   text-decoration: underline !important;
   text-underline-offset: 0.3rem;
@@ -62,17 +60,15 @@
   }
 }
 
-.project__image {
+.project__image--box {
+    width: 100%;
+    aspect-ratio: 16/8.70;
+}
+
+.project__image { 
   width: 100%;
   height: auto;
   &:not(:last-child) {
     margin-bottom: 4rem;
   }
 }
-
-// #DanceArtFestival {
-//     background: hsla(54, 100%, 17%, 0.76);
-// }
-// #Nunocci {
-//     background: hsla(26, 38%, 21%);
-// }

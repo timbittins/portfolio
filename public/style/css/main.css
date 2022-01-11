@@ -301,7 +301,7 @@ a.button__regular:link,
   margin: 4vh auto 0;
   padding: 0rem 2rem;
   font-family: var(--ff-h);
-  font-size: var(--fs-p);
+  font-size: var(--fs-h3);
   text-align: center;
   color: var(--clr-white);
   background-color: var(--clr-contrast);
@@ -1462,7 +1462,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
   width: 100%;
   margin: 0 0 5rem;
 }
@@ -1474,6 +1473,7 @@ main {
 
 .project__link {
   display: inline;
+  padding: 0.5rem 1rem;
   width: auto;
   font-size: var(--fs-h3) !important;
   text-decoration: underline !important;
@@ -1482,6 +1482,11 @@ main {
 }
 .project__link:hover {
   text-shadow: 1px 1px 1px var(--clr-white);
+}
+
+.project__image--box {
+  width: 100%;
+  aspect-ratio: 16/8.7;
 }
 
 .project__image {
@@ -1534,7 +1539,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 3rem 5rem;
   }
 }
 
