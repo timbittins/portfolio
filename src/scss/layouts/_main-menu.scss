@@ -1,5 +1,3 @@
-
-
 .menu__switch {
   display: none;
 }
@@ -9,23 +7,22 @@
   top: $button-position;
   left: $button-position;
   @include flex;
-    gap: .5rem;
+  gap: 0.5rem;
   & .brand__img {
     width: $button-size;
     height: $button-size;
-  } 
+  }
   & .brand__name {
     margin: 0;
     font-family: $ff-h;
+    font-size: $fs-h3;
   }
 
   @include rwd(mq-t) {
     & .brand__name {
-      
-    font-size: $fs-h2;
-    margin-left: 1rem;
-
-  }
+      font-size: $fs-h2;
+      margin-left: 1rem;
+    }
   }
 
   @include rwd(mq-lt) {
@@ -175,14 +172,13 @@
       }
     }
     .menu__bar--link {
-        position: relative;
-        width: 100%;
-        padding: 0.2rem 0;
-        font-family: cera;
-        font-size: $fs-xl;
-        overflow: hidden;
-      }
-
+      position: relative;
+      width: 100%;
+      padding: 0.2rem 0;
+      font-family: cera;
+      font-size: $fs-xl;
+      overflow: hidden;
+    }
   }
 }
 
@@ -204,15 +200,15 @@
 
 .brand:hover .brand__name .menu__bar--line,
 .brand:focus .brand__name .menu__bar--line {
-  // transform: translateX(0);
+  transform: translateX(0);
 }
 
 .brand__link:focus {
   outline: none;
 }
-.brand__link:focus .menu__bar--line  {
-      transform: translateX(0);
-    }
+.brand__link:focus .menu__bar--line {
+  transform: translateX(0);
+}
 
 .menu__bar--link:hover,
 .menu__bar--link:focus {

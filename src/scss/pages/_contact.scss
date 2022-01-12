@@ -15,8 +15,9 @@
 }
 
 .page__content--contact {
+  margin-top: 2.5rem;
   @include rwd(mq-lt) {
-    padding-left: 2rem;
+    margin-top: 0;
   }
 } 
 
@@ -32,7 +33,6 @@
 }
 
 .content__article--privacy {
-
   & p,
   a,
   h4 {
