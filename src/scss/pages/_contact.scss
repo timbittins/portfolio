@@ -1,16 +1,24 @@
 .page__info--contact {
-  padding-top: .5rem;
   & .keep__info {
+    padding-top: .5rem;
     justify-content: flex-start;
     height: auto;
   }
   & h1 {
-   margin: 1rem 0;
+    margin: 1rem 0;
     text-align: left;
   }
-
+  
   @include rwd(mq-t) {
     padding-top: 2rem;
+  }
+  
+  @include rwd(mq-lt) {
+    padding-top: 0rem;
+     & .keep__info {
+       gap: 0;
+
+     }
   }
 }
 

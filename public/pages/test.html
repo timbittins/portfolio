@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tim Bittins | Portfolio</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../style/css/main.css"
+      title="Main_Layout"
+    />
+    <link rel="icon" type="image/svg+xml" href="../img/TB_favicon_01.svg" />
+  </head>
+  <body>
+    <header>
+      <input class="menu__switch" id="menuSwitch" type="checkbox" />
+
+      <label for="menuSwitch">
+        <div type="button" class="menu__button">
+          <div class="menu__button--line1"></div>
+          <div class="menu__button--line2"></div>
+          <div class="menu__button--line3"></div>
+        </div>
+      </label>
+
+      <div class="menu__container">
+        <nav class="menu__bar">
+          <a class="brand__link" href="../index.html">
+            <section class="brand">
+              <img
+                class="brand__img"
+                src="../img/TB_203_white.svg"
+                alt="Tim Bittins Logo"
+              />
+              <p class="brand__name">
+                Tim Bittins
+                <span class="menu__bar--line"></span>
+              </p>
+            </section>
+          </a>
+
+          <ul class="menu__bar--list" role="list">
+            <li class="menu__bar--item">
+              <a
+                href="./portfolio.html"
+                class="menu__bar--link menu__link--active"
+                >Portfolio
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+            <li class="menu__bar--item">
+              <a href="./ueber-mich.html" class="menu__bar--link"
+                >Über mich
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+            <li class="menu__bar--item">
+              <a href="./kontakt.html" class="menu__bar--link"
+                >Kontakt
+                <div class="menu__bar--line"></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <aside class="page__info" id="pageInfo">
+            <h1 data-name="Portfolio">Test</h1>
+      </aside>
+
+      <section class="page__content">
+      </section>
+    </main>
+
+    <button id="toTop" class="button__totop--slider" type="button"></button>
+
+    <script src="../apps/app.js" type="module"></script>
+    <noscript
+      >Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit
+      Javascript.</noscript
+    >
+  </body>
+</html>

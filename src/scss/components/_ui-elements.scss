@@ -1,6 +1,6 @@
 :root {
   --button-size: 3.5rem;
-  --button-radius: .5rem;
+  --button-radius: 0.5rem;
   --button-position: 1.5rem;
 
   @include rwd(mq-t) {
@@ -17,7 +17,6 @@
 $button-size: var(--button-size);
 $button-radius: var(--button-radius);
 $button-position: var(--button-position);
-
 
 a.button__regular:link,
 .button__regular {
@@ -38,8 +37,8 @@ a.button__regular:link,
   outline: none;
   transition: background-color 100ms ease-in-out, border 200ms ease-in-out,
     box-shadow 200ms ease-in-out;
-    animation: button-slide 750ms ease;
- 
+  animation: button-slide 750ms ease;
+
   & h2 {
     margin: 0;
     font-size: $fs-p;
@@ -60,8 +59,8 @@ a.button__regular:link,
   @include rwd(mq-lt) {
     margin: 2rem 0;
     font-size: $fs-p;
-      &:hover,
-      &:focus {
+    &:hover,
+    &:focus {
       cursor: pointer;
       background-color: transparent;
       box-shadow: 0 0 15px 10px $clr-contrast;
@@ -80,8 +79,6 @@ a.button__regular:link,
   }
 }
 
-
-
 .button__submit {
   @extend .button__regular;
   margin: 0 auto 1rem;
@@ -93,7 +90,11 @@ a.button__regular:link,
   }
 
   @include rwd(mq-t) {
-    margin: 1rem 0;
+    margin: 1rem auto 0;
+  }
+
+  @include rwd(mq-lt) {
+    margin: 3rem auto 0;
   }
 }
 
@@ -102,9 +103,9 @@ a.button__regular--setwidth:link,
   @include rwd(mq-t) {
     width: 20rem;
     padding: 0;
+    margin: 1.5rem 0;
   }
 }
-
 
 .button__totop--slider {
   display: none;
@@ -128,7 +129,6 @@ a.button__regular--setwidth:link,
     transform: rotate(-135deg);
     border-right: 0.2rem solid white;
     border-bottom: 0.2rem solid white;
-    
   }
 
   @include rwd(mq-t) {
@@ -145,7 +145,7 @@ a.button__regular--setwidth:link,
 
   @include rwd(mq-lt) {
     bottom: 0;
-    right: .9rem;
+    right: 0.9rem;
     width: 4rem;
     height: 4rem;
     padding: 0;
@@ -158,7 +158,7 @@ a.button__regular--setwidth:link,
       background-color: $clr-contrast;
     }
     &::after {
-      bottom: .5rem;
+      bottom: 0.5rem;
       left: 24%;
       width: 1.5rem;
       height: 1.5rem;
@@ -171,10 +171,10 @@ a.button__regular--setwidth:link,
 
 @keyframes button-slide {
   0% {
-   transform: translateY(250%);
+    transform: translateY(250%);
   }
   100% {
-   transform: translateY(0%); 
+    transform: translateY(0%);
   }
 }
 
@@ -271,13 +271,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .arrows__direction {
+  position: relative;
+  bottom: .5rem;
   display: block;
   margin: 0 auto;
   width: 1.5rem;
   height: 3.5rem;
   opacity: 1;
   animation: arrows 1600ms linear;
-
 
   @include rwd(mq-t) {
     width: 4.3rem;

@@ -11,7 +11,7 @@
   }
 
   @include rwd(mq-lt) {
-    min-height: auto;
+    // min-height: auto;
     & .page__info--h1 {
       font-size: $fs-h4;
     }
@@ -23,20 +23,24 @@
 
 .page__content--frontpage {
   // width: 100%;
+  // @include flex($flex-direction: column);
 
   @include rwd(mq-lt) {
     // display: flex;
-    padding-top: 5rem;
+    // padding-top: 5rem;
   }
 }
 
 .content__article--frontpage {
-  // padding: 2.3rem $button-position;
+  height: 100%;
+  margin: 0;
+  padding: 2.3rem $button-position;
   background-color: transparent;
   box-shadow: none;
   backdrop-filter: none;
-
+  
   @include rwd(mq-lt) {
+    @include flex;
     padding: 0 0 0 10rem;
   }
 }
@@ -62,14 +66,15 @@
 .frontpage__text--frage {
   position: relative;
   left: 0;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 0rem;
   // border-left: .5rem solid $clr-white;
   overflow: hidden;
   transform: scaleY(0);
   animation: openframe 650ms ease forwards;
-
+  
   @include rwd(mq-lt) {
     border-left: .5rem solid $clr-white;
+    margin: 2rem 0 5vh;
   }
 }
 

@@ -55,7 +55,7 @@
 .form__textarea {
     width: 100%;
 
-    @include rwd(mq-t) {
+    @include rwd(mq-lt) {
         width: 85%;
     }
 }
@@ -78,7 +78,6 @@
 
 .form__label--privacy {
     cursor: pointer;
-    margin-bottom: 1rem;
 }
 
 .form__checkbox {

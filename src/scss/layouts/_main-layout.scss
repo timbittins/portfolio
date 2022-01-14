@@ -26,7 +26,7 @@ header {
     width: 100vw;
     max-width: 2000px;
     height: 8rem;
-    padding: 0 min(max(6rem, 10%), 12rem);
+    padding: 0 min(max(6rem, 6%), 12rem) 0 min(max(6rem, 10%), 12rem);
     background: $clr-third url("../../img/TB_bg.svg") top / cover;
     border: none;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.116);
@@ -43,43 +43,54 @@ main {
   // background-color: rgba(0, 128, 0, 0.398);
 
   @include rwd(mq-lt) {
+    top: 8rem;
     display: grid;
     grid-template-columns: 35% 65%;
     max-width: 2000px;
-    padding-top: 8rem;
-    padding-left: 0 min(max(6rem, 10%), 12rem);
+    min-height: calc(100vh - 8rem);
+    // margin: 8rem auto 0;
+    // padding-left: 0 min(max(6rem, 10%), 12rem);
   }
 }
 
 .page__info {
   width: 100%;
   min-height: 100vh;
-  padding: 6rem $button-position 0;
-
+  // background-color: rgba(0, 100, 0, 0.508);
+  // border: 2px solid red;
+  
   & .keep__info {
     @include flex(
       $flex-direction: column,
       $justify-content: space-evenly,
       $align-items: flex-start
-    );
-    width: 100%;
-    height: calc(100vh - 6rem - 8vh);
+      );
+      width: 100%;
+      height: 100vh;
+      padding: 5rem $button-position 0;
+    // background-color: aquamarine;
+    // height: calc(100vh - 6rem - 8vh);
   }
 
   @include rwd(mq-t) {
-    padding: 10rem calc(#{$button-position} * 2) 0;
+    & .keep__info { 
+      padding: 10rem calc(#{$button-position} * 2) 0;
+    }
   }
 
   @include rwd(mq-lt) {
-    grid-column: 1/2;
-    width: auto;
+    grid-column: 1/2; 
     height: calc(100vh - 8rem);
-    padding: 2rem 0 0 calc(#{$button-position} * 3);
-    .keep__info {
-      justify-content: center;
+    min-height: auto;
+    padding: 0;
+    .keep__info { 
       position: fixed;
-      width: 25%;
-      max-width: 500px;
+      justify-content: center;
+      gap: 5vh;
+      width: 100%;
+      height: calc(100vh - 8rem);
+      padding: 0 0 0 calc(#{$button-position} * 3.5);
+      max-width: 670px;
     }
   }
 }
@@ -98,6 +109,7 @@ main {
   width: 100%;
   min-height: 100vh;
   // background-color: rgba(255, 0, 0, 0.357);
+  border: 2px solid white;
 
   @include rwd(mq-t) {
     padding: 2.3rem calc(#{$button-position} * 1.5);
@@ -105,7 +117,7 @@ main {
 
   @include rwd(mq-lt) {
     grid-column: 2/3;
-    min-height: calc(100vh - 8rem);
+    min-height: 100%;
     padding: 0 calc(#{$button-position} * 2);
   }
 }

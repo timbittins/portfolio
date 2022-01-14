@@ -7,20 +7,28 @@
 
 .button__container {
   width: 100%;
-  margin: 0 0 5vh; 
-
+  margin: 3vh0; 
+  // background-color: aquamarine;
+  
   @include rwd(mq-t) {
     margin: 0;
   }
-
-  &--box {
-    overflow: hidden;
-     
-    @include rwd(mq-lt) {
-      transform: translateX(-1rem);
-      padding: 0 1rem;
-    }
+  
+}
+.button__container--box {
+  @include flex;
+  width: 100%;
+  overflow: hidden;
+  
+  @include rwd(mq-lt) {
+    display: block;
+    transform: translateX(-1rem);
+    padding: 0 1rem;
   }
+}
+
+.form__section .button__container {
+  margin: 0 auto 5vh;
 }
 
 .anima__box--h1 {
