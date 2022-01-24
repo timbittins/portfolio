@@ -2,7 +2,7 @@
 // CUSTOM PROPERTIES
 :root {
   --clr-prime: #06396d;
-  --clr-second: #4f3af4;
+  --clr-second: rgb(79, 58, 244);
   --clr-third: rgb(4, 47, 90);
   --clr-contrast: #8042fe;
   --clr-text: #fff;
@@ -11,6 +11,8 @@
   --clr-light: #f2f2f2;
   --clr-dark: #1d1d1d;
   --clr-black: #000;
+  --clr-grey: rgb(102, 102, 102);
+  --clr-darkgrey: rgb(60, 60, 60);
 
   --clr-cta-1: rgb(2, 30, 58);
   // --clr-cta-2: #cdc8f7;
@@ -28,6 +30,8 @@ $clr-white: var(--clr-white);
 $clr-light: var(--clr-light);
 $clr-dark: var(--clr-dark);
 $clr-black: var(--clr-black);
+$clr-grey: var(--clr-grey);
+$clr-darkgrey: var(--clr-darkgrey);
 
 $clr-cta-1: var(--clr-cta-1);
 $clr-cta-2: var(--clr-cta-2);

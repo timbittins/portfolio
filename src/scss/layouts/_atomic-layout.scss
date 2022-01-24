@@ -45,16 +45,19 @@
   backdrop-filter: blur(17.8px);
   -webkit-backdrop-filter: blur(17.8px);
   overflow: hidden;
-
+  
   @include rwd(mq-t) {
-  padding: 4rem $button-position 2rem;
-
+    padding: 4rem $button-position 2rem;
+    
   }
-
-@include rwd(mq-lt) {
+  
+  @include rwd(mq-lt) {
+  grid-column: 2/3;
+  grid-row: 0;
     padding: 4rem $button-position 2rem;
   }
 }
+
 
 .list__standard {
   margin-bottom: 2rem;

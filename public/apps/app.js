@@ -4,4 +4,4 @@ import disableSubmitBtn from "./submit.js";
 
 toTopButtonFunction();
 
-disableSubmitBtn();
+// disableSubmitBtn();

@@ -272,7 +272,7 @@ body::-webkit-scrollbar-thumb {
 
 .arrows__direction {
   position: relative;
-  bottom: .5rem;
+  bottom: 0.5rem;
   display: block;
   margin: 0 auto;
   width: 1.5rem;
@@ -403,4 +403,15 @@ body::-webkit-scrollbar-thumb {
   100% {
     opacity: 1;
   }
+}
+
+.text__noscript {
+  position: absolute;
+  top: 85vh;
+  // margin-top: 12rem;
+}
+
+
+.breadcrumbs {
+  display: none;
 }

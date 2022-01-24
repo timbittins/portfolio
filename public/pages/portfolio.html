@@ -40,7 +40,10 @@
               </p>
             </section>
           </a>
-
+<noscript>
+   <p class="text__noscript">Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit
+      Javascript.</p>
+      </noscript>
           <ul class="menu__bar--list" role="list">
             <li class="menu__bar--item">
               <a
@@ -79,7 +82,10 @@
                   Nunocci
               </a>
             </div>
-
+ <noscript>
+   <p class="text__noscript">Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit
+      Javascript.</p>
+      </noscript>
           </div>
 
           <div class="arrows__direction">
@@ -91,8 +97,15 @@
       </aside>
 
       <section class="page__content">
-        <!-- <button id="moveRight" class="button__move--right" type="button"></button> -->
+        <div class="content__article--left">
+            <button id="moveLeft" class="button__move--left button__move--disabled" type="button"></button>
+        </div>
 
+        <div class="content__article--right">
+          <button id="moveRight" class="button__move--right" type="button"></button>
+          <button id="toTop" class="button__totop--slider" type="button"></button>
+        </div>
+        
         <article class="content__article content__article--func" id="Nunocci">
           <section class="content__section">
             <h2>Nunocci</h2>
@@ -242,10 +255,12 @@
             </div>
           </section>
         </article>
+
+
+        
       </section>
     </main>
 
-    <button id="toTop" class="button__totop--slider" type="button"></button>
 
     <script src="../apps/app.js" type="module"></script>
     <noscript

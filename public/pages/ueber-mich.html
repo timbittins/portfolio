@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tim Bittins | Über mich</title>
     <link rel="stylesheet" type="text/css" href="../style/css/main.css" title="Main_Layout" />
-    <link rel="icon" type="image/svg+xml" href="../img/TB_favicon_01.svg">
+    <link rel="icon" type="image/svg+xml" href="../img/TB_favicon_01.svg">    
   </head>
   <body>
     <header>
@@ -97,287 +97,304 @@
       </aside>
 
       <section class="page__content">
-        <article
-          class="content__article"
-          id="Vision"
-        >
-          <section
-            class="content__section"
-          >
-            <h2>Vision</h2>
-            <div class="vision__tim--box">
+        <div class="content__article--left">
+            <button id="moveLeft" class="button__move button__move--left button__move--disabled" type="button"></button>
+        </div>
 
-            <picture class="vision__tim--img">
-              <source srcset="../img/TB_Portfolio_tim_vision_lt.webp"
-              media="(min-width: 56.25em)">
-              <img src="../img/TB_Portfolio_tim_vision_sm.webp" alt="Ein Portrait von Tim, der freundlich nach rechts in Richtung Zukunft schaut." loading="lazy" /> 
-            </picture>
+        <div class="content__article--right">
+          <button id="moveRight" class="button__move button__move--right" type="button"></button>
+          <button id="toTop" class="button__totop--slider" type="button"></button>
+        </div>
+        <div class="content__container">
 
-            </div>
-          </section>
-          <section
-            class="content__section"
+        <div class="content__article--box">
+          <article
+            class="content__article"
+            id="Vision"
           >
-            <p>
-              Kunst und Technik. Zwei Bereiche, die in meinem Leben immer wieder zusammengefunden und
-              meinen persönlichen Erfolg definiert haben.<br><br>
-              Kunst erzählt Geschichten mit Bildern, Worten oder Musik. Das Publikum wird auf eine Reise mitgenommen, 
-              die begeistert. 
-              <br>
-              Technik ermöglicht den Zugang zu den Geschichten und setzt den Rahmen für den richtigen Blick auf das Geschehen.<br><br>
-              Lass uns gemeinsam Deine Geschichte erzählen.
-            </p>
-          </section>
-        </article>
 
-        <article
-          class="content__article"
-          id="Kompetenzen"
-        >
           <section
-            class="content__section"
+              class="content__section"
+            >
+              <h2>Vision</h2>
+              <div class="vision__tim--box">
+                <picture class="vision__tim--img">
+                  <source srcset="../img/TB_Portfolio_tim_vision_lt.webp"
+                  media="(min-width: 56.25em)">
+                  <img src="../img/TB_Portfolio_tim_vision_sm.webp" alt="Ein Portrait von Tim, der freundlich nach rechts in Richtung Zukunft schaut." loading="lazy" /> 
+                </picture>
+              </div>
+            </section>
+
+            <section
+              class="content__section"
+            >
+              <p>
+                Kunst und Technik. Zwei Bereiche, die in meinem Leben immer wieder zusammengefunden und
+                meinen persönlichen Erfolg definiert haben.<br><br>
+                Kunst erzählt Geschichten mit Bildern, Worten oder Musik. Das Publikum wird auf eine Reise mitgenommen, 
+                die begeistert. 
+                <br>
+                Technik ermöglicht den Zugang zu den Geschichten und setzt den Rahmen für den richtigen Blick auf das Geschehen.<br><br>
+                Lass uns gemeinsam Deine Geschichte erzählen.
+              </p>
+            </section>
+            
+            <section
+              class="content__section"
+            >
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias tempora quaerat eligendi quia voluptatum magni sint rerum nostrum quis, voluptatibus expedita provident commodi placeat suscipit? Quas accusamus rem sequi? Natus dolorum nostrum id, minus eaque vero cupiditate aliquam, obcaecati sunt illo quisquam, quos error adipisci beatae deserunt quae quas corporis tenetur inventore? Unde magni corporis id in tenetur dolorem voluptatem facere aliquid qui, repellat, molestias mollitia earum quam magnam alias dignissimos dolore vitae consequuntur fugiat. Optio laborum illum voluptatem non veritatis, at quaerat placeat quisquam expedita ullam temporibus quos ratione suscipit quidem facere, in vel mollitia vero eius. Libero, numquam?</p>
+            </section> 
+          </article>
+
+          <article
+            class="content__article"
+            id="Kompetenzen"
           >
-            <h2>Kompetenzen</h2>
-            <p>Als gelernter Tontechniker und Mediengestalter nutze ich professionelle Programme und Tools 
-              zur Umsetzung meiner Arbeiten.<br>
+            <section
+              class="content__section"
+            >
+              <h2>Kompetenzen</h2>
+              <p>Als gelernter Tontechniker und Mediengestalter nutze ich professionelle Programme und Tools 
+                zur Umsetzung meiner Arbeiten.<br>
+                
+              </p>
+            </section>
+            <section
+              class="content__section"
+            >
+              <h3>Web-Design</h3>
+              <ul class="list__standard">
+                <li>Farbschema</li>
+                <li>Typografie</li>
+                <li>Vektorgestaltung von Logo und Icon</li>
+                <li>Bildbearbeitung und Retouche</li>
+                <li>Layout im Atomic-Model</li>
+                <li>Prototyping</li>
+              </ul>
+              <div class="tool__container">
+                <div class="tool__container--logo">
+                  <img
+                    class="logo__icon"
+                    src="../img/adobe_xd_icon.webp"
+                    alt="Adobe XD Logo Icon"
+                  />
+                  <p class="small">XD</p>
+                </div>
+                <div class="tool__container--logo">
+                  <img
+                    class="logo__icon"
+                    src="../img/adobe_photoshop_icon.webp"
+                    alt="Adobe Photoshop Logo Icon"
+                  />
+                  <p class="small">Photoshop</p>
+                </div>
+                <div class="tool__container--logo">
+                  <img
+                    class="logo__icon"
+                    src="../img/adobe_illustrator_icon.webp"
+                    alt="Adobe Illustrator Logo Icon"
+                  />
+                  <p class="small">Illustrator</p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="content__section"
+            >
+              <h3>Web-Entwicklung</h3>
+              <ul class="list__standard">
+                <li>Seitenaufbau und Struktur</li>
+                <li>Barrierefreiheit</li>
+                <li>Responsive Design für alle Geräte <small>(SCSS / Tailwind)</small></li>
+                <li>Funktionalität</li>
+                <li>API Anbindung</li>
+              </ul>
+              <div class="tool__container">
+                <div class="tool__container--logo">
+                  <img
+                    class="logo__icon"
+                    src="../img/html_icon.webp"
+                    alt="HTML5 Logo Icon"
+                  />
+                  <p class="small">HTML5</p>
+                </div>
+                <div class="tool__container--logo">
+                  <img
+                    class="logo__icon"
+                    src="../img/css_icon.webp"
+                    alt="CSS3 Logo Icon"
+                  />
+                  <p class="small">CSS3</p>
+                </div>
+                <div class="tool__container--logo">
+                  <img
+                    class="logo__icon"
+                    src="../img/javascript_icon.webp"
+                    alt="Javascript Logo Icon"
+                  />
+                  <p class="small">JS ES6</p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="content__section"
+            >
+              <h3>CMS & e-Commerce</h3>
+              <ul class="list__standard">
+                <li>Server-Einrichtung</li>
+                <li>CMS Implementierung</li>
+                <li>Aufbereitung von Inhalten</li>
+                <li>Aufsetzen von Online-Shops</li>
+                <li>Versand- und Verkaufsabwicklung</li>
+                <li>Suchmaschinen-Optimierung</li>
+              </ul>
+              <div class="tool__container">
+                <div class="tool__container--logo">
+                  <img
+                    class="logo__icon"
+                    src="../img/wordpress_icon.webp"
+                    alt="WordPress Logo Icon"
+                  />
+                  <p class="small">WordPress</p>
+                </div>
+                <div class="tool__container--logo">
+                  <img
+                    class="logo__icon"
+                    src="../img/woocommerce_icon.webp"
+                    alt="WooCommerce Logo Icon"
+                  />
+                  <p class="small">WooCommerce</p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="content__section"
+            >
+              <h3>Marketing</h3>
+              <ul class="list__standard">
+                <li>Zielgruppenanalyse</li>
+                <li>Social Media Marketing</li>
+                <li>Social Media Content Creation</li>
+              </ul>
+            </section>
+
+          </article>
+
+          <article
+            class="content__article  content__article--func"
+            id="Buecherliste"
+          >
+            <section
+              class="content__section"
+            >
+              <h2>Bücherliste</h2>
+              <p>Eine Auswahl der Bücher, die ich zuletzt in den Händen hatte.<br>
+              Lesen begeistert mich, lesen entspannt.<br>
+              Viele Inspirationen für meinen Job und mein Leben kamen von guten 
+              Autoren und deren Werken. </p>
+            </section>
+        
+            <section
+              class="content__section--books">
+              <div class="book__box">
+                <div class="book__title">
+                  <h3>Javascript - The Definitive Guide</h3>
+                  <h4>David Flanagan</h4>
+                </div>
+                <div class="book__cover--box">
+                  <img
+                  class="book__cover--img"
+                  src="../img/book_javascript_the_definitive_guide.webp"
+                  alt="Bild des Buches Javascript - The Definitive Guide"
+                  loading="lazy"
+                />
+                </div>
+              </div>
+
+              <div class="book__box">
+                <div class="book__title">
+                  <h3>Clean Code</h3>
+                  <h4>Robert C. Martin</h4>
+                </div>
+                <div class="book__cover--box">
+                  <img
+                  class="book__cover--img"
+                  src="../img/book_clean_code.webp"
+                  alt="Bild des Buches Clean Code"
+                  loading="lazy"
+                />
+                </div>
+              </div>
               
-            </p>
-          </section>
-          <section
-            class="content__section"
-          >
-            <h3>Web-Design</h3>
-            <ul class="list__standard">
-              <li>Farbschema</li>
-              <li>Typografie</li>
-              <li>Vektorgestaltung von Logo und Icon</li>
-              <li>Bildbearbeitung und Retouche</li>
-              <li>Layout im Atomic-Model</li>
-              <li>Prototyping</li>
-            </ul>
-            <div class="tool__container">
-              <div class="tool__container--logo">
-                <img
-                  class="logo__icon"
-                  src="../img/adobe_xd_icon.webp"
-                  alt="Adobe XD Logo Icon"
+              <div class="book__box">
+                <div class="book__title">
+                  <h3>The Design of Everyday Things</h3>
+                  <h4>Don Norman</h4>
+                </div>
+                <div class="book__cover--box">
+                  <img
+                  class="book__cover--img"
+                  src="../img/book_the_design_of_everyday_things.webp"
+                  alt="Bild des Buches The Design Of Everyday Things"
+                  loading="lazy"
                 />
-                <p class="small">XD</p>
+                </div>
               </div>
-              <div class="tool__container--logo">
-                <img
-                  class="logo__icon"
-                  src="../img/adobe_photoshop_icon.webp"
-                  alt="Adobe Photoshop Logo Icon"
+              
+              <div class="book__box">
+                <div class="book__title">
+                  <h3>Design Thinking</h3>
+                  <h4>Michael Lewrick</h4>
+                </div>
+                <div class="book__cover--box">
+                  <img
+                  class="book__cover--img"
+                  src="../img/book_design_thinking.webp"
+                  alt="Bild des Buches Design Thinking"
+                  loading="lazy"
                 />
-                <p class="small">Photoshop</p>
+                </div>
               </div>
-              <div class="tool__container--logo">
-                <img
-                  class="logo__icon"
-                  src="../img/adobe_illustrator_icon.webp"
-                  alt="Adobe Illustrator Logo Icon"
+              
+              <div class="book__box">
+                <div class="book__title">
+                  <h3>7 Strategies for Wealth and Happiness</h3>
+                  <h4>Jim Rohn</h4>
+                </div>
+                <div class="book__cover--box">
+                  <img
+                  class="book__cover--img"
+                  src="../img/book_seven_strategies_for_weath_and_happiness.webp"
+                  alt="Bild des Buches 7 Strategies for Wealth and Happiness"
+                  loading="lazy"
                 />
-                <p class="small">Illustrator</p>
+                </div>
               </div>
-            </div>
-          </section>
-
-          <section
-            class="content__section"
-          >
-            <h3>Web-Entwicklung</h3>
-            <ul class="list__standard">
-              <li>Seitenaufbau und Struktur</li>
-              <li>Barrierefreiheit</li>
-              <li>Responsive Design für alle Geräte <small>(SCSS / Tailwind)</small></li>
-              <li>Funktionalität</li>
-              <li>API Anbindung</li>
-            </ul>
-            <div class="tool__container">
-              <div class="tool__container--logo">
-                <img
-                  class="logo__icon"
-                  src="../img/html_icon.webp"
-                  alt="HTML5 Logo Icon"
+              
+              <div class="book__box">
+                <div class="book__title">
+                  <h3>This is Marketing</h3>
+                  <h4>Seth Godin</h4>
+                </div>
+                <div class="book__cover--box">
+                  <img
+                  class="book__cover--img"
+                  src="../img/book_this_is_marketing.webp"
+                  alt="Bild des Buches This is Marketing"
+                  loading="lazy"
                 />
-                <p class="small">HTML5</p>
+                </div>
               </div>
-              <div class="tool__container--logo">
-                <img
-                  class="logo__icon"
-                  src="../img/css_icon.webp"
-                  alt="CSS3 Logo Icon"
-                />
-                <p class="small">CSS3</p>
-              </div>
-              <div class="tool__container--logo">
-                <img
-                  class="logo__icon"
-                  src="../img/javascript_icon.webp"
-                  alt="Javascript Logo Icon"
-                />
-                <p class="small">JS ES6</p>
-              </div>
-            </div>
-          </section>
-
-          <section
-            class="content__section"
-          >
-            <h3>CMS & e-Commerce</h3>
-            <ul class="list__standard">
-              <li>Server-Einrichtung</li>
-              <li>CMS Implementierung</li>
-              <li>Aufbereitung von Inhalten</li>
-              <li>Aufsetzen von Online-Shops</li>
-              <li>Versand- und Verkaufsabwicklung</li>
-              <li>Suchmaschinen-Optimierung</li>
-            </ul>
-            <div class="tool__container">
-              <div class="tool__container--logo">
-                <img
-                  class="logo__icon"
-                  src="../img/wordpress_icon.webp"
-                  alt="WordPress Logo Icon"
-                />
-                <p class="small">WordPress</p>
-              </div>
-              <div class="tool__container--logo">
-                <img
-                  class="logo__icon"
-                  src="../img/woocommerce_icon.webp"
-                  alt="WooCommerce Logo Icon"
-                />
-                <p class="small">WooCommerce</p>
-              </div>
-            </div>
-          </section>
-
-          <section
-            class="content__section"
-          >
-            <h3>Marketing</h3>
-            <ul class="list__standard">
-              <li>Zielgruppenanalyse</li>
-              <li>Social Media Marketing</li>
-              <li>Social Media Content Creation</li>
-            </ul>
-          </section>
-
-        </article>
-
-        <article
-          class="content__article"
-          id="Buecherliste"
-        >
-          <section
-            class="content__section"
-          >
-            <h2>Bücherliste</h2>
-            <p>Eine Auswahl der Bücher, die ich zuletzt in den Händen hatte.<br>
-            Lesen begeistert mich, lesen entspannt.<br>
-            Viele Inspirationen für meinen Job und mein Leben kamen von guten 
-            Autoren und deren Werken. </p>
-          </section>
-
-       
-          <section
-            class="content__section--books">
-            <div class="book__box">
-              <div class="book__title">
-                <h3>Javascript - The Definitive Guide</h3>
-                <h4>David Flanagan</h4>
-              </div>
-              <div class="book__cover--box">
-                <img
-                 class="book__cover--img"
-                 src="../img/book_javascript_the_definitive_guide.webp"
-                 alt="Bild des Buches Javascript - The Definitive Guide"
-                 loading="lazy"
-               />
-              </div>
-            </div>
-
-            <div class="book__box">
-              <div class="book__title">
-                <h3>Clean Code</h3>
-                <h4>Robert C. Martin</h4>
-              </div>
-              <div class="book__cover--box">
-                <img
-                 class="book__cover--img"
-                 src="../img/book_clean_code.webp"
-                 alt="Bild des Buches Clean Code"
-                 loading="lazy"
-               />
-              </div>
-            </div>
+            </section>
             
-            <div class="book__box">
-              <div class="book__title">
-                <h3>The Design of Everyday Things</h3>
-                <h4>Don Norman</h4>
-              </div>
-              <div class="book__cover--box">
-                <img
-                 class="book__cover--img"
-                 src="../img/book_the_design_of_everyday_things.webp"
-                 alt="Bild des Buches The Design Of Everyday Things"
-                 loading="lazy"
-               />
-              </div>
-            </div>
-            
-            <div class="book__box">
-              <div class="book__title">
-                <h3>Design Thinking</h3>
-                <h4>Michael Lewrick</h4>
-              </div>
-              <div class="book__cover--box">
-                <img
-                 class="book__cover--img"
-                 src="../img/book_design_thinking.webp"
-                 alt="Bild des Buches Design Thinking"
-                 loading="lazy"
-               />
-              </div>
-            </div>
-            
-            <div class="book__box">
-              <div class="book__title">
-                <h3>7 Strategies for Wealth and Happiness</h3>
-                <h4>Jim Rohn</h4>
-              </div>
-              <div class="book__cover--box">
-                <img
-                 class="book__cover--img"
-                 src="../img/book_seven_strategies_for_weath_and_happiness.webp"
-                 alt="Bild des Buches 7 Strategies for Wealth and Happiness"
-                 loading="lazy"
-               />
-              </div>
-            </div>
-            
-            <div class="book__box">
-              <div class="book__title">
-                <h3>This is Marketing</h3>
-                <h4>Seth Godin</h4>
-              </div>
-              <div class="book__cover--box">
-                <img
-                 class="book__cover--img"
-                 src="../img/book_this_is_marketing.webp"
-                 alt="Bild des Buches This is Marketing"
-                 loading="lazy"
-               />
-              </div>
-            </div>
-          </section>
-
-
-          
-        </article>
+          </article>
+        </div>
+        </div>
+        </div>
 
       </section>
 
@@ -385,6 +402,7 @@
 
     <button id="toTop" class="button__totop--slider" type="button"></button>
 
+    <script src="../apps/movefunction.js" type="module"></script>
     <script src="../apps/app.js" type="module"></script>
     <noscript
       >Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit
