@@ -8,14 +8,23 @@ const clickThroughArticles = () => {
   let counter = 0;
 
   let pageArticle = document.getElementById("Kompetenzen");
-  let numberOfSections = pageArticle.childElementCount - 1;
+  let numberOfSections = pageArticle.childElementCount;
+
+  let calcArticleWidth = () => {
+    let article = document.querySelector(".content__article--func");
+    let articleWidth = (article.style.width = `${
+      (counter + numberOfSections) * 100
+    }%`);
+    console.log(articleWidth);
+  };
+  calcArticleWidth();
 
   let switchBreadcrumbs = () => {
     breadcrumbs.forEach((crumb) => {
       crumb.classList.remove("crumb--active");
     });
     breadcrumbs[counter].classList.add("crumb--active");
-  }
+  };
 
   moveLeftBtn.addEventListener("click", () => {
     if (counter > 0) {

@@ -1,11 +1,14 @@
 const loadElements = () => {
   setContent();
   showMoveButtons();
-}
+};
 
 function setContent() {
   const pageContent = document.querySelector(".page__content");
   pageContent.classList.add("page__content--func");
+
+  const contentContainer = document.querySelector(".content__container");
+  contentContainer.style.overflow = "hidden";
 
   const contentArticles = [...document.querySelectorAll(".content__article")];
   contentArticles.forEach((article) => {
