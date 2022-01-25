@@ -68,22 +68,25 @@
           <div class="anima__box--h1">
             <h1 data-name="Über mich">Über mich</h1>
           </div>
-          <div class="button__container">
+          <div class="button__container select-articles">
             <div class="button__container--box">
-              <a class="button__regular button__regular--setwidth" href="#Vision">
+              <a class="button__regular button__regular--setwidth" href="#Vision" data-article="Vision"
+              onclick="clickThroughArticles(this)">
                   Vision
               </a>
             </div>
 
             <div class="button__container--box">
-              <a class="button__regular button__regular--setwidth" href="#Kompetenzen" href="#Kompetenzen">
+              <a class="button__regular button__regular--setwidth" href="#Kompetenzen" data-article="Kompetenzen"
+              onclick="clickThroughArticles(this)">
               Kompetenzen
           </a>
             </div>
 
 
             <div class="button__container--box">
-              <a class="button__regular button__regular--setwidth" href="#Buecherliste" href="#Buecherliste">
+              <a class="button__regular button__regular--setwidth" href="#Buecherliste" data-article="Buecherliste"
+              onclick="clickThroughArticles(this)">
                   Bücherliste
               </a>
             </div>
@@ -398,6 +401,7 @@
 
     <script src="../apps/movefunction.js" type="module"></script>
     <script src="../apps/app.js" type="module"></script>
+    <script src="../apps/sectioncalculator.js"></script>
     <noscript
       >Sie haben Javascript deaktiviert. Diese Seite funktioniert besser mit
       Javascript.</noscript

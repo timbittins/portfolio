@@ -1456,10 +1456,11 @@ main {
 .button__move--right:hover {
     cursor: pointer;
     background-color: transparent;
+    box-shadow: 0 0 15px 10px var(--clr-contrast);
   }
   .button__move--left:focus,
 .button__move--right:focus {
-    box-shadow: 0 0 15px 10px var(--clr-contrast);
+    background-color: transparent;
   }
   .button__move--left:active,
 .button__move--right:active {

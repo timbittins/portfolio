@@ -19,15 +19,15 @@ function validateForm() {
     return false;
   }
 }
-//   submitBtn.disabled = true;
-//   let controlArray = [];
+  // submitBtn.disabled = true;
+  // let controlArray = [];
   
-//   formInputs.forEach(input => {
-//       input.addEventListener("keydown", function() {
-//           console.log("added")
-//       })
-//       console.log(controlArray)
-//   })
+  // formInputs.forEach(input => {
+  //     input.addEventListener("keydown", function() {
+  //         console.log("added")
+  //     })
+  //     console.log(controlArray)
+  // })
 }
 
 export default disableSubmitBtn;

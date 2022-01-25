@@ -1,4 +1,4 @@
-let toTopButtonFunction = (scrollFunction, topFunction) => { console.log("Top")
+let toTopButtonFunction = (scrollFunction, topFunction) => {
   const toTopButton = document.getElementById("toTop");
   let windowHeight = window.innerHeight - 10;
 
